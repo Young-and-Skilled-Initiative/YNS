@@ -20,3 +20,10 @@ export default function RootLayout({
     </html>
   );
 }
+// echo "# young-and-skilled-initiative" >> README.md
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/Richardudeh4/young-and-skilled-initiative.git
+// git push -u origin main
