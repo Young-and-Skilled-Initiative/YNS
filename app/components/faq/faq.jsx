@@ -12,11 +12,13 @@ const FAQ = () => {
       <div className="w-full mt-[135px] mb-[40px] ">
         <div className="w-full flex items-start justify-between gap-[100px]">
           <div className="w-[50%]">
-            <h2 className="lg:text-[50px]  font-bold leading-[50px]">
+
+            <h2 className="lg:text-[50px]  font-bold font-cocon leading-[50px]">
               Frequently Asked <span className=" text-[#00000099]"></span>
               Questions
             </h2>
-            <p className="mt-[16px] text-[#00000099] lg:text-[16px] font-normal leading-[32px] ">
+            <p className="mt-[16px] font-manrope text-[16px] font-normal text-[#00000099]  ">
+
               Find quick answers to common queries in our FAQs section, designed
               to address your most pressing questions and provide you with the
               information you need.
@@ -35,7 +37,9 @@ const FAQ = () => {
                   className="lg:w-full bg-[#F6F6F6] border-none rounded-[10px] px-[32px] "
                   value={question}
                 >
-                  <AccordionTrigger className="no-underline hover:no-underline text-[16px] font-medium ">
+
+                  <AccordionTrigger className="no-underline hover:no-underline text-[16px] font-cocon font-medium ">
+
                     {question}
                   </AccordionTrigger>
                   <AccordionContent>{answer}</AccordionContent>
