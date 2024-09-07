@@ -17,8 +17,11 @@ type TestimonialDetails = {
   position: string;
   image: string;
   bgColor: string;
-  imageWidth: number;  // New property for image width
-  imageHeight: number; // New property for image height
+  extra: string;
+  companyWidth: number; 
+  companyHeight: number; 
+  extraWidth: number; 
+  extraHeight: number; 
 };
 
 const testimonials: TestimonialDetails[] = [
@@ -30,9 +33,12 @@ const testimonials: TestimonialDetails[] = [
     name: "Maria Obioma",
     position: "Digital Marketing Graduate, Young & Skilled",
     image: "/Maria Obioma.svg",
-    bgColor: "#114F3C", // Light beige
-    imageWidth: 80,   // Custom width for this testimonial
-    imageHeight: 44,  // Custom height for this testimonial
+    bgColor: "#114F3C",
+    extra: "/Star 2.svg",
+    companyWidth: 80,
+    companyHeight: 44,
+    extraWidth: 100,
+    extraHeight: 100,
   },
   {
     quote: "I've gained the confidence to lead my school's environmental club",
@@ -42,9 +48,12 @@ const testimonials: TestimonialDetails[] = [
     name: "David Oluah",
     position: "Product Designer, Google",
     image: "/David Oluah.svg",
-    bgColor: "#98BC6D", // Light blue
-    imageWidth: 114,   // Custom width for this testimonial
-    imageHeight: 37,  // Custom height for this testimonial
+    bgColor: "#98BC6D",
+    extra: "/Star.svg",
+    companyWidth: 114,
+    companyHeight: 37,
+    extraWidth: 76,
+    extraHeight: 76,
   },
   {
     quote: "Young and Skilled Initiative opened my eyes to new possibilities",
@@ -54,9 +63,12 @@ const testimonials: TestimonialDetails[] = [
     name: "Sarah Macklin",
     position: "Program Alumna, Microsoft",
     image: "/Sarah Macklin.svg",
-    bgColor: "#EF4C0D", // Light pink
-    imageWidth: 135,   // Custom width for this testimonial
-    imageHeight: 29,  // Custom height for this testimonial
+    bgColor: "#EF4C0D",
+    extra: "/Semicircle.svg",
+    companyWidth: 135,
+    companyHeight: 29,
+    extraWidth: 65,
+    extraHeight: 32,
   },
   // Add more testimonials here...
 ];
@@ -85,20 +97,28 @@ export function Testimonial() {
           {testimonials.map((testimonial, index) => (
             <CarouselItem key={index} className="basis-1/3 bg-none ">
               <Card className="border-none bg-none  shadow-lg  h-full">
-                <CardContent className="p-0 h-full w-[320px]">
+                <CardContent className="p-0 h-full w-[620px]">
                   <div
                     className="rounded-[20px] p-7 text-white h-[200px] flex flex-col justify-between "
                     style={{ backgroundColor: testimonial.bgColor }}
                   >
-                    <blockquote className="text-lg font-semibold">
-                      {testimonial.quote}
+                    <blockquote className="text-lg font-medium">
+                      "{testimonial.quote}"
                     </blockquote>
-                    <Image
-                      src={testimonial.company}
-                      alt={testimonial.description}
-                      width={testimonial.imageWidth}  // Use custom width
-                      height={testimonial.imageHeight} // Use custom height
-                    />
+                    <div className=" flex justify-between">
+                      <Image
+                        src={testimonial.company}
+                        alt={testimonial.description}
+                        width={testimonial.companyWidth} // Use custom width
+                        height={testimonial.companyHeight} // Use custom height
+                      />
+                      <Image
+                        src={testimonial.extra}
+                        alt={testimonial.description}
+                        width={testimonial.extraWidth} // Use custom width
+                        height={testimonial.extraHeight} // Use custom height
+                      />
+                    </div>
                   </div>
                   <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex flex-col justify-between">
                     <p className="mt-4">{testimonial.description}</p>
