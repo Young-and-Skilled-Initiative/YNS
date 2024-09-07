@@ -3,8 +3,9 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import ChevronUp from "../public/images/arrow-up.svg";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+
 const navlinks = [
   {
     route: "Home",
@@ -55,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
                  `}
               //  ${currentPath === item.id ? "text-black" : "text-ash"}
             >
-              <span className="flex">
+              <span className="flex gap-2">
                 {item.route}
                 {item.icon && item.route === "Resources" && (
                   <img src={item.icon} alt="" />
@@ -64,7 +65,12 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             </Link>
           ))}
         </div>
-        <div></div>
+        <div className="flex">
+          <Button size={"lg"} className="rounded-3xl bg-dark-green">
+            Get Started
+          </Button>
+          <Button size={"icon"} className="rounded-full bg-dark-green"></Button>
+        </div>
       </div>
     </>
   );
