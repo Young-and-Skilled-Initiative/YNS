@@ -43,8 +43,8 @@ const testimonials: TestimonialDetails[] = [
     position: "Product Designer, Google",
     image: "/David Oluah.svg",
     bgColor: "#98BC6D", // Light blue
-    imageWidth: 80,   // Custom width for this testimonial
-    imageHeight: 44,  // Custom height for this testimonial
+    imageWidth: 114,   // Custom width for this testimonial
+    imageHeight: 37,  // Custom height for this testimonial
   },
   {
     quote: "Young and Skilled Initiative opened my eyes to new possibilities",
@@ -55,8 +55,8 @@ const testimonials: TestimonialDetails[] = [
     position: "Program Alumna, Microsoft",
     image: "/Sarah Macklin.svg",
     bgColor: "#EF4C0D", // Light pink
-    imageWidth: 80,   // Custom width for this testimonial
-    imageHeight: 44,  // Custom height for this testimonial
+    imageWidth: 135,   // Custom width for this testimonial
+    imageHeight: 29,  // Custom height for this testimonial
   },
   // Add more testimonials here...
 ];
@@ -96,8 +96,8 @@ export function Testimonial() {
                     <Image
                       src={testimonial.company}
                       alt={testimonial.description}
-                      width={80}
-                      height={44}
+                      width={testimonial.imageWidth}  // Use custom width
+                      height={testimonial.imageHeight} // Use custom height
                     />
                   </div>
                   <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex flex-col justify-between">
