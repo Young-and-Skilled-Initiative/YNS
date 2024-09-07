@@ -2,6 +2,8 @@
 import Lady from "@/public/lady.svg";
 import Image from "next/image";
 import Man from "@/public/man.svg";
+import Line1 from "@/public/Young Skilled Initiative (1).svg";
+import Line from "@/public/Young Skilled Initiative.svg";
 
 const Network = () => {
   return (
@@ -23,11 +25,11 @@ const Network = () => {
       {/* Right Side (Images) */}
       <div className="w-[50%] flex flex-col relative">
         {/* Male Image */}
-        <div className="z-10 ml-[2em] flex">
-          <div>
-            <Image src={Lady} alt="Man image" />
+        <div className=" ml-[2em] flex">
+          <div className="z-30">
+            <Image src={Lady} alt="Man image" className="" />
           </div>
-          <div className="flex bg-white rounded-full h-[3.25em] py-3 pl-1 pr-5 gap-3 items-center justify-center -ml-[7em] mt-[3em] w-[10.5em]">
+          <div className="flex z-30 bg-white rounded-full h-[3.25em] py-3 pl-1 pr-5 gap-3 items-center justify-center -ml-[7em] mt-[3em] w-[10.5em]">
             <span className="bg-green-900 text-white rounded-full py-2 px-4 flex items-center">
               J
             </span>
@@ -35,11 +37,17 @@ const Network = () => {
               James Ade
             </span>
           </div>
+          <div className="z-10">
+            <Image src={Line} className=" mt-[4.5em] -ml-[6.5em]" />
+          </div>
         </div>
 
         {/* Lady Image (moved up with negative margin) */}
-        <div className="flex  items-end -mt-[3em] ml-[5em] relative z-0">
-          <div className="flex bg-black rounded-full h-[3.25em] py-3 pl-2 -mr-[7em] pr-5 gap-3  z-10 items-center justify-center  mb-[5em]">
+        <div className="flex  items-end -mt-[3em] ml-[5em] relative ">
+          <div className="-mt-[3em]">
+            <Image src={Line1}/>
+          </div>
+          <div className="flex bg-black rounded-full h-[3.25em]  py-3 pl-2 -mr-[7em] pr-5 gap-3  z-30 items-center justify-center  mb-[8em]">
             <span className="bg-orange-700 text-white rounded-full py-2 px-4 flex items-center">
               G
             </span>
@@ -47,7 +55,7 @@ const Network = () => {
               Gale Hillman
             </span>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col z-20  mb-7">
             <Image src={Man} alt="Lady image" />
           </div>
         </div>
