@@ -86,3 +86,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Cocon';
+  src: url('/public/fonts/CoconRegularFont.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/public/fonts/Manrope-Bold.tff') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/public/fonts/Manrope-Light.tff') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/public/fonts/Manrope-Regular.tff') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
