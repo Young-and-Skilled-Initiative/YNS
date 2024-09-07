@@ -17,6 +17,8 @@ type TestimonialDetails = {
   position: string;
   image: string;
   bgColor: string;
+  imageWidth: number;  // New property for image width
+  imageHeight: number; // New property for image height
 };
 
 const testimonials: TestimonialDetails[] = [
@@ -29,6 +31,8 @@ const testimonials: TestimonialDetails[] = [
     position: "Digital Marketing Graduate, Young & Skilled",
     image: "/Maria Obioma.svg",
     bgColor: "#114F3C", // Light beige
+    imageWidth: 80,   // Custom width for this testimonial
+    imageHeight: 44,  // Custom height for this testimonial
   },
   {
     quote: "I've gained the confidence to lead my school's environmental club",
@@ -39,6 +43,8 @@ const testimonials: TestimonialDetails[] = [
     position: "Product Designer, Google",
     image: "/David Oluah.svg",
     bgColor: "#98BC6D", // Light blue
+    imageWidth: 80,   // Custom width for this testimonial
+    imageHeight: 44,  // Custom height for this testimonial
   },
   {
     quote: "Young and Skilled Initiative opened my eyes to new possibilities",
@@ -49,6 +55,8 @@ const testimonials: TestimonialDetails[] = [
     position: "Program Alumna, Microsoft",
     image: "/Sarah Macklin.svg",
     bgColor: "#EF4C0D", // Light pink
+    imageWidth: 80,   // Custom width for this testimonial
+    imageHeight: 44,  // Custom height for this testimonial
   },
   // Add more testimonials here...
 ];
