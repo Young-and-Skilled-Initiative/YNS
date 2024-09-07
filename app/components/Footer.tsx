@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-function Footer() {
+const Footer = () => {
   return (
     <>
       <div className="px-[45px] py-[94px] bg-dark-green w-full rounded-[20px]">
@@ -66,9 +68,56 @@ function Footer() {
             </div>
             <div className="flex flex-col gap-[30px] text-xl">
               <span className="text-lighter-yellow">Socials</span>
-              <ul className="flex flex-col gap-2">
-                <li></li>
-              </ul>
+              <div className="flex flex-col gap-2.5">
+                <Link
+                  href={""}
+                  className="p-[13px] bg-white rounded-full flex w-fit"
+                >
+                  <Image
+                    src="/instagram-filled.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className=""
+                  />
+                </Link>
+                <Link
+                  href={""}
+                  className="p-[13px] bg-white rounded-full w-fit"
+                >
+                  <Image
+                    src="/facebook-filled.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className=""
+                  />
+                </Link>
+                <Link
+                  href={""}
+                  className="p-[13px] bg-white rounded-full w-fit"
+                >
+                  <Image
+                    src="/linkedin-filled.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className=""
+                  />
+                </Link>
+                <Link
+                  href={""}
+                  className="p-[13px] bg-white rounded-full w-fit flex items-center justify-center"
+                >
+                  <Image
+                    src="/x-filled.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className=""
+                  />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-[84px]">
@@ -81,6 +130,6 @@ function Footer() {
       </div>
     </>
   );
-}
+};
 
 export default Footer;
