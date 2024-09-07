@@ -1,3 +1,4 @@
+import { Manrope } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -84,7 +85,7 @@ const config: Config = {
             },
             fontFamily: {
                 cocon: ['Cocon', 'sans-serif'],
-                manrope: ['Manrope', 'sans-serif'],
+				manrope: ['Manrope', 'sans-serif']
             },
         },
     },
