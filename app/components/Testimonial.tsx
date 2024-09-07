@@ -6,9 +6,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/components/ui/testimonialCarousel";
 import Image from "next/image";
-import Quote from "../../public/testimonial_quote.svg"
+import Quote from "../../public/testimonial_quote.svg";
 
 type TestimonialDetails = {
   quote: string;
@@ -80,54 +80,61 @@ const testimonials: TestimonialDetails[] = [
 
 export function Testimonial() {
   return (
-    <div className="bg-white w-full py-10 flex flex-col gap-14">
+    <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative">
       <div className="flex flex-col gap-7">
         <p className="font-medium text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
           Our Success Stories
         </p>
 
-        <p className="text-[#2F2F2F] text-[50px] leading-[55px] font-medium">
-          What's your excuse now?
-        </p>
-        <p className="text-base leading-7">
-          Hear from students who have transformed their futures with the Young
-          and Skilled Initiative. Our program has helped students secure jobs,
-          launch businesses, and pursue further education with confidence.
-        </p>
+        <div className="flex ">
+          <div className="w-[70%]">
+            {" "}
+            <p className="text-[#2F2F2F] text-[50px] leading-[55px] font-medium">
+              What's your excuse now?
+            </p>
+            <p className="text-base leading-7">
+              Hear from students who have transformed their futures with the
+              Young and Skilled Initiative. Our program has helped students
+              secure jobs, launch businesses, and pursue further education with
+              confidence.
+            </p>
+          </div>
+          <div className="w-[30%] px-11 relative flex justify-center items-center">
+            <CarouselPrevious className="absolute  transform -translate-x-1/2" />
+            <CarouselNext className="absolute transform translate-x-1/2" />
+          </div>
+        </div>
       </div>
-
-      {/* Carousel Section */}
-      <Carousel className="w-full">
-        <CarouselContent className="-ml-2 md:-ml-4">
-          {testimonials.map((testimonial, index) => (
-            <CarouselItem key={index} className="basis-1/2 ">
-              <Card className="border-none   h-full">
-                <CardContent className="p-0 h-full w-[520px]">
-                  <div
-                    className="rounded-[20px] p-7 text-white h-[200px] flex flex-col justify-between "
-                    style={{ backgroundColor: testimonial.bgColor }}
-                  >
-                    <blockquote className="text-lg font-medium">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className=" flex justify-between">
-                      <Image
-                        src={testimonial.company}
-                        alt={testimonial.description}
-                        width={testimonial.companyWidth} // Use custom width
-                        height={testimonial.companyHeight} // Use custom height
-                      />
-                      <Image
-                        src={testimonial.extra}
-                        alt={testimonial.description}
-                        width={testimonial.extraWidth} // Use custom width
-                        height={testimonial.extraHeight} // Use custom height
-                      />
-                    </div>
+      <CarouselContent className="-ml-2 md:-ml-4">
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className="basis-1/2 ">
+            <Card className="border-none   h-full">
+              <CardContent className="p-0 h-full w-[520px]">
+                <div
+                  className="rounded-[20px] p-7 text-white h-[200px] flex flex-col justify-between "
+                  style={{ backgroundColor: testimonial.bgColor }}
+                >
+                  <blockquote className="text-lg font-medium">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className=" flex justify-between">
+                    <Image
+                      src={testimonial.company}
+                      alt={testimonial.description}
+                      width={testimonial.companyWidth} // Use custom width
+                      height={testimonial.companyHeight} // Use custom height
+                    />
+                    <Image
+                      src={testimonial.extra}
+                      alt={testimonial.description}
+                      width={testimonial.extraWidth} // Use custom width
+                      height={testimonial.extraHeight} // Use custom height
+                    />
                   </div>
-                  <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex flex-col justify-between">
-                   <div className=" flex gap-3">
-                   <p
+                </div>
+                <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex flex-col justify-between">
+                  <div className=" flex gap-3">
+                    <p
                       className="font-bold text-5xl text-white p-2 h-11 leading-none w-14 flex  justify-center
                       rounded-full "
                       style={{ backgroundColor: testimonial.bgColor }}
@@ -140,34 +147,32 @@ export function Testimonial() {
                       />
                     </p>{" "}
                     <div className="flex gap-7 flex-col">
-                    <p className="mt-4 text-base">{testimonial.description}</p>
-                    <div className="mt-6 flex items-center">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-20 h-20 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <p className="font-medium text-base ">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          {testimonial.position}
-                        </p>
+                      <p className="mt-4 text-base">
+                        {testimonial.description}
+                      </p>
+                      <div className="mt-6 flex items-center">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-20 h-20 rounded-full"
+                        />
+                        <div className="ml-4">
+                          <p className="font-medium text-base ">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-sm text-gray-600">
+                            {testimonial.position}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                    </div>
-                   </div>
-                 
                   </div>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+                </div>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 }
