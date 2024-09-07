@@ -100,8 +100,8 @@ export function Testimonial() {
       <Carousel className="w-full">
         <CarouselContent className="-ml-2 md:-ml-4">
           {testimonials.map((testimonial, index) => (
-            <CarouselItem key={index} className="basis-1/2 bg-none ">
-              <Card className="border-none bg-none  shadow-lg  h-full">
+            <CarouselItem key={index} className="basis-1/2 ">
+              <Card className="border-none   h-full">
                 <CardContent className="p-0 h-full w-[520px]">
                   <div
                     className="rounded-[20px] p-7 text-white h-[200px] flex flex-col justify-between "
