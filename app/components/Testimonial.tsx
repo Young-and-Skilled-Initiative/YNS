@@ -87,7 +87,7 @@ export function Testimonial() {
         </p>
 
         <div className="flex ">
-          <div className="w-[70%]">
+          <div className="w-[70%] flex flex-col gap-7">
             {" "}
             <p className="text-[#2F2F2F] text-[50px] leading-[55px] font-medium">
               What's your excuse now?
@@ -99,9 +99,9 @@ export function Testimonial() {
               confidence.
             </p>
           </div>
-          <div className="w-[30%] px-11 relative flex justify-center items-center">
-            <CarouselPrevious className="absolute  transform -translate-x-1/2" />
-            <CarouselNext className="absolute transform translate-x-1/2" />
+          <div className="w-[30%]  flex justify-end">
+            <CarouselPrevious  />
+            <CarouselNext />
           </div>
         </div>
       </div>
@@ -142,8 +142,8 @@ export function Testimonial() {
                       <Image
                         src={Quote}
                         alt={""}
-                        width={23} // Use custom width
-                        height={54} // Use custom height
+                        width={23} 
+                        height={54} 
                       />
                     </p>{" "}
                     <div className="flex gap-7 flex-col">
