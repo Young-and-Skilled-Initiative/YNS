@@ -44,9 +44,7 @@ const Network = () => {
 
         {/* Lady Image (moved up with negative margin) */}
         <div className="flex  items-end -mt-[3em] ml-[5em] relative ">
-          <div className="-mt-[3em]">
-            <Image src={Line1}/>
-          </div>
+
           <div className="flex bg-black rounded-full h-[3.25em]  py-3 pl-2 -mr-[7em] pr-5 gap-3  z-30 items-center justify-center  mb-[8em]">
             <span className="bg-orange-700 text-white rounded-full py-2 px-4 flex items-center">
               G
