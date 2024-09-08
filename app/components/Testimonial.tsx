@@ -82,17 +82,17 @@ export function Testimonial() {
   return (
     <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative">
       <div className="flex flex-col gap-7">
-        <p className="font-medium text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
+        <p className="font-medium font-manrope text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
           Our Success Stories
         </p>
 
         <div className="flex ">
           <div className="w-[70%] flex flex-col gap-7">
             {" "}
-            <p className="text-[#2F2F2F] text-[50px] leading-[55px] font-medium">
+            <p className="text-[#2F2F2F] font-cocon text-[50px] leading-[55px] font-medium">
               What's your excuse now?
             </p>
-            <p className="text-base leading-7">
+            <p className="text-base leading-7 font-manrope">
               Hear from students who have transformed their futures with the
               Young and Skilled Initiative. Our program has helped students
               secure jobs, launch businesses, and pursue further education with
@@ -114,7 +114,7 @@ export function Testimonial() {
                   className="rounded-[20px] p-7 text-white h-[200px] flex flex-col justify-between "
                   style={{ backgroundColor: testimonial.bgColor }}
                 >
-                  <blockquote className="text-lg font-medium">
+                  <blockquote className="text-lg font-medium font-cocon">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className=" flex justify-between">
@@ -135,7 +135,7 @@ export function Testimonial() {
                 <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex flex-col justify-between">
                   <div className=" flex gap-3">
                     <p
-                      className="font-bold text-5xl text-white p-2 h-11 leading-none w-14 flex  justify-center
+                      className="font-bold text-5xl text-white p-2 h-11 leading-none w-14 flex font-cocon  justify-center
                       rounded-full "
                       style={{ backgroundColor: testimonial.bgColor }}
                     >
@@ -147,7 +147,7 @@ export function Testimonial() {
                       />
                     </p>{" "}
                     <div className="flex gap-7 flex-col">
-                      <p className="mt-4 text-base">
+                      <p className="mt-4 text-base font-manrope">
                         {testimonial.description}
                       </p>
                       <div className="mt-6 flex items-center">
@@ -157,7 +157,7 @@ export function Testimonial() {
                           className="w-20 h-20 rounded-full"
                         />
                         <div className="ml-4">
-                          <p className="font-medium text-base ">
+                          <p className="font-medium text-base  ">
                             {testimonial.name}
                           </p>
                           <p className="text-sm text-gray-600">
