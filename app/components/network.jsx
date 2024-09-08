@@ -25,6 +25,7 @@ const Network = () => {
       {/* Right Side (Images) */}
       <div className="w-[50%] flex flex-col relative">
         {/* Male Image */}
+        <div className=" w-[450px] h-[341px] rounded-[14.94px] border border-dotted border-[#8E9BAE] absolute  top-[75px] left-[60px] " />
         <div className=" ml-[2em] flex">
           <div className="z-30">
             <Image src={Lady} alt="Man image" className="" />
@@ -37,16 +38,16 @@ const Network = () => {
               James Ade
             </span>
           </div>
-          <div className="z-10">
+          {/* <div className="z-10">
             <Image src={Line} className=" mt-[4.5em] -ml-[6.5em]" />
-          </div>
+          </div> */}
         </div>
 
         {/* Lady Image (moved up with negative margin) */}
         <div className="flex  items-end -mt-[3em] ml-[5em] relative ">
-          <div className="-mt-[3em]">
+          {/* <div className="-mt-[3em]">
             <Image src={Line1}/>
-          </div>
+          </div> */}
           <div className="flex bg-black rounded-full h-[3.25em]  py-3 pl-2 -mr-[7em] pr-5 gap-3  z-30 items-center justify-center  mb-[8em]">
             <span className="bg-orange-700 text-white rounded-full py-2 px-4 flex items-center">
               G
