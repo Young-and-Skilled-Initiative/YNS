@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { Play, PlayCircle, PlayCircleIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div  className="flex justify-between w-[100vw] relative px-[4em] pt-[1em] items-center ">
+    <div  className="flex flex-col justify-between w-[100vw] relative px-[4em] pt-[1em] items-center ">
       {/* text section  */}
-  <div className="flex flex-col">
+  <div className="flex flex-col gap-16">
     <div className="flex flex-col gap-16 z-[20] absolute -top-6">
      <h1 className=" font-[500px] text-[64.65px] leading-[62.11px] font-cocon"> 
     <span className="bg-six-color-gradient inline-block text-transparent bg-clip-text ">Empowering</span> students
@@ -23,8 +25,30 @@ export default function Hero() {
     <Button variant="light" className="hover:opacity-70 hover:bg-slate-600">Join the Program</Button>
      </div>
     </div>
-    <div className="absolute ">
+    <div className="relative flex flex-col gap-0">
+          <Image src="/asset/Star1.png" alt="star1" width={100} height={100} className=" absolute -right-12 -top-12"/>
       <Image  src="/asset/hero.png" width={1300} height={622} alt="homepage image"/>
+      <Image src="/asset/Star2.png" width={100} height={100} className="absolute left-20 -bottom-12" alt="star2" />
+      <Button asChild variant="light" className="absolute right-20 bottom-8">
+        <Link href="/" className="flex">
+        <div className=" flex space-x-4 justify-between items-center">
+        <div className="px-2 py-2 flex items-center  rounded-full bg-slate-200">
+      <Image src="/asset/play.png" width={18} height={18} alt="play"/>
+          </div>
+      <h1 className="text-[16px] font-thin font-helvetica leading-[16px]">
+        Our team
+      </h1>
+        </div>
+        </Link>
+      </Button>
+    </div>
+    <div className="flex flex-col md:flex-row justify-between ">
+    <h1 className="text-[16px] leading-[32px] md:font-manrope text-[#606060] font-helvetica">
+    Partnership companies worldwide to<br/> empower students
+    </h1>
+    <div className="w-[80px] h-[80px] rounded-[24px] bg-[#114F3C] flex items-center justify-center -top-8">
+    <Image src="/asset/smile.png" width={39} height={39} alt="smaleImage" />
+    </div>
     </div>
     </div>
     </div>
