@@ -2,14 +2,13 @@
 import Lady from "@/public/lady.svg";
 import Image from "next/image";
 import Man from "@/public/man.svg";
-import Line1 from "@/public/Young Skilled Initiative (1).svg";
-import Line from "@/public/Young Skilled Initiative.svg";
+
 
 const Network = () => {
   return (
-    <div className="flex justify-between w-[100vw] px-[4em] py-[2em] items-center bg-gray-100">
+    <div className="flex justify-between w-[100vw] px-[5em] py-[2em] gap-[3em] items-center bg-gray-100">
       {/* Left Side (Text and Button) */}
-      <div className="flex flex-col gap-[2em] w-[50%]">
+      <div className="flex flex-col gap-[2em] pl-[2em] w-[50%]">
         <h1 className="font-cocon font-bold text-[50px] leading-[48.64px]">
           Go for Community and Networking
         </h1>
