@@ -80,13 +80,13 @@ const testimonials: TestimonialDetails[] = [
 export function Testimonial() {
   return (
     <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative">
-      <div className="flex flex-col gap-7">
+      <div className="flex flex-col gap-7 ">
         <p className="font-medium text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
           Our Success Stories
         </p>
 
-        <div className="flex ">
-          <div className="w-[70%] flex flex-col gap-7">
+        <div className="flex flex-col md:flex-row justify-center gap-3 items-center">
+          <div className="md:w-[70%] flex flex-col gap-7  ">
             {" "}
             <p className="text-[#2F2F2F] text-[50px] leading-[55px] font-medium">
               What's your excuse now?
@@ -98,7 +98,7 @@ export function Testimonial() {
               confidence.
             </p>
           </div>
-          <div className="w-[30%]  flex justify-end">
+          <div className="md:w-[30%]  flex justify-end">
             <CarouselPrevious />
             <CarouselNext />
           </div>
@@ -108,7 +108,7 @@ export function Testimonial() {
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={index} className="basis-auto ">
             <Card className="border-none rounded-none shadow-none  h-full">
-              <CardContent className="p-0 h-full w-[502px]">
+              <CardContent className="p-0 h-full w-full md:w-[502px]">
                 <div
                   className="rounded-[20px] p-7 text-white flex flex-col h-48 justify-between "
                   style={{ backgroundColor: testimonial.bgColor }}
