@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/testimonialCarousel";
 import Image from "next/image";
-import Quote from "../../public/testimonial_quote.svg";
 
 type TestimonialDetails = {
   quote: string;
@@ -30,7 +29,7 @@ const testimonials: TestimonialDetails[] = [
   {
     quote: "Platform's flexibility allowed me to learn at my own pace",
     company: "/testimonial_young_and_skilled.svg",
-    quoteImage: "/testimonial_ellipse.svg",
+    quoteImage: "/testimonial_quote_green.svg",
     description:
       "Young and Skilled Initiative gave me the skills and confidence I needed to land my dream job. The platform's flexibility allowed me to learn at my own pace, and the mentorship was invaluable.",
     name: "Maria Obioma",
@@ -46,7 +45,7 @@ const testimonials: TestimonialDetails[] = [
   {
     quote: "I've gained the confidence to lead my school's environmental club",
     company: "/testimonial_google.svg",
-    quoteImage: "/testimonial_ellipse.svg",
+    quoteImage: "/testimonial_quote_mint.svg",
     description:
       "Thanks to the mentorship and support, I've gained the confidence to lead my school's environmental club and work on sustainable projects.",
     name: "David Oluah",
@@ -62,7 +61,7 @@ const testimonials: TestimonialDetails[] = [
   {
     quote: "Young and Skilled Initiative opened my eyes to new possibilities",
     company: "/testimonial_microsoft.svg",
-    quoteImage: "/testimonial_ellipse.svg",
+    quoteImage: "/testimonial_quote_red.svg",
     description:
       "Young and Skilled Initiative opened my eyes to new possibilities. The skills I learned here have helped me launch my own app!",
     name: "Sarah Macklin",
@@ -100,18 +99,18 @@ export function Testimonial() {
             </p>
           </div>
           <div className="w-[30%]  flex justify-end">
-            <CarouselPrevious  />
+            <CarouselPrevious />
             <CarouselNext />
           </div>
         </div>
       </div>
       <CarouselContent className="-ml-2 md:-ml-4">
         {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index} className="basis-1/2 ">
-            <Card className="border-none   h-full">
-              <CardContent className="p-0 h-full w-[520px]">
+          <CarouselItem key={index} className="basis-auto ">
+            <Card className="border-none rounded-none shadow-none  h-full">
+              <CardContent className="p-0 h-full w-[502px]">
                 <div
-                  className="rounded-[20px] p-7 text-white h-[200px] flex flex-col justify-between "
+                  className="rounded-[20px] p-7 text-white flex flex-col h-48 justify-between "
                   style={{ backgroundColor: testimonial.bgColor }}
                 >
                   <blockquote className="text-lg font-medium">
@@ -132,38 +131,29 @@ export function Testimonial() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex flex-col justify-between">
-                  <div className=" flex gap-3">
-                    <p
-                      className="font-bold text-5xl text-white p-2 h-11 leading-none w-14 flex  justify-center
-                      rounded-full "
-                      style={{ backgroundColor: testimonial.bgColor }}
-                    >
-                      <Image
-                        src={Quote}
-                        alt={""}
-                        width={23} 
-                        height={54} 
+                <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex gap-3 justify-between items-start">
+                  <Image
+                    src={testimonial.quoteImage}
+                    alt={""}
+                    width={60}
+                    height={100}
+                  />
+
+                  <div className="flex gap-7 flex-col h-full justify-between">
+                    <p className="mt-4 text-base">{testimonial.description}</p>
+                    <div className=" flex items-center">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-20 h-20 rounded-full"
                       />
-                    </p>{" "}
-                    <div className="flex gap-7 flex-col">
-                      <p className="mt-4 text-base">
-                        {testimonial.description}
-                      </p>
-                      <div className="mt-6 flex items-center">
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-20 h-20 rounded-full"
-                        />
-                        <div className="ml-4">
-                          <p className="font-medium text-base ">
-                            {testimonial.name}
-                          </p>
-                          <p className="text-sm text-gray-600">
-                            {testimonial.position}
-                          </p>
-                        </div>
+                      <div className="ml-4">
+                        <p className="font-medium text-base ">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {testimonial.position}
+                        </p>
                       </div>
                     </div>
                   </div>
