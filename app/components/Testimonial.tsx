@@ -79,7 +79,7 @@ const testimonials: TestimonialDetails[] = [
 
 export function Testimonial() {
   return (
-    <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative">
+    <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative py-12">
       <div className="flex flex-col gap-7 ">
         <p className="font-medium text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
           Our Success Stories
