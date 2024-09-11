@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -79,19 +80,21 @@ const testimonials: TestimonialDetails[] = [
 
 export function Testimonial() {
   return (
-    <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative py-12">
+    <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative">
+
       <div className="flex flex-col gap-7 ">
-        <p className="font-medium text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
+        <p className="font-medium text-base font-manrope leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
+
           Our Success Stories
         </p>
 
         <div className="flex flex-col md:flex-row justify-center gap-3 items-center">
           <div className="md:w-[70%] flex flex-col gap-7  ">
             {" "}
-            <p className="text-[#2F2F2F] text-[50px] leading-[55px] font-medium">
+            <p className="text-[#2F2F2F] font-cocon text-[50px] leading-[55px] font-medium">
               What's your excuse now?
             </p>
-            <p className="text-base leading-7">
+            <p className="text-base leading-7 font-manrope">
               Hear from students who have transformed their futures with the
               Young and Skilled Initiative. Our program has helped students
               secure jobs, launch businesses, and pursue further education with
@@ -113,7 +116,7 @@ export function Testimonial() {
                   className="rounded-[20px] p-7 text-white flex flex-col h-48 justify-between "
                   style={{ backgroundColor: testimonial.bgColor }}
                 >
-                  <blockquote className="text-lg font-medium">
+                  <blockquote className="text-lg font-medium font-cocon">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className=" flex justify-between">
@@ -131,6 +134,7 @@ export function Testimonial() {
                     />
                   </div>
                 </div>
+
                 <div className="bg-[#F6F6F6] rounded-[20px] py-7 px-5 h-[284px] flex gap-3 justify-between items-start">
                   <Image
                     src={testimonial.quoteImage}
@@ -154,6 +158,7 @@ export function Testimonial() {
                         <p className="text-sm text-gray-600">
                           {testimonial.position}
                         </p>
+
                       </div>
                     </div>
                   </div>
