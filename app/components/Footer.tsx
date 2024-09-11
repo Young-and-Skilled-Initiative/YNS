@@ -120,9 +120,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-[84px]">
+          <div className="flex flex-col gap-[84px] items-center">
             <img src="/images/watermark.svg" alt="Watermark" />
-            <p className="text-xl font-normal">
+            <p className="text-xl font-normal text-gray-400">
               Copyright © 2024 Young & Skilled Initiative
             </p>
           </div>
