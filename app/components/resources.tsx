@@ -15,10 +15,10 @@ const Resources = () => {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col cursor-pointer">
         <h1 className="bg-gray-200 text-gray-500 p-[0.5em] text-center w-[8em] rounded-full mx-auto mb-4">Resources</h1>
       <h1 className="font-cocon font-bold text-[40px] text-center">
-        Unlock your potential and embark on a journey of{" "}
+        Unlock your potential and embark on a journey of
       </h1>
       <h1 className="font-cocon font-bold text-[40px] text-center mb-[1em]">growth</h1>
       <p className="font-manrope  text-gray-500 text-[16px] text-center ">
