@@ -3,7 +3,7 @@ import img1 from "@/public/images/about-us-img1.png";
 import img2 from "@/public/images/about-us-img2.png";
 import { ArrowUpRight, MoveUpRight } from "lucide-react";
 import Image from "next/image";
-import badge from "@/public/images/logo-sticker-2.png";
+import badge from "@/public/Logosticker.svg";
 const AboutUs = () => {
   return (
     <>

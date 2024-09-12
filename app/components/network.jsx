@@ -6,7 +6,7 @@ import Man from "@/public/man.svg";
 
 const Network = () => {
   return (
-    <div className="flex justify-between w-[100vw] px-[5em] py-[2em] gap-[3em] items-center bg-gray-100">
+    <div className="flex justify-between w-[100vw] px-[5em]  pt-[4em] pb-[2em] gap-[3em] items-center bg-gray-100">
       {/* Left Side (Text and Button) */}
       <div className="flex flex-col gap-[2em] pl-[2em] w-[50%]">
         <h1 className="font-cocon font-bold text-[50px] w-[12em] leading-[48.64px]">
