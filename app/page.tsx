@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Resources from "./components/resources";
 
 import Hero from "./components/hero/hero";
+import NewsInsightsAndBlog from "./components/NewsInsightsAndBlog";
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
         <Network />
         <FAQ />
         <Testimonial />
+        <NewsInsightsAndBlog/>
       </main>
       <Footer />
     </>
