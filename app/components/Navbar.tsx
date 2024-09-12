@@ -15,23 +15,23 @@ const navlinks = [
   {
     route: "About us",
     link: "/",
-    id: "rent",
+    id: "about",
   },
   {
     route: "Resources",
     link: "/",
-    id: "short let",
+    id: "resources",
     icon: "images/arrow-up.svg",
   },
   {
     route: "Contact us",
     link: "/",
-    id: "short let",
+    id: "contact-us",
   },
   {
     route: "Blog",
     link: "/",
-    id: "short let",
+    id: "Blog",
   },
 ];
 
@@ -45,16 +45,15 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   //   console.log(currentPath);
   return (
     <>
-      <div className="w-full bg-white px-28 flex justify-between py-12">
+      <div className="w-full bg-white xl:px-28 flex justify-between gap-6 py-12">
         <img src="images/logo-main.svg" alt="" />
         <div className="flex items-center justify-between gap-10 text-black">
           {navlinks.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className={`text-base font-semibold transition-all p-[10px] duration-200 text-ash hover:text-black
+              className={`text-base font-semibold transition-all p-[10px] text-nowrap duration-200 text-ash hover:text-black
                  `}
-              //  ${currentPath === item.id ? "text-black" : "text-ash"}
             >
               <span className="flex gap-2">
                 {item.route}
@@ -65,11 +64,16 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             </Link>
           ))}
         </div>
-        <div className="flex">
+        <div className="flex items-center">
           <Button size={"lg"} className="rounded-3xl bg-dark-green">
             Get Started
           </Button>
-          <Button size={"icon"} className="rounded-full bg-dark-green"></Button>
+          <Button
+            size={"icon"}
+            className="rounded-full bg-dark-green ml-[-6px] "
+          >
+            <img src="/arrow.svg" alt="" className="p-2" />
+          </Button>
         </div>
       </div>
     </>
