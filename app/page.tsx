@@ -8,6 +8,7 @@ import Resources from "./components/resources";
 import Newsletter from "./components/newsletter/newsletter";
 
 import Hero from "./components/hero/hero";
+import NewsInsightsAndBlog from "./components/NewsInsightsAndBlog";
 
 export default function Home() {
   return (
