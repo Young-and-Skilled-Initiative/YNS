@@ -5,22 +5,19 @@ import Network from "@/app/components/network";
 import { Testimonial } from "./components/Testimonial";
 import Footer from "./components/Footer";
 import Resources from "./components/resources";
-
+import AboutUs from "./components/about/about-us.component";
 import Hero from "./components/hero/hero";
-
-
 
 export default function Home() {
   return (
-    < >
+    <>
       <Navbar />
 
-    
-        <Hero/>
+      <Hero />
 
       <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
-
-        <Resources/>
+        <AboutUs />
+        <Resources />
         <Network />
         <FAQ />
         <Testimonial />
