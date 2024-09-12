@@ -15,13 +15,14 @@ export default function Home() {
     <>
       <Navbar />
 
+      <Hero />
+
       <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
-        <Hero />
         <Resources />
         <Network />
         <FAQ />
         <Testimonial />
-        <Newsletter />
+        <NewsInsightsAndBlog />
       </main>
       <Footer />
     </>
