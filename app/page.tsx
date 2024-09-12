@@ -5,6 +5,7 @@ import Network from "@/app/components/network";
 import { Testimonial } from "./components/Testimonial";
 import Footer from "./components/Footer";
 import Resources from "./components/resources";
+import Newsletter from "./components/newsletter/newsletter";
 
 import Hero from "./components/hero/hero";
 import NewsInsightsAndBlog from "./components/NewsInsightsAndBlog";
