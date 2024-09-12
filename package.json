@@ -17,6 +17,7 @@
     "embla-carousel-react": "^8.2.1",
     "gsap": "^3.12.5",
     "lucide-react": "^0.438.0",
+    "material-icons": "^1.13.12",
     "next": "14.2.7",
     "postcss-loader": "^8.1.1",
     "react": "^18",
