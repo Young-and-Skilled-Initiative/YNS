@@ -5,21 +5,26 @@ import Network from "@/app/components/network";
 import { Testimonial } from "./components/Testimonial";
 import Footer from "./components/Footer";
 import Resources from "./components/resources";
+
 import Hero from "./components/hero/hero";
+
 
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <div>
+    <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <Hero/>
+
+      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
+
         <Resources/>
         <Network />
         <FAQ />
         <Testimonial />
       </main>
       <Footer />
-    </>
+    <div/>
   );
 }
