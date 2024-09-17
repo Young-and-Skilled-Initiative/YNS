@@ -42,7 +42,7 @@ export default function Hero() {
         </Link>
       </Button>
     </div>
-    <div className="flex flex-col md:flex-row justify-between ">
+    <div className="flex flex-col md:flex-row justify-between">
     <h1 className="text-[16px] leading-[32px] md:font-manrope text-[#606060] font-helvetica">
     Partnership companies worldwide to<br/> empower students
     </h1>
