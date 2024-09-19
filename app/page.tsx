@@ -23,6 +23,7 @@ export default function Home() {
         <Network />
         <FAQ />
         <Testimonial />
+        <Newsletter/>
         <NewsInsightsAndBlog />
       </main>
       <Footer />
