@@ -45,9 +45,9 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   //   console.log(currentPath);
   return (
     <>
-      <div className="w-full bg-white xl:px-28 flex justify-between gap-6 py-12">
+      <div className="w-full bg-white xl:px-28 px-4 flex justify-between gap-6 py-12">
         <img src="images/logo-main.svg" alt="" />
-        <div className="flex items-center justify-between gap-10 text-black">
+        <div className="flex items-center justify-between gap-2 lg:gap-10 text-black">
           {navlinks.map((item, index) => (
             <Link
               key={index}

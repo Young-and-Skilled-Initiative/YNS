@@ -5,14 +5,14 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="p-[3em] text-white">
-      <div className="px-[45px] py-[94px] bg-dark-green w-full rounded-[20px]">
+      <div className="lg:px-[45px] px-6 py-[94px] bg-dark-green w-full rounded-[20px]">
         <div className="flex flex-col gap-[125px] w-full">
           <div className="flex justify-between w-full h-full">
             <div className="flex flex-col justify-between">
               <img src="images/Logo.svg" alt="Logo" />
               <img src="images/logo-sticker.svg" alt="logo sticker" />
             </div>
-            <div className="flex flex-col gap-[30px] text-xl">
+            <div className="flex flex-col gap-[30px] text-lg xl:text-lg lg:text-xl">
               <span className="text-lighter-yellow">Company</span>
               <ul className="flex flex-col gap-2">
                 <li>
@@ -32,7 +32,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-[30px] text-xl">
+            <div className="flex flex-col gap-[30px] text-lg xl:text-xl">
               <span className="text-lighter-yellow">Resources</span>
               <ul className="flex flex-col gap-2">
                 <li>
@@ -52,7 +52,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-[30px] text-xl">
+            <div className="flex flex-col gap-[30px] text-lg xl:text-xl">
               <span className="text-lighter-yellow">Legal</span>
               <ul className="flex flex-col gap-2">
                 <li>
@@ -66,7 +66,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-[30px] text-xl">
+            <div className="flex flex-col gap-[30px] text-lg xl:text-xl">
               <span className="text-lighter-yellow">Socials</span>
               <div className="flex flex-col gap-2.5">
                 <Link
