@@ -20,8 +20,8 @@ export default function Home() {
       <Hero />
 
       <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
-        <AboutUs/>
-        <PersonalizedLearning/>
+        <AboutUs />
+        <PersonalizedLearning />
         <Resources />
         <Network />
         <FAQ />
