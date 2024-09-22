@@ -68,6 +68,20 @@ export default function Hero() {
             </Button>
           </div>
         </div>
+
+        </Link>
+      </Button>
+    </div>
+    <div className="flex flex-col md:flex-row justify-between">
+    <h1 className="text-[16px] leading-[32px] md:font-manrope text-[#606060] font-helvetica">
+    Partnership companies worldwide to<br/> empower students
+    </h1>
+    <div className="w-[80px] h-[80px] rounded-[24px] bg-[#114F3C] flex items-center justify-center -top-8">
+    <Image src="/images/smile.png" width={39} height={39} alt="smaleImage" />
+    </div>
+    </div>
+    </div>
+
         <div className="relative flex flex-col gap-0">
           <Image
             src="/images/Star1.svg"
@@ -112,6 +126,7 @@ export default function Hero() {
           </Button>
         </div>
       </div>
+
     </div>
   );
 }
