@@ -98,6 +98,8 @@ const config: Config = {
       colors: {
         "dark-green": "#114F3C",
         "lighter-yellow": "#F6DEAE",
+        "dark-orange": "#EF4C0D",
+        "yellow-1": "#F2A300",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
