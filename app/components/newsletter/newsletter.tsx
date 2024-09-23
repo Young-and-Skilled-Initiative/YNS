@@ -10,7 +10,7 @@ const newsletter = () => {
     <div className="newsletter flex flex-col    rounded-3xl p-[4em] justify-between ">
       <div className=" flex flex-col pt-[3em] ">
 
-        <h1 className="font-cocon text-white text-[50px]">Join the Movement</h1>
+        <h1 className="font-cocon text-white text-[50px]">Join the Movement Now</h1>
         <p className="font-manrope text-white ">Are you ready to take the next step in your learning journey? Sign up  </p>
         <p className="font-manrope text-white ">now and start exploring a world of opportunities with Young and</p>
         <p className="font-manrope text-white font-th">Skilled Initiative. Your future begins here!</p>
