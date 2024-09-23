@@ -8,7 +8,7 @@ import Image from "next/image";
 // Define your nav links
 const navlinks = [
   { route: "Home", link: "", id: "home" },
-  { route: "About us", link: "/about", id: "about" },
+  { route: "About us", link: "/aboutus", id: "about" },
   { route: "Resources", link: "/resources", id: "resources" },
   { route: "Contact us", link: "/contact", id: "contact-us" },
   { route: "Blog", link: "/blog", id: "blog" },

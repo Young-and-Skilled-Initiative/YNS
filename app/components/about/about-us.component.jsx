@@ -94,3 +94,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+// git config pull rebase --false

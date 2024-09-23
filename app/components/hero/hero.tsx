@@ -2,11 +2,11 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
+import { Play } from "lucide-react";
 
 export default function Hero() {
   return (
-
-    <div className="flex flex-col justify-between w-[100vw] relative px-[4em] pt-[1em] items-center mt-6 ">
+    <div className="flex flex-col justify-between w-full relative px-[4em] pt-[1em] items-center mt-6 ">
       {/* text section  */}
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-8 z-[20] max-w-screen-md  absolute -top-6">
@@ -160,6 +160,9 @@ export default function Hero() {
         </div>
       </div>
 
+    </div>
+    </div>
+    </div>
     </div>
   );
 }
