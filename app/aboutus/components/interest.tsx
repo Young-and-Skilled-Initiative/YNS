@@ -5,14 +5,14 @@ import Circle from "../../../public/circles.svg"
 
 const interest = () => {
   return (
-    <div className=' flex py-[4em] px-[3em] bg-[#F6DEAE] '>
-        <div className='mx-auto flex gap-[5em]'>
+    <div className=' flex  py-[4em] px-[3em] bg-[#F6DEAE] '>
+        <div className=' mx-auto flex gap-[6em]'>
         <div className=' bg-[#114F3C] flex flex-col font-cocon text-white  p-[4em] justify-between  w-[24em] rounded-3xl'>
             <h1 className='text-[40px] px-3'>what we do?</h1>
             <Image src={Arrow} alt="" />
 
         </div>
-        <div className='flex justify-between bg-[#98BC6D] gap-[2em] rounded-[2.5em]'>
+        <div className='flex justify-between bg-[#98BC6D] gap-[5em] rounded-[2.5em]'>
             <div className='w-[31em] pl-[3em] py-[3em] flex flex-col gap-[1em] justify-around'>
                 <h1 className='font-cocon  font-[500] text-[50px] text-[#114f3c]'>
                 Offer a wide range of courses:
