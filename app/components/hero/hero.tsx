@@ -48,7 +48,7 @@ export default function Hero() {
             </span>{" "}
             to Excel in the Dynamic World{" "}
           </h1>
-          <p className="font-thin text-[20px] leading-[26.19px] font-helvetica text-[#1A1A1A] pr-[10px]">
+          <p className="font-thin text-wrap text-[20px] leading-[26.19px] font-helvetica text-[#1A1A1A] pr-[10px] w-[26em]">
             Unlock your potential with learning programs designed for the
             leaders of tomorrow.
           </p>
