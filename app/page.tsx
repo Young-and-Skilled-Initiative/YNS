@@ -15,11 +15,11 @@ import PersonalizedLearning from "./components/personalizedLerning/personalizedL
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Hero />
 
-      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
+      {/* <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
         <AboutUs />
         <PersonalizedLearning />
         <Resources />
@@ -29,7 +29,7 @@ export default function Home() {
         <Newsletter/>
         <NewsInsightsAndBlog />
       </main>
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
