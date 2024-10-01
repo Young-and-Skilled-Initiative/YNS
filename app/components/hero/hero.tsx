@@ -1,14 +1,26 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+<<<<<<< HEAD
+=======
+import Mobilehero from "@/public/hero.svg";
+import Mobilegrp from "@/public/mobilegrp.svg";
+import Mobiletxt from "@/public/mobiletxt.svg";
+>>>>>>> 9ffb03376f66b25150570f5a44bd4b9e97d1f53f
 import { Play } from "lucide-react"; // Importing Play from lucide-react
 
 export default function Hero() {
   return (
+<<<<<<< HEAD
     <div className="flex flex-col justify-between w-[100vw] relative px-[4em] pt-[1em] items-center mt-6">
       {/* text section */}
      
       <div className="flex flex-col gap-16">
+=======
+    <div className="flex flex-col justify-between w-[100vw] relative md:px-[4em] pt-[1em] items-center mt-6">
+      {/* text section */}
+      <div className=" hidden md:flex md:flex-col gap-16">
+>>>>>>> 9ffb03376f66b25150570f5a44bd4b9e97d1f53f
         <div className="flex flex-col gap-8 z-[20] max-w-screen-md absolute -top-6">
           <h1 className="relative w-fit tracking-tight text-balance -mt-4 font-cocon font-[400px] !leading-tight text-black text-5xl md:text-[74.65px] lg:text-7xl">
             <span className="bg-six-color-gradient text-transparent bg-clip-text">
@@ -112,6 +124,26 @@ export default function Hero() {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      {/* mobile responsive screen */}
+      <div className="flex flex-col ">
+        <div className="flex">
+          <div className="flex flex-col -mr-[9em] w-[em]">
+            <h1 className="font-cocon text-black text-[23px] ">Empowering</h1>
+            <h1 className="font-cocon text-black text-[23px] ">Students </h1>
+            <h1 className="font-cocon text-black text-[23px] ">to excel in</h1>
+            <h1 className="font-cocon text-black text-[23px] ">the dynamic</h1>
+            <h1 className="font-cocon text-black text-[23px] ">world</h1>
+          </div>
+          <div className="w-[100%] mt-[em]">
+            <Image src={Mobilehero} alt="hero" />
+          </div>
+        </div>
+        {/* for the buttons */}
+        <div></div>
+      </div>
+>>>>>>> 9ffb03376f66b25150570f5a44bd4b9e97d1f53f
     </div>
   );
 }
