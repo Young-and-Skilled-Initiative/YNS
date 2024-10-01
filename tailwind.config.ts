@@ -14,7 +14,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        'six-color-gradient' : "linear-gradient(to right, #EF4C0D, #1A1A1A, #114F3C, #F2A300, #98BC6D, #F6DEAE)",
+        "six-color-gradient":
+          "linear-gradient(to right, #EF4C0D, #1A1A1A, #114F3C, #F2A300, #98BC6D, #F6DEAE)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -90,15 +91,11 @@ const config: Config = {
         cocon: ["Cocon", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       colors: {
         "dark-green": "#114F3C",
         "lighter-yellow": "#F6DEAE",
         "dark-orange": "#EF4C0D",
+        yellow: "#F2A300",
         "yellow-1": "#F2A300",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
