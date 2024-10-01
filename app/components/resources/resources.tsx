@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Bento1 from "@/public/Bento 1.svg";
+import Bento1 from "@/public/bento1.svg";
 import Bento2 from "@/public/Bento 2.svg";
 import Bento3 from "@/public/Bento 3.svg";
-import Bento4 from "@/public/Bento 4.svg";
+import Bento4 from "@/public/bento4.svg";
 import Variant1 from "@/public/variant1.svg";
 import Variant2 from "@/public/variant2.svg";
 import Variant3 from "@/public/variant3.svg";
