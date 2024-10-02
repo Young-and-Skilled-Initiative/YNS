@@ -15,7 +15,7 @@ const page: React.FC = () => {
       <Values />
       <Interest />
       <div className="px-5 md:px-9 lg:px-[2.5rem]">
-        {/* <WhoIsIntrested /> */}
+        <WhoIsIntrested />
         <TeamMembers />
         <Footer />
       </div>
