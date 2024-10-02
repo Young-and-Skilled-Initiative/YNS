@@ -18,7 +18,7 @@ const WhoIsIntrested = () => {
                 <h1 className='font-cocon text-[30px] md:text-[40px] '>Who we are interested in?</h1>
                 <p className='font-manrope leading-[32px] text-[16px] font-normal'>We're looking for curious, motivated individuals who are passionate about learning and growth. If you're interested in</p>
             </div>
-            <div className='flex flex-col justify-between md:flex-row gap-1'>
+            <div className='flex flex-col justify-between items-center md:flex-row gap-1'>
                 {
                     IntrestedData.map((item, i) => (
                     <div key={i} className={cn(`w-[400px] h-[377px] relative  rounded-[10px]`, i === 0 ? "bg-[#74bc6dfa]" : " bg-[#114F3C]", i === 2 ? "bg-[#EF4C0D]" : "bg-[#98BC6D]")}>
