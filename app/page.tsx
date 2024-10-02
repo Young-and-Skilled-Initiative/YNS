@@ -18,7 +18,6 @@ export default function Home() {
       <Navbar />
 
       <Hero />
-
       <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
         <AboutUs />
         <PersonalizedLearning />
@@ -28,8 +27,8 @@ export default function Home() {
         <Testimonial />
         <Newsletter/>
         <NewsInsightsAndBlog />
-      </main>
-      <Footer />
+      </main> 
+     <Footer />
     </>
   );
 }
