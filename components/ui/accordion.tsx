@@ -45,7 +45,7 @@ const AccordionTrigger = React.forwardRef<
         <Image
           alt="dropdown-icon"
           className={cn(
-            "h-[26.48px] w-[26.48px] shrink-0 transition-transform duration-500",
+            " h-[23px] w-[23px] lg:h-[26.48px] lg:w-[26.48px] shrink-0 transition-transform duration-500",
             isOpen ? "rotate-180" : "rotate-0" // Rotate image based on state
           )}
           width={49.68}

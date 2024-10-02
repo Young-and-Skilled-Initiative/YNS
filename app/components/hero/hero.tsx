@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Play } from "lucide-react"; // Importing Play from lucide-react
+import { Play } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-between w-[100vw] relative px-[4em] pt-[1em] items-center mt-6">
-      {/* text section */}
+    <div className="flex flex-col justify-between w-full relative px-[4em] pt-[1em] items-center mt-6 ">
+      {/* text section  */}
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-8 z-[20] max-w-screen-md absolute -top-6">
           <h1 className="relative w-fit tracking-tight text-balance -mt-4 font-cocon font-[400px] !leading-tight text-black text-5xl md:text-[74.65px] lg:text-7xl">
@@ -112,6 +112,7 @@ export default function Hero() {
         </div>
       </div>
     </div>
+
   );
 }
 
