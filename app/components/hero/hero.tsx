@@ -115,22 +115,7 @@ export default function Hero() {
         </div>
       </div>
       {/* mobile responsive screen */}
-      <div className="flex flex-col ">
-        <div className="flex">
-          <div className="flex flex-col -mr-[9em] w-[em]">
-            <h1 className="font-cocon text-black text-[23px] ">Empowering</h1>
-            <h1 className="font-cocon text-black text-[23px] ">Students </h1>
-            <h1 className="font-cocon text-black text-[23px] ">to excel in</h1>
-            <h1 className="font-cocon text-black text-[23px] ">the dynamic</h1>
-            <h1 className="font-cocon text-black text-[23px] ">world</h1>
-          </div>
-          <div className="w-[100%] mt-[em]">
-            <Image src={Mobilehero} alt="hero" />
-          </div>
-        </div>
-        {/* for the buttons */}
-        <div></div>
-      </div>
+
     </div>
   );
 }
