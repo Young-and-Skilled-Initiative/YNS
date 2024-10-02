@@ -41,3 +41,37 @@ export const teamMembers = [
     linkedin: "https://www.linkedin.com/",
   },
 ];
+
+// data.ts
+import { CoreValue } from "@/types";
+
+export const coreValues: CoreValue[] = [
+  {
+    id: 1,
+    title: "Accessible Education",
+    backgroundColor: "bg-dark-green",
+    sticker: "/Logo Sticker Curved Orange (1).svg",
+    padding: "py-2.5",
+  },
+  {
+    id: 2,
+    title: "Innovation",
+    backgroundColor: "bg-orange-500",
+    sticker: "/Logo Sticker Curved Orange (2).svg",
+    padding: "py-7",
+  },
+  {
+    id: 3,
+    title: "Nurturing Potential",
+    backgroundColor: "bg-[#F2A300]",
+    sticker: "/Logo Sticker Curved Orange (3).svg",
+    padding: "py-2.5",
+  },
+  {
+    id: 4,
+    title: "Excellence",
+    backgroundColor: "bg-black",
+    sticker: "/Logo Sticker Curved Orange (4).svg",
+    padding: "py-7",
+  },
+];
