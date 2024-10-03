@@ -6,11 +6,11 @@ import Mobilegrp from "@/public/mobilegrp.svg";
 import Mobiletxt from "@/public/mobiletxt.svg";
 import { Play } from "lucide-react"; // Importing Play from lucide-react
 
+
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-between w-[100vw] relative px-[4em] pt-[1em] items-center mt-6">
-      {/* text section */}
-     
+    <div className="flex flex-col justify-between w-full relative px-[4em] pt-[1em] items-center mt-6 ">
+      {/* text section  */}
       <div className="flex flex-col gap-16">
     <div className="flex flex-col justify-between w-[100vw] relative md:px-[4em] pt-[1em] items-center mt-6">
       {/* text section */}
@@ -57,7 +57,7 @@ export default function Hero() {
             </span>{" "}
             to Excel in the Dynamic World{" "}
           </h1>
-          <p className="font-thin text-wrap text-[20px] leading-[26.19px] font-helvetica text-[#1A1A1A] pr-[10px] w-[26em]">
+          <p className="font-thin text-[20px] leading-[26.19px] font-helvetica text-[#1A1A1A] pr-[10px]">
             Unlock your potential with learning programs designed for the
             leaders of tomorrow.
           </p>
@@ -140,5 +140,7 @@ export default function Hero() {
       </div> 
       </div>
     </div>
+
   );
 }
+

@@ -36,17 +36,7 @@ const WhoIsIntrested = () => {
                     <Image src="/images/inStar3.svg" width={76} height={76} alt="star image" className='absolute right-4  bottom-14'/>
                 </div>
                 </div>
-                {/* {
-                    IntrestedData.map((item, i) => (
-                    <div key={i} className={cn(`w-[400px] h-[377px] relative  rounded-[10px]`, i === 0 ? "bg-[#74bc6dfa]" : " bg-[#114F3C]", i === 2 ? "bg-[#EF4C0D]" : "bg-[#98BC6D]")}>
-                        <div className='px-8 py-10 flex flex-col gap-3'>
-                            <h1 className='font-bold text-[40px] leading-[44px] font-cocon text-white'>{item.title}</h1>
-                            <p className='text-[16px] text-white  font-normal leading-[32px] font-manrope'>{item.text}</p>
-                            <Image src={item.image} width={76} height={76} alt="star image" className='absolute right-4 bottom-16'/>
-                        </div>
-                    </div>
-                    ))
-                } */}
+              
             </div>
         </div>
     </div>
