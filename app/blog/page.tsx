@@ -4,12 +4,14 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/newsletter/newsletter";
 
 import BlogCardList from "@/components/BlogCardList";
+import NewsAndInsightsBlogHero from "./components/NewsAndInsightsBlogHero";
 
 const page = () => {
   return (
     <div>
       <Navbar />
-      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
+      <NewsAndInsightsBlogHero/>
+      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24 ">
         <BlogCardList/>
         <Newsletter />
       </main>
