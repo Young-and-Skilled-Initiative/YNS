@@ -10,20 +10,22 @@ const NewsAndInsightsBlogHero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="bg-green-900 text-white py-12 px-4 relative"
+      className="bg-green-900  text-white py-24 relative"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="flex flex-col gap-12 text-left">
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+       <div className="flex flex-col gap-4 ">
+       <h1 className="text-7xl  font-medium ">
           News Insights & <span className="text-gradient">Blog</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-gray-300 mb-8">
+        <p className="text-base ">
           Latest community tips for you. Dive into our latest posts, explore
-          various learning categories, and stay informed about the best
+          various learning categories, and stay informed <br /> about the best
           practices in education.
         </p>
+       </div>
 
         {/* Category Buttons */}
         <div className="flex justify-center space-x-4">
@@ -33,8 +35,8 @@ const NewsAndInsightsBlogHero = () => {
               className={`${
                 index === 0
                   ? "bg-white text-black"
-                  : "bg-gray-700 text-gray-300"
-              } py-2 px-4 rounded-[2.75rem] hover:bg-white hover:text-black transition`}
+                  : "bg-gray-700 text-white"
+              } py-4 backdrop-blur-4 px-10 rounded-[2.75rem] hover:bg-white hover:text-black transition`}
             >
               {category}
             </button>
