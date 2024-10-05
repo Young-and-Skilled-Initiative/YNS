@@ -94,4 +94,40 @@ export const blogCards: BlogCardData[] = [
     date: "August 23, 2024",
     image: "/news_and_blog_3.svg", // Example, replace with actual image path
   },
+  {
+    category: ["Company", "Courses"],
+    title: "Preparing for College: A Comprehensive Guide",
+    date: "August 23, 2024",
+    image: "/news_and_blog_4.svg", // Example, replace with actual image path
+  },
+  {
+    category: ["Company", "Courses"],
+    title: "The Power of Mentorship: How to Find and Benefit from a Mentor",
+    date: "August 23, 2024",
+    image: "/news_and_blog_5.svg", // Example, replace with actual image path
+  },
+  {
+    category: ["Company", "Courses"],
+    title: "Financial Literacy for Students: Building a Strong Foundation",
+    date: "August 23, 2024",
+    image: "/news_and_blog_6.svg", // Example, replace with actual image path
+  },
+  {
+    category: ["Company", "Courses"],
+    title: "The Role of Soft Skills in Career Success",
+    date: "August 23, 2024",
+    image: "/news_and_blog_7.svg", // Example, replace with actual image path
+  },
+  {
+    category: ["Company", "Courses"],
+    title: "Top Skills Employers Look for in 2024",
+    date: "August 23, 2024",
+    image: "/news_and_blog_8.svg", // Example, replace with actual image path
+  },
+  {
+    category: ["Company", "Courses"],
+    title: "How to Balance Academics and Extracurricular Activities",
+    date: "August 23, 2024",
+    image: "/news_and_blog_9.svg", // Example, replace with actual image path
+  },
 ];

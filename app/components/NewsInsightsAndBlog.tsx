@@ -1,7 +1,5 @@
-import BlogCard from "@/components/BlogCard";
-import { blogCards } from "@/data";
+import BlogCardList from "@/components/BlogCardList";
 import React from "react";
-
 
 const NewsInsightsAndBlog = () => {
   return (
@@ -20,18 +18,7 @@ const NewsInsightsAndBlog = () => {
           </p>
         </div>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 md:gap-4">
-        {blogCards.map((card, index) => (
-          <BlogCard
-            key={index}
-            category={card.category}
-            title={card.title}
-            date={card.date}
-            image={card.image}
-          />
-        ))}
-      </div>
+      <BlogCardList limit={3}/>
     </div>
   );
 };
