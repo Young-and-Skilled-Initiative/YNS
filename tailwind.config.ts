@@ -163,6 +163,7 @@ const config: Config = {
       fontFamily: {
         cocon: ["Cocon", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        lato: ['Lato', 'sans-serif'],
       },
     },
   },

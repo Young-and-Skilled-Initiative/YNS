@@ -1,11 +1,6 @@
-;<style>
-  @import
-  url(`https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap`);
-</style>
-
 const Hero: React.FC = () => {
-  const float =
-    "py-5 px-6 border-[#8E9BAE] border-[1px] rounded-[44.98px] text-center text-[#8E9BAE] absolute"
+  const float: string =
+    "py-5 px-6 border-[#8E9BAE] border-[1px] font-lato rounded-[44.98px] text-center text-[#8E9BAE] absolute"
   return (
     <section className=" grid place-content-center relative">
       <div className={`${float} left-[183px] top-[23px] rotate-[-9.3deg] `}>
@@ -30,7 +25,7 @@ const Hero: React.FC = () => {
           experiences.
         </p>
         <div className="flex justify-center">
-          <button className="mt-12 px-10 py-5 font-[lato] text-xl rounded-[44.98px] text-[#FFFFFF] bg-[#1A1A1A]">
+          <button className="mt-12 px-10 py-5 font-lato text-xl rounded-[44.98px] text-[#FFFFFF] bg-[#1A1A1A]">
             Become a partner today
           </button>
         </div>
