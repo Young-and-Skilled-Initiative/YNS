@@ -15,3 +15,9 @@ export interface CoreValue {
   sticker: string;
   padding: string;
 }
+export interface BlogCardData {
+  category: string[];
+  title: string;
+  date: string;
+  image: string;
+}
