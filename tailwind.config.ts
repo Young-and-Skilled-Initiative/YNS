@@ -22,6 +22,9 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backdropBlur: {
+        "4": "blur(4px)",
+      },
       colors: {
         "dark-green": "#114F3C",
         background: "hsl(var(--background))",
@@ -163,6 +166,7 @@ const config: Config = {
       fontFamily: {
         cocon: ["Cocon", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        lato: ['Lato', 'sans-serif'],
       },
     },
   },
