@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const navlinks = [
-  { route: "Home", link: "", id: "home" },
+  { route: "Home", link: "/", id: "home" },
   { route: "About us", link: "/aboutus", id: "about" },
   { route: "Resources", link: "/resources", id: "resources" },
   { route: "Contact us", link: "/contact", id: "contact-us" },
