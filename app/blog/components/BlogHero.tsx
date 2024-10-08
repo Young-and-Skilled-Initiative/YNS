@@ -3,7 +3,7 @@ import { Star } from "@/public/images";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const NewsAndInsightsBlogHero = () => {
+const BlogHero = () => {
   const categories = ["All", "Education", "Career", "Company", "Courses"];
   const backgroundImage = "/images/blog-hero.png"; // Update this with your image path
   const [activeCategory, setActiveCategory] = useState(0);
@@ -61,4 +61,4 @@ const NewsAndInsightsBlogHero = () => {
   );
 };
 
-export default NewsAndInsightsBlogHero;
+export default BlogHero;
