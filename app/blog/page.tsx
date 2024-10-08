@@ -5,7 +5,8 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/newsletter/newsletter";
 import BlogCardList from "@/components/BlogCardList";
 import BlogHero from "./components/BlogHero";
-import BlogFeatured from "./components/blogFeatured";
+import BlogFeatured from "./components/BlogFeatured";
+
 
 const page = () => {
   return (
@@ -13,7 +14,7 @@ const page = () => {
       <Navbar />
       <BlogHero />
       <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24 ">
-        <BlogFeatured />
+       <BlogFeatured/>
         <BlogCardList />
         <Newsletter />
       </main>
