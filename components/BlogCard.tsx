@@ -11,7 +11,7 @@ const BlogCard: React.FC<BlogCardData> = ({ category, title, date, image }) => {
         <div className="text-sm text-gray-500 space-x-2">
           {category.map((cat, i) => (
             <span
-              className="font-medium text-base font-manrope text-[#8E9BAE]"
+              className="font-medium text-base font-manrope text-gray-400"
               key={i}
             >
               {cat}
@@ -22,7 +22,7 @@ const BlogCard: React.FC<BlogCardData> = ({ category, title, date, image }) => {
       </div>
       <div className="flex flex-col  gap-3">
         {" "}
-        <p className="text-[#8E9BAE] font-manrope font-medium">{date}</p>
+        <p className="text-gray-400 font-manrope font-medium">{date}</p>
       </div>
     </div>
   );
