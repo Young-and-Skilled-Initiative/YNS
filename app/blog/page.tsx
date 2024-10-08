@@ -7,17 +7,16 @@ import BlogCardList from "@/components/BlogCardList";
 import BlogHero from "./components/BlogHero";
 import BlogFeatured from "./components/BlogFeatured";
 
-
 const page = () => {
   return (
     <div>
       <Navbar />
       <BlogHero />
-      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24 ">
-       <BlogFeatured/>
-        <BlogCardList />
+      <BlogFeatured />
+      <BlogCardList />
+      <div className="px-6 md:px-24 py-3 md:py-12">
         <Newsletter />
-      </main>
+      </div>
       <Footer />
     </div>
   );

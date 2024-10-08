@@ -14,7 +14,7 @@ const BlogHero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="bg-dark-green text-white py-24 relative p-6 md:p-24"
+      className="bg-dark-green text-white py-24 relative px-6 md:px-24 mb-12"
     >
       <div className="flex flex-col gap-12 text-left font-manrope">
         {/* Title */}
