@@ -30,7 +30,7 @@ const NewsAndInsightsBlogHero = () => {
                 width={100}
                 height={100}
                 alt="star"
-                className="absolute bottom-6 hover:animate-spin "
+                className="absolute bottom-6 animate-spin-slow  "
               />
             </div>
           </div>
