@@ -19,7 +19,7 @@ const NewsAndInsightsBlogHero = () => {
         <div className="flex flex-col gap-4 ">
           <div className="relative flex gap-14 w-fit ">
             <h1 className="text-7xl  font-medium ">
-              News Insights & <span className="text-gradient">Blog</span>
+              News Insights & <span className="bg-nine-color-blocks text-transparent bg-clip-text">Blog</span>
             </h1>
 
             <div>
