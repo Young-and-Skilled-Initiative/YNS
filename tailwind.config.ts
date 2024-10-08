@@ -17,7 +17,7 @@ const config: Config = {
         "six-color-gradient":
           "linear-gradient(to right, #EF4C0D, #1A1A1A, #114F3C, #F2A300, #98BC6D, #F6DEAE)",
         "nine-color-blocks": 
-          'linear-gradient(-39deg, #EF4C0D 11.11%, #FFFFFF 11.11% 22.22%, #F6DEAE 22.22% 33.33%, #FFFFFF 33.33% 44.44%, #F2A300 44.44% 55.55%, #FFFFFF 55.55% 66.66%, #F6DEAE 66.66% 77.77%, #FFFFFF 77.77% 88.88%, #98BC6D 88.88% 100%)',
+          'linear-gradient(-39deg, #EF4C0D 15%, #FFFFFF 15% 20%, #F6DEAE 20% 35%, #FFFFFF 35% 40%, #F2A300 40% 55%, #FFFFFF 55% 60%, #F6DEAE 60% 75%, #FFFFFF 75% 80%, #98BC6D 80% 95%)',
       },
       borderRadius: {
         lg: "var(--radius)",
