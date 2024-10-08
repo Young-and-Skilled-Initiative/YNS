@@ -1,20 +1,22 @@
+"use client";
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/newsletter/newsletter";
-
 import BlogCardList from "@/components/BlogCardList";
-import NewsAndInsightsBlogHero from "./components/NewsAndInsightsBlogHero";
+import BlogHero from "./components/BlogHero";
+import BlogFeatured from "./components/BlogFeatured";
 
 const page = () => {
   return (
     <div>
       <Navbar />
-      <NewsAndInsightsBlogHero/>
-      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24 ">
-        <BlogCardList/>
+      <BlogHero />
+      <BlogFeatured />
+      <BlogCardList />
+      <div className="px-6 md:px-24 py-3 md:py-12">
         <Newsletter />
-      </main>
+      </div>
       <Footer />
     </div>
   );
