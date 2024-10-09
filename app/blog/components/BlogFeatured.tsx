@@ -33,7 +33,7 @@ const BlogFeatured = () => {
                   Featured
                 </p>
               </div>
-              <div className="relative md:px-14 py-5 flex flex-col gap-4 text-left md:w-1/2">
+              <div className="relative md:px-4 lg:px-14 py-3 lg:py-5 flex flex-col gap-4 text-left md:w-1/2">
                 <div className="flex gap-5">
                   {card.category.map((cat, idx) => (
                     <span
@@ -51,7 +51,7 @@ const BlogFeatured = () => {
                   <p className=" text-[#55534E] font-normal text-base leading-8 ">
                     {card.description}
                   </p>
-                  <Image width={20} height={20} src={IntercomMessenger} alt="star" className="absolute w-20 cursor-pointer -top-12   -right-14 " />
+                  <Image width={20} height={20} src={IntercomMessenger} alt="messenger" className="absolute w-20 cursor-pointer -top-14 -right-0  md:-right-5  lg:-right-14 " />
                 </div>
                 <p className="text-gray-400 text-base ">{card.date}</p>
 
@@ -59,7 +59,7 @@ const BlogFeatured = () => {
                   Read Article{" "}
                   <ArrowRight className="text-[#55534E] text-base" />
                 </button>
-                <Image width={20} height={20} src={Star4} alt="star" className="absolute w-20 cursor-pointer bottom-0 right-0 " />
+                <Image width={20} height={20} src={Star4} alt="star" className="absolute w-20 cursor-pointer bottom-0 right-4 " />
               </div>
             </div>
           </div>
