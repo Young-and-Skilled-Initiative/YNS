@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/newsletter/newsletter";
-import BlogCardList from "@/components/BlogCardList";
+import BlogCardList from "@/components/blog/BlogCardList";
 import BlogHero from "./components/BlogHero";
 import BlogFeatured from "./components/BlogFeatured";
 
