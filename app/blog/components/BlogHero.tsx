@@ -38,7 +38,7 @@ const BlogHero = () => {
             </div>
           </div>
           {/* Subtitle */}
-          <p className="text-base ">
+          <p className="text-base leading-8">
             Latest community tips for you. Dive into our latest posts, explore
             various learning categories, and stay informed <br className="hidden lg:inline-block"/> about the best
             practices in education.

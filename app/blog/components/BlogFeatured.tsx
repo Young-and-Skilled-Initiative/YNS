@@ -1,5 +1,7 @@
 import { blogCards } from "@/data";
+import { IntercomMessenger, Star4 } from "@/public/icons";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 
@@ -7,14 +9,14 @@ const BlogFeatured = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
   };
 
   return (
-    <div className="slider-container text-black w-full flex flex-col justify-center px-6 md:px-24 py-3 md:py-12 font-manrope">
+    <div className="slider-container text-black w-full flex flex-col justify-center px-6 md:px-24 py-6 pb-16 md:py-12 font-manrope">
       {" "}
       <Slider {...settings}>
         {blogCards.map((card, index) => (
@@ -31,7 +33,7 @@ const BlogFeatured = () => {
                   Featured
                 </p>
               </div>
-              <div className="md:px-14 py-5 flex flex-col gap-4 text-left md:w-1/2">
+              <div className="relative md:px-14 py-5 flex flex-col gap-4 text-left md:w-1/2">
                 <div className="flex gap-5">
                   {card.category.map((cat, idx) => (
                     <span
@@ -45,14 +47,19 @@ const BlogFeatured = () => {
                 <h3 className="text-3xl font-medium font-cocon leading-9 ">
                   {card.title}
                 </h3>
-                <p className=" text-gray-600 text-base leading-8 ">
-                  {card.description}
-                </p>
+                <div className="relative">
+                  <p className=" text-[#55534E] font-normal text-base leading-8 ">
+                    {card.description}
+                  </p>
+                  <Image width={20} height={20} src={IntercomMessenger} alt="star" className="absolute w-20 cursor-pointer -top-12   -right-14 " />
+                </div>
                 <p className="text-gray-400 text-base ">{card.date}</p>
 
-                <button className="flex gap-3 ">
-                  Read Article <ArrowRight />
+                <button className="flex gap-4 text-base">
+                  Read Article{" "}
+                  <ArrowRight className="text-[#55534E] text-base" />
                 </button>
+                <Image width={20} height={20} src={Star4} alt="star" className="absolute w-20 cursor-pointer bottom-0 right-0 " />
               </div>
             </div>
           </div>
