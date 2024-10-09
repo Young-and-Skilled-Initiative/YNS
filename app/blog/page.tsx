@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/newsletter/newsletter";
-import BlogCardList from "@/components/BlogCardList";
+import BlogCardList from "@/components/blog/BlogCardList";
 import BlogHero from "./components/BlogHero";
 import BlogFeatured from "./components/BlogFeatured";
 
@@ -14,7 +14,9 @@ const page = () => {
       <BlogHero />
       <BlogFeatured />
       <BlogCardList />
-      <div className="px-6 md:px-24 py-3 md:py-12">
+      <div className="px-6 md:px-12 lg:px-24 py-6 md:py-8 lg:pt-16 lg:pb-4">
+        {" "}
+        {/*temporal till the paddings are fixed by creator of Newsletter */}
         <Newsletter />
       </div>
       <Footer />
