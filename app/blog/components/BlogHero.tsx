@@ -46,7 +46,7 @@ const BlogHero = () => {
         </div>
 
         {/* Category Buttons */}
-        <div className="flex space-x-3 lg:space-x-5">
+        <div className="flex flex-wrap  gap-y-3 gap-x-4 lg:gap-x-5">
           {categories.map((category, index) => (
             <button
               key={index}
@@ -55,7 +55,7 @@ const BlogHero = () => {
                 activeCategory === index
                   ? "bg-white text-black"
                   : "bg-white/30 text-white"
-              } py-3 lg:py-4 backdrop-blur-4 px-7 lg:px-10 rounded-[2.75rem] hover:bg-white hover:text-black transition-all duration-500 ease-in-out`}
+              } py-3 lg:py-4 backdrop-blur-4 px-8 md:px-7 lg:px-10 rounded-[2.75rem] hover:bg-white hover:text-black transition-all duration-500 ease-in-out`}
             >
               {category}
             </button>
