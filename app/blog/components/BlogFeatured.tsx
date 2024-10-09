@@ -18,20 +18,20 @@ const BlogFeatured = () => {
       {" "}
       <Slider {...settings}>
         {blogCards.map((card, index) => (
-          <div key={index} className="pb-6">
-            <div className="flex">
-              <div className="relative w-1/2">
+          <div key={index} className="md:pb-6">
+            <div className="flex flex-col md:flex-row">
+              <div className="relative md:w-1/2">
                 {" "}
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover rounded-[1.25rem]"
                 />
-                <p className="absolute top-0 left-0 px-4 py-2 rounded-tl-[1.25rem] bg-dark-green text-white">
+                <p className="text-[0.5625rem] md:text-base absolute top-0 left-0 px-4 py-2 rounded-tl-[1.25rem] bg-dark-green text-white">
                   Featured
                 </p>
               </div>
-              <div className="px-14 py-5 flex flex-col gap-4 text-left w-1/2">
+              <div className="md:px-14 py-5 flex flex-col gap-4 text-left md:w-1/2">
                 <div className="flex gap-5">
                   {card.category.map((cat, idx) => (
                     <span
