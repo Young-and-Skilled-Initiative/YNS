@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-// Define your nav links
+
 const navlinks = [
-  { route: "Home", link: "", id: "home" },
+  { route: "Home", link: "/", id: "home" },
   { route: "About us", link: "/aboutus", id: "about" },
   { route: "Resources", link: "/resources", id: "resources" },
   { route: "Contact us", link: "/contact", id: "contact-us" },
@@ -20,7 +20,8 @@ const Navbar: React.FC = () => {
   const underlineRef = useRef(null);
   const [hoverStyle, setHoverStyle] = useState({ width: 0, left: 0 });
 
-  const handleMouseEnter = (e) => {
+  // Fix the typing for the mouse event
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const { offsetLeft, offsetWidth } = e.currentTarget;
     setHoverStyle({ width: offsetWidth, left: offsetLeft });
   };
@@ -44,7 +45,6 @@ const Navbar: React.FC = () => {
 
         {/* Desktop menu */}
         <div className="relative hidden md:flex items-center justify-between gap-2 lg:gap-10 text-black">
-          {/* Shared underline element */}
           <span
             ref={underlineRef}
             className="absolute bottom-0 h-[3px] bg-dark-green transition-all duration-300"
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.3 }}
-            onClick={closeMobileMenu} // Close on outside click
+            onClick={closeMobileMenu}
           >
             {/* Logo inside the dropdown */}
             <div className="flex w-full justify-between">
@@ -134,7 +134,7 @@ const Navbar: React.FC = () => {
                   key={index}
                   href={item.link}
                   className="text-white font-semibold text-lg hover:text-gray-400"
-                  onClick={closeMobileMenu} // Close menu on link click
+                  onClick={closeMobileMenu}
                 >
                   {item.route}
                 </Link>
@@ -172,7 +172,7 @@ const Navbar: React.FC = () => {
                     />
                   </Link>
                 </div>
-                <button className="w-[4x] h-[47px">
+                <button className="w-[4x] h-[47px]">
                   <img
                     src="Messenger.svg"
                     alt="intercom messenger"
