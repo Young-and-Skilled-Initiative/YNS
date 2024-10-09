@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Star } from "@/public/images";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -19,9 +19,12 @@ const BlogHero = () => {
       <div className="flex flex-col gap-12 text-left font-manrope">
         {/* Title */}
         <div className="flex flex-col gap-4 ">
-          <div className="relative flex gap-14 w-fit ">
-            <h1 className="text-7xl  font-medium font-cocon">
-              News Insights & <span className="bg-nine-color-blocks text-transparent bg-clip-text">Blog</span>
+          <div className="relative flex gap-8 lg:gap-14 w-fit ">
+            <h1 className="text-[2.5rem] md:text-5xl lg:text-7xl  font-medium font-cocon">
+              News Insights &{" "}
+              <span className="bg-nine-color-blocks text-transparent bg-clip-text">
+                Blog
+              </span>
             </h1>
 
             <div>
@@ -30,27 +33,29 @@ const BlogHero = () => {
                 width={100}
                 height={100}
                 alt="star"
-                className="absolute bottom-6 animate-spin-slow  "
+                className="absolute bottom-4 lg:bottom-6 animate-spin-slow w-auto h-18  lg:w-auto lg:h-24"
               />
             </div>
           </div>
           {/* Subtitle */}
           <p className="text-base ">
             Latest community tips for you. Dive into our latest posts, explore
-            various learning categories, and stay informed <br /> about the best
+            various learning categories, and stay informed <br className="hidden lg:inline-block"/> about the best
             practices in education.
           </p>
         </div>
 
         {/* Category Buttons */}
-        <div className="flex  space-x-5">
-        {categories.map((category, index) => (
+        <div className="flex space-x-3 lg:space-x-5">
+          {categories.map((category, index) => (
             <button
               key={index}
               onClick={() => setActiveCategory(index)} // Set the clicked category as active
               className={`${
-                activeCategory === index ? "bg-white text-black" : "bg-white/30 text-white"
-              } py-4 backdrop-blur-4 px-10 rounded-[2.75rem] hover:bg-white hover:text-black transition-all duration-500 ease-in-out`}
+                activeCategory === index
+                  ? "bg-white text-black"
+                  : "bg-white/30 text-white"
+              } py-3 lg:py-4 backdrop-blur-4 px-7 lg:px-10 rounded-[2.75rem] hover:bg-white hover:text-black transition-all duration-500 ease-in-out`}
             >
               {category}
             </button>
