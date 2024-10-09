@@ -16,11 +16,11 @@ const BlogFeatured = () => {
   };
 
   return (
-    <div className="slider-container text-black w-full flex flex-col justify-center px-6 md:px-24 py-6 pb-16 md:py-12 font-manrope">
+    <div className="slider-container text-black w-full flex flex-col justify-center px-6  md:px-16 lg:px-24 py-6 pb-16 md:py-8 font-manrope">
       {" "}
       <Slider {...settings}>
         {blogCards.map((card, index) => (
-          <div key={index} className="md:pb-6">
+          <div key={index} className="md:pb-6 px-2">
             <div className="flex flex-col md:flex-row">
               <div className="relative md:w-1/2">
                 {" "}

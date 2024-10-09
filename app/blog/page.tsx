@@ -14,12 +14,12 @@ const page = () => {
       <BlogHero />
       <BlogFeatured />
       <BlogCardList />
-      <div className="px-6 md:px-24 py-6 md:py-12"> {/*temporal till the paddings are fixed by creator of Newsletter */}
+      <div className="px-6 md:px-12 lg:px-24 py-6 md:py-8 lg:pt-16 lg:pb-4">
+        {" "}
+        {/*temporal till the paddings are fixed by creator of Newsletter */}
         <Newsletter />
       </div>
-     <div className="pt-6"> {/*temporal till the paddings are fixed by creator of the footer */}
-    <Footer />
-    </div>
+      <Footer />
     </div>
   );
 };
