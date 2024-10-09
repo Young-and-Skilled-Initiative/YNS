@@ -14,14 +14,14 @@ const BlogHero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="bg-dark-green text-white py-24 relative px-6 md:px-24 mb-12"
+      className="bg-dark-green text-white py-14 md:py-24 relative px-6 md:px-24 mb-12"
     >
       <div className="flex flex-col gap-12 text-left font-manrope">
         {/* Title */}
         <div className="flex flex-col gap-4 ">
-          <div className="relative flex gap-8 lg:gap-14 w-fit ">
+          <div className="relative flex gap-6 md:gap-8 lg:gap-14 w-fit ">
             <h1 className="text-[2.5rem] md:text-5xl lg:text-7xl  font-medium font-cocon">
-              News Insights &{" "}
+              News Insights <br className="md:hidden" />&{" "}
               <span className="bg-nine-color-blocks text-transparent bg-clip-text">
                 Blog
               </span>
@@ -33,7 +33,7 @@ const BlogHero = () => {
                 width={100}
                 height={100}
                 alt="star"
-                className="absolute bottom-4 lg:bottom-6 animate-spin-slow w-auto h-18  lg:w-auto lg:h-24"
+                className="absolute -top-8 md:bottom-4 lg:bottom-6 animate-spin-slow w-auto h-14 md:h-18 lg:h-24"
               />
             </div>
           </div>
