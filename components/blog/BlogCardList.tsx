@@ -11,7 +11,7 @@ const BlogCardList: React.FC<BlogCardListProps> = ({ limit }) => {
   const displayedCards = limit ? blogCards.slice(0, limit) : blogCards;
 
   return (
-    <div className="px-6 md:px-24 py-3 md:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-x-4 md:gap-y-12">
+    <div className="px-6  md:px-16 lg:px-24 py-6 md:py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-x-4 md:gap-y-12">
       {displayedCards.map((card, index) => (
         <BlogCard
           key={index}
