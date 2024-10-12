@@ -25,10 +25,10 @@ export default function Home() {
         <Network />
         <FAQ />
         <Testimonial />
-        <Newsletter/>
+        <Newsletter />
         <NewsInsightsAndBlog />
-      </main> 
-     <Footer />
+      </main>
+      <Footer />
     </>
   );
 }
