@@ -20,6 +20,7 @@ const config: Config = {
           "linear-gradient(-39deg, #EF4C0D 15%, #FFFFFF 15% 20%, #F6DEAE 20% 35%, #FFFFFF 35% 40%, #F2A300 40% 55%, #FFFFFF 55% 60%, #F6DEAE 60% 75%, #FFFFFF 75% 80%, #98BC6D 80% 95%)",
         "movement-gradient":
           "linear-gradient(-39deg, #F6DEAE 0% 30%, #98BC6D 30% 48%, #F2A300 48% 65%, #114F3C 65% 72%, #EF4C0D 72% 90%)",
+          "linear-gradient(-39deg, #98BC6D 15%, #FFFFFF 15% 20%, #F6DEAE 20% 35%, #FFFFFF 35% 40%, #F2A300 40% 55%, #FFFFFF 55% 60%, #F6DEAE 60% 75%, #FFFFFF 75% 80%,#EF4C0D 80% 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",

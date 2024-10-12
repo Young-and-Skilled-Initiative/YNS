@@ -1,4 +1,4 @@
-import BlogCardList from "@/components/BlogCardList";
+import BlogCardList from "@/components/blog/BlogCardList";
 import React from "react";
 
 const NewsInsightsAndBlog = () => {
