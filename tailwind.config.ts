@@ -17,7 +17,9 @@ const config: Config = {
         "six-color-gradient":
           "linear-gradient(to right, #EF4C0D, #1A1A1A, #114F3C, #F2A300, #98BC6D, #F6DEAE)",
         "nine-color-blocks":
-          "linear-gradient(-39deg, #98BC6D 15%, #FFFFFF 15% 20%, #F6DEAE 20% 35%, #FFFFFF 35% 40%, #F2A300 40% 55%, #FFFFFF 55% 60%, #F6DEAE 60% 75%, #FFFFFF 75% 80%,#EF4C0D 80% 100%)",
+          "linear-gradient(-39deg, #EF4C0D 15%, #FFFFFF 15% 20%, #F6DEAE 20% 35%, #FFFFFF 35% 40%, #F2A300 40% 55%, #FFFFFF 55% 60%, #F6DEAE 60% 75%, #FFFFFF 75% 80%, #98BC6D 80% 95%)",
+        "movement-gradient":
+          "linear-gradient(-39deg, #F6DEAE 0% 30%, #98BC6D 30% 48%, #F2A300 48% 65%, #114F3C 65% 72%, #EF4C0D 72% 90%)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -97,6 +99,8 @@ const config: Config = {
         manrope: ["Manrope", "sans-serif"],
       },
       colors: {
+        ash: "#8E9BAE",
+        "dark-ash": "#55534E",
         "dark-green": "#114F3C",
         "lighter-yellow": "#F6DEAE",
         "dark-orange": "#EF4C0D",
@@ -165,10 +169,12 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-slow": "spin 10s linear infinite",
+        "spin-slow": "spin 10s linear infinite",
       },
       fontFamily: {
         cocon: ["Cocon", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
     },

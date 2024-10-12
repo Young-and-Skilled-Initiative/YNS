@@ -1,13 +1,8 @@
+.newsletter {
+  background-image: url("/newsletterbg.svg");
+  background-size: cover;
 
-.newsletter{
-    background-image: url('/newsletterbg.svg');
-    background-size: cover;
-
-    background-position: center;
-    width: 100%;
-    height: 582px;
-
-  
-
+  background-position: center;
+  width: 100%;
+  height: 582px;
 }
-
