@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const navlinks = [
   { route: "Home", link: "/", id: "home" },
@@ -19,6 +20,32 @@ const Navbar: React.FC = () => {
 
   const underlineRef = useRef(null);
   const [hoverStyle, setHoverStyle] = useState({ width: 0, left: 0 });
+
+  // Inside the Navbar component
+  const router = useRouter();
+  const activeRoute = navlinks.find((link) => link.link === router.pathname);
+
+  // On component mount, set the underline for the active link
+  useEffect(() => {
+    if (activeRoute) {
+      const activeLinkElement = document.getElementById(activeRoute.id);
+      if (activeLinkElement) {
+        const { offsetLeft, offsetWidth } = activeLinkElement;
+        setHoverStyle({ width: offsetWidth, left: offsetLeft });
+      }
+    }
+  }, [activeRoute]);
+
+  // OnMouseLeave for the nav links to return to active link position
+  const handleMouseLeave = () => {
+    if (activeRoute) {
+      const activeLinkElement = document.getElementById(activeRoute.id);
+      if (activeLinkElement) {
+        const { offsetLeft, offsetWidth } = activeLinkElement;
+        setHoverStyle({ width: offsetWidth, left: offsetLeft });
+      }
+    }
+  };
 
   // Fix the typing for the mouse event
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -54,9 +81,11 @@ const Navbar: React.FC = () => {
           {navlinks.map((item, index) => (
             <Link
               key={index}
+              id={item.id}
               href={item.link}
               className="relative group text-base font-semibold transition-all p-[6px] text-nowrap duration-200 text-ash hover:text-black"
               onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               {item.route}
             </Link>
@@ -133,7 +162,9 @@ const Navbar: React.FC = () => {
                 <Link
                   key={index}
                   href={item.link}
-                  className="text-white font-semibold text-lg hover:text-gray-400"
+                  className={`${
+                    router.pathname === item.link ? "text-green" : "text-white"
+                  } font-semibold text-lg hover:text-gray-400`}
                   onClick={closeMobileMenu}
                 >
                   {item.route}
