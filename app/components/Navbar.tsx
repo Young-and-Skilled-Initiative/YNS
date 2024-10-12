@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const navlinks = [
   { route: "Home", link: "/", id: "home" },
@@ -21,22 +21,16 @@ const Navbar: React.FC = () => {
   const underlineRef = useRef(null);
   const [hoverStyle, setHoverStyle] = useState({ width: 0, left: 0 });
 
-  // Inside the Navbar component
-  const router = useRouter();
-  const activeRoute = navlinks.find((link) => link.link === router.pathname);
+  const pathname = usePathname(); // Use usePathname to get current path
+  const activeRoute = navlinks.find((link) => link.link === pathname);
 
-  // On component mount, set the underline for the active link
-  useEffect(() => {
-    if (activeRoute) {
-      const activeLinkElement = document.getElementById(activeRoute.id);
-      if (activeLinkElement) {
-        const { offsetLeft, offsetWidth } = activeLinkElement;
-        setHoverStyle({ width: offsetWidth, left: offsetLeft });
-      }
-    }
-  }, [activeRoute]);
+  // Handle mouse enter to update the hover style
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const { offsetLeft, offsetWidth } = e.currentTarget;
+    setHoverStyle({ width: offsetWidth, left: offsetLeft });
+  };
 
-  // OnMouseLeave for the nav links to return to active link position
+  // Handle mouse leave to revert to active link style
   const handleMouseLeave = () => {
     if (activeRoute) {
       const activeLinkElement = document.getElementById(activeRoute.id);
@@ -47,11 +41,16 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // Fix the typing for the mouse event
-  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const { offsetLeft, offsetWidth } = e.currentTarget;
-    setHoverStyle({ width: offsetWidth, left: offsetLeft });
-  };
+  // Ensure the underline reflects the active link when the component mounts
+  useEffect(() => {
+    if (activeRoute) {
+      const activeLinkElement = document.getElementById(activeRoute.id);
+      if (activeLinkElement) {
+        const { offsetLeft, offsetWidth } = activeLinkElement;
+        setHoverStyle({ width: offsetWidth, left: offsetLeft });
+      }
+    }
+  }, [pathname, activeRoute]);
 
   const toggleMobileMenu = useCallback(() => {
     setShowMobileMenu((current) => !current);
@@ -71,21 +70,25 @@ const Navbar: React.FC = () => {
         />
 
         {/* Desktop menu */}
-        <div className="relative hidden md:flex items-center justify-between gap-2 lg:gap-10 text-black">
+        <div
+          className="relative hidden md:flex items-center justify-between gap-2 lg:gap-10 text-black"
+          onMouseLeave={handleMouseLeave}
+        >
           <span
             ref={underlineRef}
             className="absolute bottom-0 h-[3px] bg-dark-green transition-all duration-300"
             style={hoverStyle}
           ></span>
 
-          {navlinks.map((item, index) => (
+          {navlinks.map((item) => (
             <Link
-              key={index}
-              id={item.id}
+              key={item.id}
               href={item.link}
-              className="relative group text-base font-semibold transition-all p-[6px] text-nowrap duration-200 text-ash hover:text-black"
+              id={item.id} // Add id to each link for active link tracking
+              className={`relative group text-base font-semibold transition-all p-[6px] text-nowrap duration-200 ${
+                pathname === item.link ? "text-black" : "text-ash"
+              } hover:text-black`}
               onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
             >
               {item.route}
             </Link>
@@ -96,13 +99,13 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center group">
           <Button
             size={"lg"}
-            className="rounded-3xl bg-dark-green transform transition-all duration-300 ease-in-out group-hover:scale-100 group-hover:px- group-hover:text-base hover:bg-dark-green"
+            className="rounded-3xl bg-dark-green transform transition-all duration-300 ease-in-out group-hover:scale-120 group-hover:text-base hover:bg-dark-green"
           >
             Get Started
           </Button>
           <Button
             size={"icon"}
-            className="rounded-full bg-dark-green ml-[-6px] transform transition-transform duration-300 ease-in-out group-hover:rotate-90"
+            className="rounded-full bg-dark-green ml-[-6px] transform transition-transform duration-500 ease-in-out group-hover:rotate-90"
           >
             <img src="/arrow.svg" alt="Arrow" className="p-2" />
           </Button>
@@ -129,7 +132,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {showMobileMenu && (
           <motion.div
-            className="fixed top-0 left-0 w-full h-[80%] bg-black z-50 flex flex-col items-center justify-between px-4 py-6"
+            className="fixed top-0 left-0 w-screen h-auto bg-black z-50 flex flex-col gap-8 items-center justify-between px-4 py-6"
             initial={{ y: "-100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
@@ -152,19 +155,19 @@ const Navbar: React.FC = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
+                  transition={{ duration: 0.4 }}
                 />
               </button>
             </div>
 
-            <nav className="flex flex-col h-full justify-center items-center gap-12 w-full">
-              {navlinks.map((item, index) => (
+            <nav className="flex flex-col h-full justify-center items-center gap-8 w-full">
+              {navlinks.map((item) => (
                 <Link
-                  key={index}
+                  key={item.id}
                   href={item.link}
-                  className={`${
-                    router.pathname === item.link ? "text-green" : "text-white"
-                  } font-semibold text-lg hover:text-gray-400`}
+                  className={`text-lg font-semibold ${
+                    pathname === item.link ? "text-[#98BC6D]" : "text-white"
+                  } hover:text-gray-400`}
                   onClick={closeMobileMenu}
                 >
                   {item.route}
