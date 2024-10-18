@@ -81,15 +81,14 @@ const testimonials: TestimonialDetails[] = [
 export function Testimonial() {
   return (
     <Carousel className="w-full bg-white  py-10 flex flex-col gap-14 relative">
-
+      
       <div className="flex flex-col gap-7 ">
         <p className="font-medium text-base font-manrope leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit ">
-
           Our Success Stories
         </p>
 
         <div className="flex flex-col md:flex-row justify-center gap-3 items-center">
-          <div className="md:w-[70%] flex flex-col gap-7  ">
+          <div className="md:w-[70%] flex flex-col gap-7">
             {" "}
             <p className="text-[#2F2F2F] font-cocon text-[50px] leading-[55px] font-medium">
               What's your excuse now?
