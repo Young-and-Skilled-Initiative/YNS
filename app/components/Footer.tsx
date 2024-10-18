@@ -4,13 +4,13 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="sm:p-[3em] text-white">
-      <div className="lg:px-[45px] px-6 py-12 sm:py-[94px] bg-dark-green w-full rounded-[20px]">
+      <div className="lg:px-[45px] px-6 py-12 sm:py-[94px] bg-dark-green w-full rounded-t-3xl sm:rounded-[20px]">
         <div className="flex flex-col gap-[125px] w-full">
-          <div className="sm:flex justify-between w-full h-full items-start ">
+          <div className="lg:flex justify-between w-full h-full items-start ">
             <img
               src="images/Logo.svg"
               alt="Logo"
-              className="flex justify-start items-start pb-[30px] sm:p-0"
+              className="flex justify-start items-start pb-[30px] lg:p-0"
             />
             {/* <img src="images/logo-sticker.svg" alt="logo sticker" /> */}
 
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col gap-[30px] text-lg xl:text-xl">
                 <span className="text-lighter-yellow">Socials</span>
-                <div className="sm:flex flex-col grid grid-cols-2 sm:gap-2.5 w-fit gap-y-2 gap-x-4">
+                <div className="sm:flex flex-col grid grid-cols-2 sm:gap-2.5 w-fit gap-y-2 gap-x-3">
                   <Link
                     href={""}
                     className="p-[13px] bg-white rounded-full flex w-fit"

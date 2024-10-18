@@ -12,16 +12,16 @@ const interest = () => {
             <Image src={Arrow} alt="" />
 
         </div>
-        <div className='flex flex-col md:flex-row justify-between bg-[#98BC6D] gap-[5em] rounded-[2.5em]'>
-            <div className='md:w-[31em] md:pl-[3em] p-[2em] md:py-[3em] flex flex-col gap-[1em] justify-around '>
-                <h1 className='font-cocon  font-[500] text-[25px] md:text-[50px] text-[#114f3c]'>
+        <div className='flex flex-col md:flex-row justify-between bg-[#98BC6D] gap-[1em] md:gap-[2em] lg:gap-[5em] rounded-[2.5em]'>
+            <div className='md:w-[25em] md:pl-[2em] p-[2em] md:py-[2em] flex flex-col gap-[1em] justify-around '>
+                <h1 className='font-cocon  font-[500] text-[25px] md:text-[30px] text-[#114f3c]'>
                 Offer a wide range of courses:
                 </h1>
-                <p className='text-wrap text-white text-[16px] font-manrope font-[400] leading-[32px]'>
+                <p className='text-wrap text-white text-[16px] md:text-[14px] font-manrope font-[400] leading-[32px]'>
                 From tech skills like web development, data analysis, and artificial intelligence to creative arts like graphic design, music production, and writing, we have something for everyone. Whether you're looking to upskill for your current job, start a new career, or simply explore your passions, we have courses to suit your interests and goals.
                 </p>
             </div>
-            <div className='p-3 hidden lg:block'>
+            <div className='p-3 hidden lg:block '>
                 <Image src={Circle} className='h-full' alt='arrow image'/>
             </div>
 

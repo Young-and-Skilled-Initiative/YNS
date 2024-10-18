@@ -18,17 +18,17 @@ export default function Home() {
       <Navbar />
 
       <Hero />
-      <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between px-6 md:px-16 lg:px-24 py-6 md:py-8">
         <AboutUs />
         <PersonalizedLearning />
         <Resources />
         <Network />
         <FAQ />
         <Testimonial />
-        <Newsletter/>
+        <Newsletter />
         <NewsInsightsAndBlog />
-      </main> 
-     <Footer />
+      </main>
+      <Footer />
     </>
   );
 }
