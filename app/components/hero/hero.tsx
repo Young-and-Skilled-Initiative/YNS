@@ -9,7 +9,7 @@ import { Play } from "lucide-react"; // Importing Play from lucide-react
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-between w-full relative px-[4em] pt-[1em] items-center mt-6  ">
+    <div className="flex flex-col justify-between w-full relative px-[4em] pt-[1em] items-center mt-6 mb-[6em] ">
       {/* text section  */}
       <div className="flex flex-col gap-16">
     <div className="flex flex-col justify-between w-[100vw] relative md:px-[4em] pt-[1em] items-center mt-6">
@@ -120,23 +120,8 @@ export default function Hero() {
           </Button>
         </div>
       </div>
-      {/* mobile responsive screen */}
-      <div className="flex flex-col ">
-        <div className="flex">
-          <div className="flex flex-col -mr-[9em] w-[em]">
-            <h1 className="font-cocon text-black text-[23px] ">Empowering</h1>
-            <h1 className="font-cocon text-black text-[23px] ">Students </h1>
-            <h1 className="font-cocon text-black text-[23px] ">to excel in</h1>
-            <h1 className="font-cocon text-black text-[23px] ">the dynamic</h1>
-            <h1 className="font-cocon text-black text-[23px] ">world</h1>
-          </div>
-          <div className="w-[100%] mt-[em]">
-            <Image src={Mobilehero} alt="hero" />
-          </div>
-        </div>
-        {/* for the buttons */}
-        <div></div>
-      </div>
+      
+     
       </div> 
       </div>
     </div>
