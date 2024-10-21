@@ -8,10 +8,10 @@ const Network = () => {
     <div className="flex justify-between w-[100vw] px-[21px] md:px-[5em]  pt-[4em] pb-[2em] gap-[3em] items-center bg-gray-100  flex-col  md:flex-row ">
       {/* Left Side (Text and Button) */}
       <div className="flex flex-col gap-[2em] md:pl-[2em] w-full md:w-[50%]  ">
-        <h1 className="font-cocon font-bold text-[30px] lg:text-[50px] w-[12em] leading-[48.64px]">
+        <h1 className="font-cocon font-bold text-[30px] lg:text-[50px] w-full md:w-[12em] leading-[48.64px]">
           Go for Community and Networking
         </h1>
-        <p className="font-manrope font-normal text-balance text-[16px] w-[28em] text-[#00000099]">
+        <p className="font-manrope font-normal text-balance text-[16px] w-full md:w-[28em] text-[#00000099]">
           Join a vibrant community of like-minded students and gain access to
           valuable networking opportunities.
         </p>
