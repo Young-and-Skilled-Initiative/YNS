@@ -15,19 +15,24 @@ const Resources = () => {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col cursor-pointer">
-        <h1 className="bg-gray-200 text-gray-500 p-[0.5em] text-center w-[8em] rounded-full mx-auto mb-4">Resources</h1>
-      <h1 className="font-cocon font-bold text-[40px] text-center">
-        Unlock your potential and embark on a journey of
-      </h1>
-      <h1 className="font-cocon font-bold text-[40px] text-center mb-[1em]">growth</h1>
-      <p className="font-manrope  text-gray-500 text-[16px] text-center ">
-        Our learning programs are designed to nurture creativity, critical
-        thinking, and collaboration, helping students to become the{" "}
-      </p>
-      <p className="font-manrope text-gray-500 text-[16px] text-center">changemakers of tomorrow.</p>
-      <div className="px-[2em] py-[4em] flex flex-col gap-[4em]">
-        <div className="flex gap-[4em]">
+    <div className="flex flex-col cursor-pointer  ">
+      <div className="flex flex-col gap-[1em] ">
+        <h1 className="bg-gray-200 text-gray-500 py-[1em] px-[1.5em]  text-center text-[25px] xl:w-[8em] rounded-full mx-auto mb-4">
+          Resources
+        </h1>
+        <h1 className="font-cocon font-bold xl:text-[40px] text-center xl:w-[25em] mx-auto text-[30px]">
+          Unlock your potential and embark on a journey of growth
+        </h1>
+
+        <p className="font-manrope  text-gray-500 text-[16px] md:text-[20px] text-center xl:w-[60em] mx-auto ">
+          Our learning programs are designed to nurture creativity, critical
+          thinking, and collaboration, helping students to become the
+          changemakers of tomorrow
+        </p>
+      </div>
+
+      <div className="lg:px-[2em] lg:py-[4em] xl:flex-col xl:flex  gap-[4em] mt-[2em] px-[3em] ">
+        <div className=" flex-col flex xl:flex-row lg:justify-center gap-[4em] ">
           {/* Bento 1 */}
           <div
             onMouseEnter={() => setHoveredImage(1)}
@@ -58,7 +63,7 @@ const Resources = () => {
             />
           </div>
         </div>
-        <div className="flex gap-[4em]">
+        <div className="flex flex-col xl:flex-row gap-[4em] mt-[4em] xl:mt-0">
           {/* Bento 3 */}
           <div
             onMouseEnter={() => setHoveredImage(3)}
