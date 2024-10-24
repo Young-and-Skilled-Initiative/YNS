@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="w-full bg-white xl:px-28 px-4 py-6 flex justify-between gap-6 lg:py-12">
+      <div className="w-full bg-white lg:px-[4em] xl:px-[8em] px-4 py-6 flex justify-between gap-6 lg:py-12">
         <img
           src="/images/logo-main.svg"
           alt="Logo"
