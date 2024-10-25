@@ -43,7 +43,7 @@ export const teamMembers = [
 ];
 
 // data.ts
-import { BlogCardData, CoreValue } from "@/types";
+import { BlogCardData, CoreValue, TestimonialDetails } from "@/types";
 
 export const coreValues: CoreValue[] = [
   {
@@ -148,4 +148,55 @@ export const blogCards: BlogCardData[] = [
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_9.svg",
   },
+];
+export const testimonials: TestimonialDetails[] = [
+  {
+    quote: "Platform's flexibility allowed me to learn at my own pace",
+    company: "/testimonial_young_and_skilled.svg",
+    quoteImage: "/testimonial_quote_green.svg",
+    description:
+      "Young and Skilled Initiative gave me the skills and confidence I needed to land my dream job. The platform's flexibility allowed me to learn at my own pace, and the mentorship was invaluable.",
+    name: "Maria Obioma",
+    position: "Digital Marketing Graduate, Young & Skilled",
+    image: "/testimonial_maria_obioma.svg",
+    bgColor: "#114F3C",
+    extra: "/testimonial_star_2.svg",
+    companyWidth: 80,
+    companyHeight: 44,
+    extraWidth: 76,
+    extraHeight: 76,
+  },
+  {
+    quote: "I've gained the confidence to lead my school's environmental club",
+    company: "/testimonial_google.svg",
+    quoteImage: "/testimonial_quote_mint.svg",
+    description:
+      "Thanks to the mentorship and support, I've gained the confidence to lead my school's environmental club and work on sustainable projects.",
+    name: "David Oluah",
+    position: "Product Designer, Google",
+    image: "/testimonial_david_oluah.svg",
+    bgColor: "#98BC6D",
+    extra: "/testimonial_star.svg",
+    companyWidth: 114,
+    companyHeight: 37,
+    extraWidth: 76,
+    extraHeight: 76,
+  },
+  {
+    quote: "Young and Skilled Initiative opened my eyes to new possibilities",
+    company: "/testimonial_microsoft.svg",
+    quoteImage: "/testimonial_quote_red.svg",
+    description:
+      "Young and Skilled Initiative opened my eyes to new possibilities. The skills I learned here have helped me launch my own app!",
+    name: "Sarah Macklin",
+    position: "Program Alumna, Microsoft",
+    image: "/testimonial_sarah_macklin.svg",
+    bgColor: "#EF4C0D",
+    extra: "/testimonial_semicircle.svg",
+    companyWidth: 135,
+    companyHeight: 29,
+    extraWidth: 65,
+    extraHeight: 32,
+  },
+  // Add more testimonials here...
 ];

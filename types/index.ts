@@ -22,3 +22,19 @@ export interface BlogCardData {
   image: string;
   description: string;
 }
+export type TestimonialDetails = {
+  quote: string;
+  company: string;
+  description: string;
+  quoteImage: string;
+  name: string;
+  position: string;
+  image: string;
+  bgColor: string;
+  extra: string;
+  companyWidth: number;
+  companyHeight: number;
+  extraWidth: number;
+  extraHeight: number;
+};
+
