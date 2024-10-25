@@ -3,6 +3,7 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import star from "@/public/star.png";
+import star2 from "@/public/testimonial_star.svg";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -42,7 +43,16 @@ const AccordionTrigger = React.forwardRef<
         onClick={handleToggle}
       >
         {children}
-        <Image
+        {isOpen ? <Image
+          alt="dropdown-icon"
+          className={cn(
+            " h-[23px] w-[23px] lg:h-[26.48px] lg:w-[26.48px] shrink-0 transition-transform duration-500",
+            isOpen ? "rotate-180" : "rotate-0" // Rotate image based on state
+          )}
+          width={49.68}
+          height={49.68}
+          src={star2}
+        /> : <Image
           alt="dropdown-icon"
           className={cn(
             " h-[23px] w-[23px] lg:h-[26.48px] lg:w-[26.48px] shrink-0 transition-transform duration-500",
@@ -51,7 +61,7 @@ const AccordionTrigger = React.forwardRef<
           width={49.68}
           height={49.68}
           src={star}
-        />
+        />}
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

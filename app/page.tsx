@@ -19,19 +19,20 @@ export default function Home() {
 
       <Hero />
       <AboutUs />
-      <PersonalizedLearning/>
+      <PersonalizedLearning />
 
-      
+
       <main className="flex min-h-screen flex-col items-center justify-between px-6 md:px-16 lg:px-24 py-6 md:py-8">
-       
-        
-        <Resources /> 
+
+
+        <Resources />
         {/* <Network /> */}
-        <FAQ />
+
         <Testimonial />
-        <Newsletter/>
-       
+        <Newsletter />
+
         <NewsInsightsAndBlog />
+        <FAQ />
       </main>
       <Footer />
     </>
