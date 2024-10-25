@@ -10,12 +10,17 @@ const PersonalizedLearning = () => {
     <div className="bg-black mb-[9em]  ">
       <div className="flex flex-col lg:flex-row justify-between lg:px-[5em] items-center w-full lg:p-10 px-4">
         {/* First Text Section */}
-        <div className="flex lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em]">
+        <div className=" lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em] hidden lg:block ">
           <h1 className="font-[500] lg:text-[40px] text-[30px]">
             Personalized
           </h1>
           <h1 className="text-[#FFFFFF80] font-[500] lg:text-[40px] text-[30px]">
             Learning
+          </h1>
+        </div>
+        <div className="mt-[1em] lg:hidden">
+          <h1 className="text-white font-cocon text-[30px] ">
+            Personalized Learning
           </h1>
         </div>
 
@@ -33,6 +38,10 @@ const PersonalizedLearning = () => {
             each student, ensuring a personalized and impactful learning
             experience.
           </p>
+        </div>
+        <div className="flex  items-left lg:hidden">
+          <Image src={Star} alt="" />
+          <div></div>
         </div>
       </div>
       <div className="flex lg:pl-[5em] px-[2em]  lg:px-0">

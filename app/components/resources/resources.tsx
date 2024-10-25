@@ -10,14 +10,17 @@ import Variant1 from "@/public/variant1.svg";
 import Variant2 from "@/public/variant2.svg";
 import Variant3 from "@/public/variant3.svg";
 import Variant4 from "@/public/variant4.svg";
-import Bento1mob 
+import Bento1mob from "@/public/Bento1mob.svg"
+import Bento2mob from "@/public/Bento2mob.svg"
+import Bento3mob from "@/public/Bento3mob.svg"
+import Bento4mob from "@/public/Bento4mob.svg"
 
 const Resources = () => {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
 
   return (
     <div>
-      <div className="lg:flex-col cursor-pointer hidden  ">
+      <div className="lg:flex-col cursor-pointer  ">
         <div className="flex flex-col gap-[1em] ">
           <h1 className="bg-gray-200 text-gray-500 py-[1em] px-[1.5em]  text-center text-[25px] xl:w-[8em] rounded-full mx-auto mb-4">
             Resources
@@ -33,7 +36,7 @@ const Resources = () => {
           </p>
         </div>
 
-        <div className="lg:px-[2em] lg:py-[4em] xl:flex-col xl:flex  gap-[4em] mt-[2em] px-[3em] ">
+        <div className="lg:px-[2em] lg:py-[4em] xl:flex-col   gap-[4em] mt-[2em] px-[3em] hidden xl:block ">
           <div className=" flex-col flex xl:flex-row lg:justify-center gap-[4em] ">
             {/* Bento 1 */}
             <div
@@ -65,7 +68,7 @@ const Resources = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row gap-[4em] mt-[4em] xl:mt-0">
+          <div className="flex flex-col xl:flex-row gap-[4em] mt-[4em] ">
             {/* Bento 3 */}
             <div
               onMouseEnter={() => setHoveredImage(3)}
@@ -97,8 +100,11 @@ const Resources = () => {
           </div>
         </div>
       </div>
-      <div className="lg:hidden flex flex-col">
-
+      <div className="xl:hidden flex flex-col gap-[2em] mt-[5em]">
+                <Image src={Bento1mob} alt="bento1" className="w-full "/>
+                <Image src={Bento2mob} alt="bento1" className="w-full"/>
+                <Image src={Bento3mob} alt="bento1" className="w-full"/>
+                <Image src={Bento4mob} alt="bento1" className="w-full "/>
 
       </div>
     </div>

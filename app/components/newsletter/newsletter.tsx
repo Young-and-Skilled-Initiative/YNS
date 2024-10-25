@@ -11,7 +11,7 @@ const Newsletter = () => {
         <h1 className="font-cocon text-white text-[40px] lg:text-[50px]">
           Join the Movement Now
         </h1>
-        <p className="font-[400] text-[20px] text-white lg:w-[570px] text-wrap">
+        <p className="font-[400] text-[16px] text-white lg:w-[570px] text-wrap text-center lg:text-left">
           Are you ready to take the next step in your learning journey? Sign up
           now and start exploring a world of opportunities with Young and
           Skilled Initiative. Your future begins here!
@@ -25,11 +25,11 @@ const Newsletter = () => {
         />
         <button
           type="submit"
-          className="bg-black py-[1em] px-[2.5em] text-white text-manrope text-[20px] rounded-full w-full"
+          className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] "
         >
           Join Waitlist
         </button>
-        <button className="bg-white bg-opacity-20 p-[1em] px-[2.5em] rounded-full text-white text-lg w-full">
+        <button className="bg-white bg-opacity-20 p-[1.5em] xl:px-[2.5em] rounded-full text-white text-[16px] w-full lg:w-[15em]">
           Browse Courses
         </button>
       </div>
