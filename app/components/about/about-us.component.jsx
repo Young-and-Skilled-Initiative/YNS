@@ -7,39 +7,74 @@ import badge from "@/public/Logosticker.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="w-full flex items-start justify-between relative gap-[142px]  mb-[134px]">
+      <div className="w-full flex sm:flex-row flex-col-reverse items-start sm:text-start text-center justify-between relative gap-16 sm:gap-24 lg:gap-[142px] px-[1em] xl:px-24 my-14 sm:mb-[134px]">
+        <div className="block sm:hidden text-xs text-ash ">
+          <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
+            <div className="bg-white w-[120px] text-nowrap h-[32.97px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[32px] ">
+              <li className=" font-medium list-disc ">Cyber Security</li>
+            </div>
+            <div className=" bg-white w-[44px] h-[37px] rounded-full flex items-center justify-center border border-ash text-ash ">
+              <div className=" rounded-full w-[5px] h-[5px] bg-ash" />
+              <div className=" rounded-full w-[5px] h-[5px] bg-ash" />
+              <div className=" rounded-full w-[5px] h-[5px] bg-ash" />
+            </div>
+            <div className="bg-white h-[32.97px] w-[120px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[2px] rotate-[43.52deg] relative -left-[8px] ">
+              <li className=" font-medium  list-disc ">Development</li>
+            </div>
+          </ul>
+
+          <ul className="w-full mt-[10px] flex items-center justify-start sm:gap-5 gap-3  font-medium">
+            <div className="bg-white h-[35px] w-14 rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[23px] ">
+              <li className="list-disc ">AI</li>
+            </div>
+            <div className="bg-white h-[35px] w-[78px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[23px] ">
+              <li className=" list-disc ">Web3</li>
+            </div>
+            <div className="bg-white h-[35px] w-[82px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[23px] ">
+              <li className=" list-disc ">Design</li>
+            </div>
+          </ul>
+        </div>
         <div className="w-1/2 relative  ">
-          <Image src={badge} className=" z-10 absolute object-contain -right-[50px] top-8 " />
-          <div className=" w-[241px] h-[314px] rounded-[14.94px] border border-dotted border-[#8E9BAE] absolute  top-[75px] left-[352px] " />
-          <div className=" ml-[2em] flex">
+          <Image
+            src={badge}
+            className="lg:w-[90px] lg:h-[90px] w-16 h-16 z-10 absolute object-contain -right-32 sm:-right-20 lg:-right-28 xl:-right-[72px] top-8 "
+          />
+          <div className="w-[200px] h-[160px] sm:w-[280px]  sm:h-[180px] lg:w-[301px] lg:h-[314px] rounded-[14.94px] border border-dotted border-ash absolute  top-[75px] left-9 lg:left-[160px] xl:left-[302px] " />
+          <div className=" lg:ml-[em] xl:ml-[-8px] flex">
             <div className="z-20">
               <Image
                 src={img1}
-                className=" w-[360px] h-[300px] object-contain "
+                className="w-[203px] h-[163px] lg:w-[360px] lg:h-[260px] object-contain "
+                alt=""
               />
             </div>
           </div>
 
           {/* Lady Image (moved up with negative margin) */}
-          <div className="flex  items-end -mt-[3em] ml-[8em] relative ">
-            <div className="flex flex-col z-30  mb-7 ">
+          <div className="flex  items-end -mt-[1em] sm:-mt-[3em] md:ml-[8em] relative ">
+            <div className="flex flex-col z-30  lg:mb-7 ">
               <Image
                 src={img2}
-                className="w-[343px] h-[242px] object-contain  left-[73px]  relative"
+                className="w-[180px] sm:w-[243px] lg:w-[343px] h-[100px] lg:h-[228px] md:h-[242px] object-contain left-24 sm:left-8 xl:left-[73px]  relative"
+                alt=""
               />
             </div>
           </div>
         </div>
-        <div className="w-1/2">
-          <div className="w-[138px] h-[38px] bg-[#FAFAFA]  rounded-[30px] flex items-center justify-center">
-            <p className="text-[16px] text-[#8E9BAE] font-[medium]">About Us</p>
+
+        <div className="sm:w-1/2 w-full">
+          <div className="w-[138px] mx-auto  h-[38px] bg-[#FAFAFA] rounded-[30px] flex items-center justify-center">
+            <p className="text-base text-center text-ash font-[medium]  sm:text-start">
+              About Us
+            </p>
           </div>
 
           <h3 className=" text-[40px]  font-medium leading-[48.64px] font-cocon mt-[30px] mb-[15px] ">
             Life Skills Development
           </h3>
 
-          <p className=" text-[16px] font-400 leading-[32px] font-manrope ">
+          <p className="text-base font-400 leading-8 text-black/60 font-manrope tracking-wide lg:pr-[2.5em]">
             Welcome to Young and Skilled Initiative, where we believe that every
             student has the potential to achieve greatness. Our mission is to
             provide high-quality learning experiences that equip young minds
@@ -56,34 +91,30 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="mt-[65.03px]">
+          <div className="mt-[65.03px] hidden sm:block text-sm lg:text-base text-ash">
             <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
-              <div className="bg-white w-[181px] h-[62.97px] rounded-[44.98px] flex items-center justify-center border border-[#8E9BAE] text-[17.19px] text-[#8E9BAE] py-[15.5px] px-[23px] ">
-                <li className="text-[16px] font-medium list-disc ">
-                  Cyber Security
-                </li>
+              <div className="bg-white w-[181px] h-12 lg:h-[62.97px] rounded-[44.98px] flex items-center justify-center border border-ash  py-4 px-[23px] ">
+                <li className=" font-medium list-disc ">Cyber Security</li>
               </div>
-              <div className=" bg-white w-[64px] h-[50px] rounded-full flex items-center justify-center border border-[#8E9BAE] text-[#8E9BAE] ">
-                <div className=" rounded-full w-[5px] h-[5px] bg-[#8E9BAE]" />
-                <div className=" rounded-full w-[5px] h-[5px] bg-[#8E9BAE]" />
-                <div className=" rounded-full w-[5px] h-[5px] bg-[#8E9BAE]" />
+              <div className=" bg-white w-[64px] h-12 lg:h-[50px] rounded-full flex items-center justify-center border border-ash text-ash ">
+                <div className=" rounded-full w-[5px] h-[5px] bg-ash" />
+                <div className=" rounded-full w-[5px] h-[5px] bg-ash" />
+                <div className=" rounded-full w-[5px] h-[5px] bg-ash" />
               </div>
-              <div className="bg-white h-[62.97px] w-[173px] rounded-[44.98px] flex items-center justify-center border border-[#8E9BAE] text-[17.19px] text-[#8E9BAE] py-[15.5px] px-[23px] rotate-[43.52deg] relative left-[14px] ">
-                <li className="text-[16px] font-medium  list-disc ">
-                  Development
-                </li>
+              <div className="bg-white h-12 lg:h-[62.97px] w-[173px] rounded-[44.98px] flex items-center justify-center border border-ash  py-4 px-[23px] rotate-[43.52deg] relative top-2 lg:left-[14px] ">
+                <li className=" font-medium  list-disc ">Development</li>
               </div>
             </ul>
 
             <ul className="w-full mt-[10px] flex items-center justify-start gap-[19px] ">
-              <div className="bg-white h-[50px] w-[85px] rounded-[44.98px] flex items-center justify-center border border-[#8E9BAE] text-[17.19px] text-[#8E9BAE] py-[15.5px] px-[23px] ">
-                <li className="text-[16px] font-medium list-disc ">AI</li>
+              <div className="bg-white h-[50px] w-[70px] lg:w-[85px] rounded-[44.98px] flex items-center justify-center border border-ash  py-4 px-[23px] ">
+                <li className=" font-medium list-disc ">AI</li>
               </div>
-              <div className="bg-white h-[50px] w-[116px] rounded-[44.98px] flex items-center justify-center border border-[#8E9BAE] text-[17.19px] text-[#8E9BAE] py-[15.5px] px-[23px] ">
-                <li className="text-[16px] font-medium  list-disc ">Web3</li>
+              <div className="bg-white h-[50px] w-[90px] lg:w-[116px] rounded-[44.98px] flex items-center justify-center border border-ash  py-4 px-[23px] ">
+                <li className=" font-medium  list-disc ">Web3</li>
               </div>
-              <div className="bg-white h-[50px] w-[123px] rounded-[44.98px] flex items-center justify-center border border-[#8E9BAE] text-[17.19px] text-[#8E9BAE] py-[15.5px] px-[23px] ">
-                <li className="text-[16px] font-medium  list-disc ">Design</li>
+              <div className="bg-white h-[50px] w-[90px] lg:w-[123px] rounded-[44.98px] flex items-center justify-center border border-ash  py-4 px-[23px] ">
+                <li className=" font-medium  list-disc ">Design</li>
               </div>
             </ul>
           </div>
