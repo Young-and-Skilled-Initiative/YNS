@@ -26,7 +26,7 @@ export default function Home() {
        
         
         <Resources /> 
-        {/* <Network /> */}
+        <Network />
         <FAQ />
         <Testimonial />
         <Newsletter/>
