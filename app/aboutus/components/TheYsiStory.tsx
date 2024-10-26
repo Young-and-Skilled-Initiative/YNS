@@ -23,7 +23,7 @@ const TheYsiStory = () => {
             <Image
               src={YsiTapStar}
               alt="tap star"
-              className="absolute z-20 left-[-2rem] bottom-[-3rem] lg:left-[-3.5rem] lg:bottom-[-3.5rem] xl:left-[-4rem] xl:bottom-[-4rem] w-28 lg:w-[146px] xl:w-[159.34px]"
+              className="absolute z-20 left-[-2rem] bottom-[-3rem] lg:left-[-3.5rem] lg:bottom-[-3.5rem] xl:left-[-4rem] xl:bottom-[-4rem] w-28 lg:w-[146px] xl:w-[159.34px] "
             />
           </div>
         </figure>
@@ -33,7 +33,7 @@ const TheYsiStory = () => {
           <Image
             src={YsiStar}
             alt="star image"
-            className="absolute right-[-50px] w-16 lg:w-[80px]"
+            className="absolute right-[-50px] w-16 lg:w-[80px] animate-spin-slow"
           />
           <h1 className="text-[#EF4C0D] text-[35px] md:text-[50px] font-medium font-[Cocon]">
             The YSI story

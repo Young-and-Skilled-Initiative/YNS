@@ -8,7 +8,7 @@ import Logo from "@/public/orangelogo.svg";
 const PersonalizedLearning = () => {
   return (
     <div className="bg-black mb-[9em]  ">
-      <div className="flex flex-col lg:flex-row justify-between lg:px-[5em] items-center w-full lg:p-10 px-4">
+      <div className="flex flex-col lg:flex-row justify-between 2xl:justify-center lg:px-[5em] items-center w-full lg:p-10 px-[2em]">
         {/* First Text Section */}
         <div className=" lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em] hidden lg:block ">
           <h1 className="font-[500] lg:text-[40px] text-[30px]">
@@ -19,7 +19,7 @@ const PersonalizedLearning = () => {
           </h1>
         </div>
         <div className="mt-[1em] lg:hidden">
-          <h1 className="text-white font-cocon text-[30px] ">
+          <h1 className="text-white font-cocon text-[30px] mb-[0.5em]">
             Personalized Learning
           </h1>
         </div>
@@ -28,7 +28,7 @@ const PersonalizedLearning = () => {
         <Image
           src={Star}
           alt="star"
-          className="w-20 h-20 object-contain hidden lg:block "
+          className="w-20 h-20 object-contain hidden lg:block animate-spin-slow 2xl:w-[20%] "
         />
 
         {/* Paragraph Section */}
@@ -39,12 +39,13 @@ const PersonalizedLearning = () => {
             experience.
           </p>
         </div>
-        <div className="flex  items-left lg:hidden mb-7">
-          <Image src={Star} alt="" />
+      
+      </div>
+      <div className="flex  items-left lg:hidden mb-7 ml-[2em]">
+          <Image src={Star} alt="" className="animate-spin-slow "/>
     
         </div>
-      </div>
-      <div className="flex lg:pl-[5em] px-[4em] ">
+      <div className="flex lg:pl-[5em] px-[6em] ">
         <div className="mx-auto relative">
           <div className="absolute -left-[5em]">
             <Image
