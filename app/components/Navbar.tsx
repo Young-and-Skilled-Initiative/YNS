@@ -11,7 +11,7 @@ const navlinks = [
   { route: "Home", link: "/", id: "home" },
   { route: "About us", link: "/aboutus", id: "about" },
   { route: "Resources", link: "/resources", id: "resources" },
-  { route: "Contact us", link: "/contact", id: "contact-us" },
+  { route: "Contact us", link: "/join-movement", id: "contact-us" },
   { route: "Blog", link: "/blog", id: "blog" },
 ];
 
