@@ -79,7 +79,7 @@ export default function Hero() {
                 src="/images/Star2.svg"
                 width={100}
                 height={100}
-                className="absolute left-20 -bottom-12 hidden lg:block"
+                className="absolute left-20 -bottom-12 hidden lg:block animate-spin-slow"
                 alt="star2"
               />
               <Button

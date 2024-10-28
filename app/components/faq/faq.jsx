@@ -26,19 +26,19 @@ const FAQ = () => {
           <div className="w-full mt-[32px] lg:mt-0 lg:w-[50%]">
             {faq_list.map(({ question, answer }) => (
               <Accordion
-                className=" mb-[16px] lg:mb-[34px]"
+                className=" mb-[16px] lg:mb-[34px] outline-none"
                 key={question}
                 type="single"
                 collapsible
               >
                 <AccordionItem
-                  className="lg:w-full bg-[#F6F6F6] border-none rounded-[10px] px-[32px]  "
+                  className="lg:w-full bg-[#F6F6F6] border-none rounded-[10px] px-[32px] transition-colors duration-200 ease-in-out hover:bg-[#1A1A1A] hover:text-white"
                   value={question}
                 >
                   <AccordionTrigger className="no-underline hover:no-underline text-[9.8px] lg:text-[16px] font-cocon font-medium ">
                     {question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[9.8px] lg:text-[16px]">
+                  <AccordionContent className="text-[9.8px] lg:text-[16px] ">
                     {answer}
                   </AccordionContent>
                 </AccordionItem>
