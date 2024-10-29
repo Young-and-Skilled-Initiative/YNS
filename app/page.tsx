@@ -26,7 +26,10 @@ export default function Home() {
         <Network />
 
         <FAQ />
- <Testimonial />
+        <Testimonial />
+        <Newsletter />
+
+        <Testimonial />
         <Newsletter />
 
         <NewsInsightsAndBlog />
