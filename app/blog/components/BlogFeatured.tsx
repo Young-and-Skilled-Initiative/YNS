@@ -68,7 +68,7 @@ const BlogFeatured = () => {
                 </div>
                 <p className="text-gray-400 text-base">{card.date}</p>
 
-                <Link href={`/${generateSlug(card.title)}`} className="flex gap-4 text-base">
+                <Link href={`/blog/${generateSlug(card.title)}`} className="flex gap-4 text-base">
                   Read Article <ArrowRight className="text-[#55534E] text-base" />
                 </Link>
 
