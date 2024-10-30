@@ -83,6 +83,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_1.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Product", "Courses"],
@@ -91,6 +96,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_2.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Product", "Education", "Ecosystem"],
@@ -99,6 +109,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_3.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Company", "Courses"],
@@ -107,6 +122,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_4.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Company", "Courses"],
@@ -115,6 +135,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_5.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Company", "Courses"],
@@ -123,6 +148,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_6.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Company", "Courses"],
@@ -131,6 +161,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_7.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Company", "Courses"],
@@ -139,6 +174,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_8.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
   {
     category: ["Company", "Courses"],
@@ -147,6 +187,11 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_9.svg",
+    author: {
+      name: "Young & Skilled Admin",
+     image: "/icons/photo-card.svg",
+      socials: { "twitter(X)": "", facebook: "", linkedin: "", instagram: "" },
+    },
   },
 ];
 export const testimonials: TestimonialDetails[] = [

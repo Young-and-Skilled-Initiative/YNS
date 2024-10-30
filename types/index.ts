@@ -21,6 +21,7 @@ export interface BlogCardData {
   date: string;
   image: string;
   description: string;
+  author: {};
 }
 export type TestimonialDetails = {
   quote: string;
