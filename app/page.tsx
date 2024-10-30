@@ -29,6 +29,9 @@ export default function Home() {
         <Testimonial />
         <Newsletter />
 
+        <Testimonial />
+        <Newsletter />
+
         <NewsInsightsAndBlog />
       </main>
       <Network />
