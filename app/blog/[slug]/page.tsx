@@ -59,6 +59,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
     <div>
       <Navbar />
       <div className="px-6 pt-8 pb-20 md:px-16 lg:px-24 flex flex-col gap-9">
+        {/* Categories */}
         <div className="flex gap-5">
           {blogPost.category.map((cat, idx) => (
             <span
@@ -81,9 +82,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
             height={0}
             src={Star4}
             alt="star"
-            className="hidden md:flex min-w-14 lg:min-w-20 cursor-pointer  animate-spin-slow"
+            className="absolute bottom-0 right-0  w-10 md:w-14 lg:min-w-20  animate-spin-slow"
           />
         </div>
+           {/* Author and Date */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-y-7 md:items-center">
           {" "}
           <div className="flex gap-x-5">
