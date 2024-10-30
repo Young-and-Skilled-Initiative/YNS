@@ -63,21 +63,18 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
             </span>
           ))}
         </div>
-        <div className="flex justify-between relative">
+        <div className="flex justify-between relative gap-4">
           {" "}
           <h1 className="font-cocon font-medium text-3xl md:text-4xl leading-[45px] lg:text-5xl">
             {blogPost.title}
           </h1>{" "}
-      
-            {" "}
-            <Image
-              width={0}
-              height={0}
-              src={Star4}
-              alt="star"
-              className="hidden md:flex min-w-14 lg:min-w-20 cursor-pointer  animate-spin-slow"
-            />
-         
+          <Image
+            width={0}
+            height={0}
+            src={Star4}
+            alt="star"
+            className="hidden md:flex min-w-14 lg:min-w-20 cursor-pointer  animate-spin-slow"
+          />
         </div>
         <div className="flex flex-col md:flex-row justify-between items-start gap-y-7 md:items-center">
           {" "}
@@ -94,7 +91,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
             )}
             <div className="flex flex-col justify-between py-[6px]">
               {blogPost.author?.name && (
-                <p className="font-medium text-sm md:text-xl lg:text-2xl">{blogPost.author.name}</p>
+                <p className="font-medium text-sm md:text-xl lg:text-2xl">
+                  {blogPost.author.name}
+                </p>
               )}
 
               <p className="text-[#EF4C0D] text-xs md:text-base font-normal">
@@ -103,7 +102,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
             </div>
           </div>
           <div className="flex flex-col gap-y-2.5 text-left md:text-right">
-            <p className="text-[#8E9BAE] font-normal text-sm md:text-xl">Socials</p>
+            <p className="text-[#8E9BAE] font-normal text-sm md:text-xl">
+              Socials
+            </p>
             <div className="flex gap-2.5">
               {blogPost.author?.socials["twitter(X)"] && (
                 <Link
@@ -126,7 +127,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
                     height={0}
                     src={Facebook_green}
                     alt="facebook"
-                   className="w-10 md:w-12"
+                    className="w-10 md:w-12"
                   />
                 </Link>
               )}
@@ -137,7 +138,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
                     height={0}
                     src={Linkedin_green}
                     alt="linkedin"
-                 className="w-10 md:w-12"
+                    className="w-10 md:w-12"
                   />
                 </Link>
               )}
@@ -148,7 +149,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
                     height={0}
                     src={Instagram_green}
                     alt="instagram"
-                  className="w-10 md:w-12"
+                    className="w-10 md:w-12"
                   />
                 </Link>
               )}
@@ -179,7 +180,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           {blogPost.moreDescription?.map((more, idx) => (
             <div key={idx} className="flex flex-col gap-y-12">
               <div className="flex flex-col gap-y-5">
-                <p className="font-bold text-xl md:text-2xl lg:text-3xl">{more.title}</p>
+                <p className="font-bold text-xl md:text-2xl lg:text-3xl">
+                  {more.title}
+                </p>
                 <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
                   {more.content}
                 </p>
