@@ -83,14 +83,102 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_1.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+
+          alt: "Image 1: Student making financial plans",
+        },
+
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Product", "Courses"],
     title: "The Importance of Networking in Building a Successful Career",
     date: "August 28, 2024",
     description:
-      "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
+      " Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future. In today's fast-paced world, financial literacy is an essential skill for students to master early in life. Understanding how to manage money, budget effectively, and make informed financial decisions sets the stage for a secure future. ",
     image: "/news_and_blog_2.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Product", "Education", "Ecosystem"],
@@ -99,6 +187,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_3.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Company", "Courses"],
@@ -107,6 +238,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_4.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Company", "Courses"],
@@ -115,6 +289,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_5.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Company", "Courses"],
@@ -123,6 +340,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_6.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Company", "Courses"],
@@ -131,6 +391,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_7.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Company", "Courses"],
@@ -139,6 +442,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_8.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
   {
     category: ["Company", "Courses"],
@@ -147,6 +493,49 @@ export const blogCards: BlogCardData[] = [
     description:
       "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
     image: "/news_and_blog_9.svg",
+    author: {
+      name: "Young & Skilled Admin",
+      image: "/icons/photo-card.svg",
+      socials: {
+        "twitter(X)": "https://x.com/",
+        facebook: "https://www.facebook.com/",
+        instagram: "https://www.instagram.com/",
+        linkedin: "https://www.linkedin.com/",
+      },
+    },
+    moreDescription: [
+      {
+        title: "Why Financial Literacy Matters",
+        content:
+          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+      },
+      {
+        title: "Starting Early",
+        content:
+          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+      },
+      {
+        title: "Budgeting and Saving",
+        content:
+          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+      },
+      {
+        title: "The Power of Compound Interest",
+        content:
+          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+      },
+      {
+        title: "Making Informed Financial Decisions",
+        content:
+          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+      },
+    ],
   },
 ];
 export const testimonials: TestimonialDetails[] = [
