@@ -21,7 +21,20 @@ export interface BlogCardData {
   date: string;
   image: string;
   description: string;
-  author: {};
+  author: {
+    image: string;
+    name: string;
+    socials: {
+      "twitter(X)": string;
+      facebook: string;
+      instagram: string;
+      linkedin: string;
+    };
+  };
+  moreDescription: {
+    title: string;
+    content: string;
+  }[];
 }
 export type TestimonialDetails = {
   quote: string;
@@ -38,4 +51,3 @@ export type TestimonialDetails = {
   extraWidth: number;
   extraHeight: number;
 };
-

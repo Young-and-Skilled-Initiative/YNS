@@ -9,7 +9,7 @@ const BlogNewsletter = () => {
       <h1 className="font-cocon text-5xl font-medium">
         Want to enjoy more news like?
       </h1>
-      <p className="font-normal text-[1rem] font-manrope">
+      <p className="font-normal text-base font-manrope">
         Sign up for our newsletter and receive more updates like this.
       </p>
       <div className="flex gap-x-2">
@@ -36,14 +36,14 @@ const BlogNewsletter = () => {
         alt="sketch"
         className="absolute left-0 bottom-0 w-20 cursor-pointer  "
       />
-       <Image
+      <Image
         width={20}
         height={20}
         src={Smile}
         alt="smile"
         className="absolute right-0 top-[50%] w-20 cursor-pointer  "
       />
-      
+
       <Image
         width={20}
         height={20}
