@@ -20,6 +20,18 @@ import Link from "next/link";
 const generateSlug = (title: string) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
+// Category background color utility
+const getCategoryBgColor = (category: string) => {
+  const colors: { [key: string]: string } = {
+    Education: "bg-[#98BC6D]",
+    Courses: "bg-gray-200",
+    Company: "bg-red-200",
+    Product: "bg-blue-200",
+    Ecosystem: "bg-purple-200",
+  };
+  return colors[category] || "bg-gray-200";
+};
+
 // Define the type for params
 interface BlogPostProps {
   params: {
@@ -34,7 +46,13 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
   const blogPost = blogCards.find((card) => generateSlug(card.title) === slug);
 
   if (!blogPost) {
-    return <div>Post not found!</div>;
+    return (
+      <div className="flex flex-col">
+        <Navbar />
+        <div className="text-center text-xl font-bold">Post not found!</div>
+        <Footer />
+      </div>
+    );
   }
 
   return (
@@ -45,19 +63,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           {blogPost.category.map((cat, idx) => (
             <span
               key={idx}
-              className={`text-xs font-medium text-black px-7 py-3 rounded-[31px] ${
-                cat === "Education"
-                  ? "bg-[#98BC6D]"
-                  : cat === "Courses"
-                  ? "bg-gray-200 "
-                  : cat === "Company"
-                  ? "bg-red-200 "
-                  : cat === "Product"
-                  ? "bg-blue-200 "
-                  : cat === "Ecosystem"
-                  ? "bg-purple-200 "
-                  : "bg-gray-200 "
-              }`}
+              className={`text-xs font-medium text-black px-7 py-3 rounded-[31px] ${getCategoryBgColor(
+                cat
+              )}`}
             >
               {cat}
             </span>
