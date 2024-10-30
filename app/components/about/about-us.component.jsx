@@ -7,7 +7,7 @@ import badge from "@/public/Logosticker.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="w-full flex sm:flex-row flex-col-reverse items-start sm:text-start text-center justify-between relative gap-16 sm:gap-24 lg:gap-[142px] px-[1em] xl:px-24 my-14 sm:mb-[134px]">
+      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-16 sm:gap-24 lg:gap-[142px] px-[1em] xl:px-24 my-14 sm:mb-[134px]">
         <div className="block sm:hidden text-xs text-ash ">
           <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
             <div className="bg-white w-[120px] text-nowrap h-[32.97px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[32px] ">
@@ -38,25 +38,26 @@ const AboutUs = () => {
         <div className="w-1/2 relative  ">
           <Image
             src={badge}
-            className="lg:w-[90px] lg:h-[90px] w-16 h-16 z-10 absolute object-contain -right-32 sm:-right-20 lg:-right-28 xl:-right-[72px] top-8 "
+            className="lg:w-[90px] lg:h-[90px] w-16 h-16 z-10 absolute object-contain -right-20 sm:-right-20 lg:-right-28 xl:-right-[72px] top-4 sm:top-8 "
+            alt=""
           />
-          <div className="w-[200px] h-[160px] sm:w-[280px]  sm:h-[180px] lg:w-[301px] lg:h-[314px] rounded-[14.94px] border border-dotted border-ash absolute  top-[75px] left-9 lg:left-[160px] xl:left-[302px] " />
-          <div className=" lg:ml-[2em] flex">
-            <div className="z-20">
+          <div className="w-[200px] h-[160px] sm:w-[240px]  sm:h-[180px] lg:w-[301px] lg:h-[314px] rounded-[14.94px] border border-dotted border-ash absolute top-10 sm:top-[75px] left-2 sm:left-20 lg:left-[160px] xl:left-[302px] " />
+          <div className=" md:ml-[4em] xl:ml-[6em] flex w-full">
+            <div className="sm:z-20">
               <Image
                 src={img1}
-                className="w-[203px] h-[163px] lg:w-[320px] lg:h-[260px] object-contain "
+                className="w- relative right-16 sm:w-[243px] h-[200px] lg:w-[380px] lg:h-[260px] object-contain "
                 alt=""
               />
             </div>
           </div>
 
           {/* Lady Image (moved up with negative margin) */}
-          <div className="flex  items-end -mt-[1em] sm:-mt-[3em] md:ml-[8em] relative ">
+          <div className="flex  items-end -mt-[1em] sm:-mt-[3em] md:ml-[em]  lg:ml-[8em]  relative ">
             <div className="flex flex-col z-30  lg:mb-7 ">
               <Image
                 src={img2}
-                className="w-[180px] sm:w-[243px] lg:w-[343px] h-[100px] lg:h-[228px] md:h-[242px] object-contain left-24 sm:left-8 xl:left-[73px]  relative"
+                className="w-[280px] sm:w-[223px] sm:h-[200px] lg:w-[343px] h-[180px] lg:h-[228px] md:h-[232px] object-contain -top-20 sm:-top-6 lg:top-0 left-2 sm:left-14 lg:left-4 xl:left-[73px]  relative"
                 alt=""
               />
             </div>
@@ -74,7 +75,7 @@ const AboutUs = () => {
             Life Skills Development
           </h3>
 
-          <p className="text-base font-400 leading-8 text-black/60 font-manrope tracking-wide ">
+          <p className="text-base font-400 leading-8 text-black/60 font-manrope tracking-wide lg:pr-[2.5em]">
             Welcome to Young and Skilled Initiative, where we believe that every
             student has the potential to achieve greatness. Our mission is to
             provide high-quality learning experiences that equip young minds
@@ -82,7 +83,7 @@ const AboutUs = () => {
             ever-changing world.
           </p>
 
-          <div className="w-full mt-[15px] flex items-center justify-start ">
+          <div className="w-full mt-[15px] flex items-center justify-center sm:justify-start ">
             <button className="bg-[#114F3C] h-[62.97px] rounded-[44.98px] flex items-center justify-center text-[17.19px] text-white py-[18.49px] px-[40px] ">
               Explore More About Us
             </button>
