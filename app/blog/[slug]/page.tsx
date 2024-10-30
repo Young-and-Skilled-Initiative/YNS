@@ -40,7 +40,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
   return (
     <div>
       <Navbar />
-      <div className="px-6  md:px-16 lg:px-24 flex flex-col gap-9">
+      <div className="px-6 pt-8 pb-20 md:px-16 lg:px-24 flex flex-col gap-9">
         <div className="flex gap-5">
           {blogPost.category.map((cat, idx) => (
             <span
