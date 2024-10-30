@@ -45,7 +45,19 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           {blogPost.category.map((cat, idx) => (
             <span
               key={idx}
-              className="text-xs font-medium text-black px-7 py-3 bg-[#98BC6D] rounded-[31px] "
+              className={`text-xs font-medium text-black px-7 py-3 rounded-[31px] ${
+                cat === "Education"
+                  ? "bg-[#98BC6D]"
+                  : cat === "Courses"
+                  ? "bg-gray-200 "
+                  : cat === "Company"
+                  ? "bg-red-200 "
+                  : cat === "Product"
+                  ? "bg-blue-200 "
+                  : cat === "Ecosystem"
+                  ? "bg-purple-200 "
+                  : "bg-gray-200 "
+              }`}
             >
               {cat}
             </span>
@@ -56,7 +68,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           <h1 className="font-cocon font-medium text-5xl">
             {blogPost.title}
           </h1>{" "}
-          <div>
+          <div className="min-w-20">
             {" "}
             <Image
               width={0}
@@ -71,15 +83,20 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           {" "}
           <div className="flex gap-x-5">
             {" "}
-            <Image
-              src={blogPost.author.image}
-              alt={blogPost.title}
-              width={0}
-              height={0}
-              className="w-20 "
-            />
+            {blogPost.author?.image && (
+              <Image
+                src={blogPost.author.image}
+                alt={blogPost.title}
+                width={0}
+                height={0}
+                className="w-20"
+              />
+            )}
             <div className="flex flex-col justify-between py-[6px]">
-              <p className="font-medium text-2xl ">{blogPost.author.name}</p>
+              {blogPost.author?.name && (
+                <p className="font-medium text-2xl">{blogPost.author.name}</p>
+              )}
+
               <p className="text-[#EF4C0D] text-base font-normal">
                 {blogPost.date}
               </p>
@@ -88,47 +105,53 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           <div className="flex flex-col gap-y-2.5 text-right">
             <p className="text-[#8E9BAE] font-normal text-xl">Socials</p>
             <div className="flex gap-2.5">
-              {" "}
-              <Link href={blogPost?.author.socials["twitter(X)"]}>
-                {" "}
-                <Image
-                  width={0}
-                  height={0}
-                  src={Twitter_green}
-                  alt="twitter"
-                  className=" w-12   "
-                />{" "}
-              </Link>
-              <Link href={blogPost.author.socials.facebook}>
-                {" "}
-                <Image
-                  width={0}
-                  height={0}
-                  src={Facebook_green}
-                  alt="facebook"
-                  className=" w-12   "
-                />{" "}
-              </Link>{" "}
-              <Link href={blogPost.author.socials.linkedin}>
-                {" "}
-                <Image
-                  width={0}
-                  height={0}
-                  src={Linkedin_green}
-                  alt="linkedin"
-                  className=" w-12   "
-                />{" "}
-              </Link>{" "}
-              <Link href={blogPost.author.socials.instagram}>
-                {" "}
-                <Image
-                  width={0}
-                  height={0}
-                  src={Instagram_green}
-                  alt="instagram"
-                  className=" w-12   "
-                />
-              </Link>{" "}
+              {blogPost.author?.socials["twitter(X)"] && (
+                <Link
+                  href={blogPost.author.socials["twitter(X)"]}
+                  target="_blank"
+                >
+                  <Image
+                    width={0}
+                    height={0}
+                    src={Twitter_green}
+                    alt="twitter"
+                    className="w-12"
+                  />
+                </Link>
+              )}
+              {blogPost.author?.socials.facebook && (
+                <Link href={blogPost.author.socials.facebook} target="_blank">
+                  <Image
+                    width={0}
+                    height={0}
+                    src={Facebook_green}
+                    alt="facebook"
+                    className="w-12"
+                  />
+                </Link>
+              )}
+              {blogPost.author?.socials.linkedin && (
+                <Link href={blogPost.author.socials.linkedin} target="_blank">
+                  <Image
+                    width={0}
+                    height={0}
+                    src={Linkedin_green}
+                    alt="linkedin"
+                    className="w-12"
+                  />
+                </Link>
+              )}
+              {blogPost.author?.socials.instagram && (
+                <Link href={blogPost.author.socials.instagram} target="_blank">
+                  <Image
+                    width={0}
+                    height={0}
+                    src={Instagram_green}
+                    alt="instagram"
+                    className="w-12"
+                  />
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -153,49 +176,43 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           {blogPost.description}
         </p>
         <div className="flex flex-col gap-y-12 pb-12">
-          {" "}
-          {blogPost.moreDescription.map((more, idx) => (
-            <span key={idx} className=" flex flex-col gap-y-5 ">
-              <span className="flex flex-col gap-y-5">
-                {" "}
+          {blogPost.moreDescription?.map((more, idx) => (
+            <div key={idx} className="flex flex-col gap-y-12">
+              <div className="flex flex-col gap-y-5">
                 <p className="font-bold text-3xl">{more.title}</p>
                 <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
                   {more.content}
                 </p>
-              </span>
-              <span className="flex flex-col gap-y-4">
-                {" "}
-                {more.imageContent?.image ? (
-                  <img
-                    width={0}
-                    height={0}
-                    src={more.imageContent?.image}
-                    alt={more.title}
-                    className="w-full"
-                  />
-                ) : (
-                  ""
-                )}
-                {more.imageContent?.alt ? (
-                  <p className="w-full text-center font-manrope text-base leading-8 font-normal text-[#808080]">
-                    {more.imageContent.alt}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </span>
-              {more.moreContent ? (
+              </div>
+              {more.imageContent && (
+                <div className="flex flex-col gap-y-4">
+                  {more.imageContent.image && (
+                    <img
+                      width={0}
+                      height={0}
+                      src={more.imageContent.image}
+                      alt={more.title}
+                      className="w-full"
+                    />
+                  )}
+                  {more.imageContent.alt && (
+                    <p className="w-full text-center font-manrope text-base leading-8 font-normal text-[#808080]">
+                      {more.imageContent.alt}
+                    </p>
+                  )}
+                </div>
+              )}
+              {more.moreContent && (
                 <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
                   {more.moreContent}
                 </p>
-              ) : (
-                ""
               )}
-            </span>
+            </div>
           ))}
         </div>
+
         <BlogNewsletter />
-        <p className="font-cocon text-5xl font-medium ">Stay Updated</p>
+        <p className="font-cocon text-5xl font-medium pt-20">Stay Updated</p>
         <BlogCardList limit={3} />
       </div>
       <Footer />

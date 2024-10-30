@@ -21,7 +21,7 @@ export interface BlogCardData {
   date: string;
   image: string;
   description: string;
-  author: {
+  author?: {
     image: string;
     name: string;
     socials: {
@@ -31,7 +31,7 @@ export interface BlogCardData {
       linkedin: string;
     };
   };
-  moreDescription: {
+  moreDescription?: {
     title: string;
     content: string;
     imageContent?: { image: string; alt: string };
