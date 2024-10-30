@@ -6,13 +6,13 @@ import React from "react";
 const BlogNewsletter = () => {
   return (
     <div className="bg-dark-green overflow-hidden relative flex flex-col gap-y-7 items-center text-center py-20 text-white rounded-[20px]">
-      <h1 className="font-cocon text-5xl font-medium">
+      <h1 className="font-cocon text-4xl lg:text-5xl font-medium z-[1000]">
         Want to enjoy more news like?
       </h1>
-      <p className="font-normal text-base font-manrope">
+      <p className="font-normal text-sm lg:text-base font-manrope">
         Sign up for our newsletter and receive more updates like this.
       </p>
-      <div className="flex gap-x-2">
+      <div className="flex gap-x-2 text-sm">
         <input
           type="text"
           placeholder="Enter your Email..."
@@ -27,7 +27,7 @@ const BlogNewsletter = () => {
         height={20}
         src={Star}
         alt="star"
-        className="absolute left-[5%] top-[25%] w-20 cursor-pointer  "
+        className="absolute left-[2%] lg:left-[5%] top-[25%] w-20 cursor-pointer  "
       />
       <Image
         width={20}
