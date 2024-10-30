@@ -14,7 +14,6 @@ const page = () => {
       <BlogHero />
       <BlogFeatured />
       <div className="px-6  md:px-16 lg:px-24">
-        
       <BlogCardList />
       </div>
       <div className="px-6 md:px-12 lg:px-24 py-6 md:py-8 lg:pt-16 lg:pb-4">
