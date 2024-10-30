@@ -34,6 +34,8 @@ export interface BlogCardData {
   moreDescription: {
     title: string;
     content: string;
+    imageContent?: { image: string; alt: string };
+    moreContent?: string;
   }[];
 }
 export type TestimonialDetails = {

@@ -118,6 +118,14 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+
+          alt: "Image 1: Student making financial plans",
+        },
+
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -163,6 +171,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -208,6 +222,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -253,6 +273,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -298,6 +324,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -343,6 +375,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -388,6 +426,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },
@@ -433,9 +477,14 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
-
   },
   {
     category: ["Company", "Courses"],
@@ -479,6 +528,12 @@ export const blogCards: BlogCardData[] = [
         title: "Making Informed Financial Decisions",
         content:
           "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+        imageContent: {
+          image: "/images/finance.png",
+          alt: "Image 1: Student making financial plans",
+        },
+        moreContent:
+          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
       },
     ],
   },

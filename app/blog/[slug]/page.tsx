@@ -89,7 +89,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
             <p className="text-[#8E9BAE] font-normal text-xl">Socials</p>
             <div className="flex gap-2.5">
               {" "}
-              <Link href={blogPost.author.socials["twitter(X)"]}>
+              <Link href={blogPost?.author.socials["twitter(X)"]}>
                 {" "}
                 <Image
                   width={0}
@@ -152,14 +152,45 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
         <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
           {blogPost.description}
         </p>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-y-12 pb-12">
           {" "}
           {blogPost.moreDescription.map((more, idx) => (
             <span key={idx} className=" flex flex-col gap-y-5 ">
-              <p className="font-bold text-3xl">{more.title}</p>
-              <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
-                {more.content}
-              </p>
+              <span className="flex flex-col gap-y-5">
+                {" "}
+                <p className="font-bold text-3xl">{more.title}</p>
+                <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
+                  {more.content}
+                </p>
+              </span>
+              <span className="flex flex-col gap-y-4">
+                {" "}
+                {more.imageContent?.image ? (
+                  <img
+                    width={0}
+                    height={0}
+                    src={more.imageContent?.image}
+                    alt={more.title}
+                    className="w-full"
+                  />
+                ) : (
+                  ""
+                )}
+                {more.imageContent?.alt ? (
+                  <p className="w-full text-center font-manrope text-base leading-8 font-normal text-[#808080]">
+                    {more.imageContent.alt}
+                  </p>
+                ) : (
+                  ""
+                )}
+              </span>
+              {more.moreContent ? (
+                <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
+                  {more.moreContent}
+                </p>
+              ) : (
+                ""
+              )}
             </span>
           ))}
         </div>
