@@ -63,12 +63,13 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="w-full bg-white lg:px-[4em] xl:px-[8em] px-4 py-6 flex justify-between gap-6 lg:py-12">
-        <img
-          src="/images/logo-main.svg"
-          alt="Logo"
-          className="w-[60px] h-[33px] sm:w-auto sm:h-auto"
-        />
-
+        <Link href="/">
+          <img
+            src="/images/logo-main.svg"
+            alt="Logo"
+            className="w-[60px] h-[33px] sm:w-auto sm:h-auto"
+          />
+        </Link>
         {/* Desktop menu */}
         <div
           className="relative hidden md:flex items-center justify-between gap-2 lg:gap-10 text-black"

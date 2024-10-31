@@ -134,7 +134,7 @@ export const blogCards: BlogCardData[] = [
     title: "The Importance of Networking in Building a Successful Career",
     date: "August 28, 2024",
     description:
-      " Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future. In today's fast-paced world, financial literacy is an essential skill for students to master early in life. Understanding how to manage money, budget effectively, and make informed financial decisions sets the stage for a secure future. ",
+      " Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future. In today's fast-paced world, financial literacy is an essential skill for students to master early in life.  ",
     image: "/news_and_blog_2.svg",
     author: {
       name: "Young & Skilled Admin",
