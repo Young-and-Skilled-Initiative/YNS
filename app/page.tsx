@@ -23,7 +23,7 @@ export default function Home() {
 
       <main className="flex min-h-screen flex-col items-center justify-between px-6 md:px-16 lg:px-24 py-6 md:py-8">
         <Resources />
-        <Network />
+       
 
         <FAQ />
         <Testimonial />
@@ -34,6 +34,7 @@ export default function Home() {
 
         <NewsInsightsAndBlog />
       </main>
+      <Network />
       <Footer />
     </>
   );

@@ -29,7 +29,7 @@ export const MovementHero = () => {
       <form className="flex flex-col sm:flex-row gap-[0.75em] w-full">
         <input
           type="text"
-          className="bg-white px-[1.5em] sm:px-[2em] py-[1em] text-xs sm:text-base border rounded-full placeholder:text-xs sm:placeholder:text-base placeholder:font-manrope placeholder:leading-8 w-full sm:w-[30em]"
+          className="bg-white px-[1.5em] sm:px-[2em] py-[1em] text-xs sm:text-base border border-gray-300 rounded-full placeholder:text-xs sm:placeholder:text-base placeholder:font-manrope placeholder:leading-8 w-full sm:w-[30em] focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500"
           placeholder="Enter your Email"
           required
         />

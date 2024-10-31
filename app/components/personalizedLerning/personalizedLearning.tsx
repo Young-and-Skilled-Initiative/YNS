@@ -8,7 +8,7 @@ import Logo from "@/public/orangelogo.svg";
 const PersonalizedLearning = () => {
   return (
     <div className="bg-black mb-[9em]  ">
-      <div className="flex flex-col lg:flex-row justify-between lg:px-[5em] items-center w-full lg:p-10 px-4">
+      <div className="flex flex-col lg:flex-row justify-between 2xl:justify-center lg:px-[5em] items-center w-full lg:p-10 px-[2em]">
         {/* First Text Section */}
         <div className=" lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em] hidden lg:block ">
           <h1 className="font-[500] lg:text-[40px] text-[30px]">
@@ -19,7 +19,7 @@ const PersonalizedLearning = () => {
           </h1>
         </div>
         <div className="mt-[1em] lg:hidden">
-          <h1 className="text-white font-cocon text-[30px] ">
+          <h1 className="text-white font-cocon text-[30px] mb-[0.5em]">
             Personalized Learning
           </h1>
         </div>
@@ -28,7 +28,7 @@ const PersonalizedLearning = () => {
         <Image
           src={Star}
           alt="star"
-          className="w-20 h-20 object-contain hidden lg:block "
+          className="w-20 h-20 object-contain hidden lg:block animate-spin-slow 2xl:w-[20%] "
         />
 
         {/* Paragraph Section */}
@@ -39,34 +39,32 @@ const PersonalizedLearning = () => {
             experience.
           </p>
         </div>
-        <div className="flex  items-left lg:hidden">
-          <Image src={Star} alt="" />
-          <div></div>
-        </div>
+      
       </div>
-      <div className="flex lg:pl-[5em] px-[2em]  lg:px-0">
-        <div>
-          <Image
-            src={Star2}
-            alt=""
-            className="mt-[15em] absolute left-0 hidden lg:block"
-          />
+      <div className="flex  items-left lg:hidden mb-7 ml-[2em] w-10 lg:w-full">
+          <Image src={Star} alt="" className="animate-spin-slow "/>
+    
         </div>
-        <div className="mx-auto">
+      <div className="flex lg:pl-[5em] px-[2em] ">
+        <div className="mx-auto relative">
+          <div className="absolute -left-[5em]">
+            <Image
+              src={Star2}
+              alt=""
+              className="mt-[15em]  left-0 hidden lg:block"
+            />
+          </div>
           <Image
             src={Man}
             alt=""
-            className="rounded-2xl lg:-mb-[7em] -mb-[4em]"
+            className="rounded-[2em] lg:-mb-[7em] -mb-[4em] "
             unoptimized
           />
+          <div className="absolute -right-[4em] -top-[4em]">
+            <Image src={Logo} alt="" className=" hidden lg:block " />
+          </div>
         </div>
-        <div>
-          <Image
-            src={Logo}
-            alt=""
-            className="-mt-[3em] -ml-[2em] hidden lg:block "
-          />
-        </div>
+
         <div></div>
       </div>
     </div>
