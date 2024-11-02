@@ -25,7 +25,7 @@ export default function Home() {
         <Resources />
        
 
-        <FAQ />
+        <FAQ className={undefined} />
         <Testimonial />
         <Newsletter />
 

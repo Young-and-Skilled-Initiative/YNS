@@ -16,6 +16,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "six-color-gradient":
           "linear-gradient(-39deg, #F6DEAE 0% 28%, #98BC6D 28% 50%, #F2A300 50% 68%, #114F3C 68% 80%, #EF4C0D 80% 90%)",
+        "touch-color-gradient":
+          "linear-gradient(-39deg, #F6DEAE 0%, #98BC6D 28%, #EF4C0D 50%, #F2A300 68%, #FFFFFF 100%)",
         "nine-color-blocks":
           "linear-gradient(-39deg, #EF4C0D 15%, #FFFFFF 15% 20%, #F6DEAE 20% 35%, #FFFFFF 35% 40%, #F2A300 40% 55%, #FFFFFF 55% 60%, #F6DEAE 60% 75%, #FFFFFF 75% 80%, #98BC6D 80% 95%)",
         "movement-gradient":
