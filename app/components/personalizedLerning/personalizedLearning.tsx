@@ -7,7 +7,7 @@ import Logo from "@/public/orangelogo.svg";
 
 const PersonalizedLearning = () => {
   return (
-    <div className="bg-black mb-[9em]  ">
+    <div className="bg-black mb-[9em]    ">
       <div className="flex flex-col lg:flex-row justify-between 2xl:justify-center lg:px-[5em] items-center w-full lg:p-10 px-[2em]">
         {/* First Text Section */}
         <div className=" lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em] hidden lg:block ">
@@ -18,7 +18,7 @@ const PersonalizedLearning = () => {
             Learning
           </h1>
         </div>
-        <div className="mt-[1em] lg:hidden">
+        <div className="mt-[3em] lg:hidden">
           <h1 className="text-white font-cocon text-[30px] mb-[0.5em]">
             Personalized Learning
           </h1>
@@ -45,7 +45,7 @@ const PersonalizedLearning = () => {
           <Image src={Star} alt="" className="animate-spin-slow "/>
     
         </div>
-      <div className="flex lg:pl-[5em] px-[2em] ">
+      <div className="flex  lg:px-[6em] px-[2em] ">
         <div className="mx-auto relative">
           <div className="absolute -left-[5em]">
             <Image

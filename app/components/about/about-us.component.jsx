@@ -7,7 +7,7 @@ import badge from "@/public/Logosticker.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-16 sm:gap-24 lg:gap-[142px] px-[1em] xl:px-24 my-14 sm:mb-[134px]">
+      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-16 sm:gap-24 lg:gap-[142px] px-[2.7em] xl:pr-24 xl:pl-[2.2em] my-14 sm:mb-[134px]">
         <div className="block sm:hidden text-xs text-ash ">
           <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
             <div className="bg-white w-[120px] text-nowrap h-[32.97px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[32px] ">
