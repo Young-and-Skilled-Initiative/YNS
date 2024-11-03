@@ -28,7 +28,7 @@ const PersonalizedLearning = () => {
         <Image
           src={Star}
           alt="star"
-          className="w-20 h-20 object-contain hidden lg:block animate-spin-slow 2xl:w-[20%] "
+          className="w-21 h-20 object-contain hidden lg:block animate-spin-slow 2xl:w-[20%] "
         />
 
         {/* Paragraph Section */}
