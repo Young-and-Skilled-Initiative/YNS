@@ -8,6 +8,15 @@ import Instagram_green from "./Instagram-green.svg";
 import Facebook_green from "./Facebook-green.svg";
 import Linkedin_green from "./Linkedin-green.svg";
 import Twitter_green from "./Twitter-green.svg";
+import Star1 from "./Star2.svg";
+import Star3 from "./Star2 (1).svg";
+import Star2 from "./Star.svg";
+import Group1 from "./Frame 1000001814.svg";
+import Group2 from "./Frame 1000001814 (1).svg";
+import Group3 from "./Frame 1000001814 (2).svg";
+import Sticker1 from "./Logo stanp sketch.png";
+import Sticker2 from "./Logo stanp sketch (1).png";
+import Sticker3 from "./Logo stanp sketch (2).png";
 export {
   Star4,
   IntercomMessenger,
@@ -19,4 +28,13 @@ export {
   Facebook_green,
   Linkedin_green,
   Twitter_green,
+  Star1,
+  Star2,
+  Star3,
+  Group1,
+  Group2,
+  Group3, 
+  Sticker1,
+  Sticker2,
+  Sticker3,
 };
