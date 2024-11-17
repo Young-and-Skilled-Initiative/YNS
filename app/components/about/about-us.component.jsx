@@ -7,8 +7,8 @@ import badge from "@/public/Logosticker.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-16 sm:gap-24 lg:gap-[142px] px-[2.7em] xl:pr-24 xl:pl-[2.2em] my-14 sm:mb-[134px]">
-        <div className="block sm:hidden text-xs text-ash ">
+      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-16 sm:gap-24 lg:gap-[142px] px-[1em] xl:px-24 my-14 sm:mb-[134px]">
+        <div className="block sm:hidden text-xs text-ash -mt-24">
           <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
             <div className="bg-white w-[120px] text-nowrap h-[32.97px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[32px] ">
               <li className=" font-medium list-disc ">Cyber Security</li>
@@ -84,10 +84,10 @@ const AboutUs = () => {
           </p>
 
           <div className="w-full mt-[15px] flex items-center justify-center sm:justify-start ">
-            <button className="bg-[#114F3C] h-[62.97px] rounded-[44.98px] flex items-center justify-center text-[17.19px] text-white py-[18.49px] px-[40px] ">
+            <button className="bg-[#114F3C] sm:h-[62.97px] rounded-[44.98px] flex items-center justify-center text-sm sm:text-[17.19px] text-white py-[18.49px] px-8 sm:px-[40px] ">
               Explore More About Us
             </button>
-            <div className=" bg-[#114F3C] w-[60px] h-[60px] rounded-full flex items-center justify-center">
+            <div className=" bg-[#114F3C] w-[60px] h-14 sm:h-[60px] rounded-full flex items-center justify-center">
               <ArrowUpRight size={33.17} color={"#FFFF"} />
             </div>
           </div>

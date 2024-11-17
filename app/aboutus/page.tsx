@@ -7,12 +7,14 @@ import Interest from "./components/interest";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Faq from "../components/faq/faq"
+import AboutHero from "./components/AboutHero";
 
 
 const page: React.FC = () => {
   return (
     <>
       <Navbar />
+      <AboutHero/>
       <TheYsiStory />
       <Values />
       <Interest />

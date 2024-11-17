@@ -103,6 +103,7 @@ const config: Config = {
       colors: {
         ash: "#8E9BAE",
         "dark-ash": "#55534E",
+        "light-green": "#98BC6D",
         "dark-green": "#114F3C",
         "lighter-yellow": "#F6DEAE",
         "dark-orange": "#EF4C0D",
