@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Faq from "../components/faq/faq"
 
+
 const page: React.FC = () => {
   return (
     <>
