@@ -1,9 +1,9 @@
 import Image from "next/image";
 const ContactAddress = () => {
     return (
-        <div className="flex justify-between px-36 items-center py-24">
+        <div className="flex md:flex-row flex-col justify-between md:px-36 px-8 items-center py-24">
             <div className="flex flex-col gap-4">
-                <h2 className="font-bold text-[50px] w-[50%] leading-none">43 Akerele Street Onigbogbo Maryland Ikeja Lagos</h2>
+                <h2 className="font-bold md:text-[50px] text-[32px] md:w-[50%] w-full leading-none">43 Akerele Street Onigbogbo Maryland Ikeja Lagos</h2>
 
                 {/* Email */}
                 <div className="flex gap-3 items-center">
