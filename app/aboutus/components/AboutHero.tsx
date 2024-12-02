@@ -16,7 +16,8 @@ const AboutHero = () => {
   return (
     <>
       <div className="font-cocon div flex flex-col gap-10 sm:gap-16 xl:px-9 lg:pb-16">
-        <h1 className="text-center text-7xl">Who are We?</h1>
+        <h1 className="text-center text-7xl">Who are <span className="bg-clip-text text-transparent bg-eight-color-block">We?</span>
+        </h1>
         <section className="lg:flex lg:flex-row flex-wrap sm:grid grid-cols-2 justify-center space-y-2 relative items-center gap-2 lg:-space-x-1 p-4">
           {/* First Card */}
           <div className="bg-orange-500 relative lg:w-[380px] h-[410px] rounded-xl text-white p-4 pr-4 lg:p-7 flex flex-col gap-14 items-center">
