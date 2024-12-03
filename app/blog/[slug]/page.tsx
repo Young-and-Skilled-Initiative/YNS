@@ -39,7 +39,7 @@ type BlogPostProps = {
   };
 };
 
-const BlogPost: FC<BlogPostProps> = ({ params }) => {
+const BlogPost: FC<BlogPostProps> =  async ({ params }) => {
   const { slug } = params;
 
   // Find the blog post by the slug

@@ -14,14 +14,12 @@ const BlogCard: React.FC<BlogCardData> = ({ category, title, date, image }) => {
       <div className="flex flex-col rounded-lg gap-3 justify-between">
         <div className="flex flex-col gap-3">
           <div className="flex justify-center mb-3">
-            {/* Replace img with Image component */}
             <Image
-              src={image} // Image source
-              alt={title} // Alt text for the image
-              className="w-full h-full" // Optional: styling, can be modified
-              width={500} // Provide a width value
-              height={300} // Provide a height value (or adjust to your needs)
-              objectFit="cover" // Ensure the image fits within the container
+              src={image}
+              alt={title}
+              className="w-full h-full"
+              width={0}
+              height={0}
             />
           </div>
           <div className="text-sm text-gray-500 space-x-2">

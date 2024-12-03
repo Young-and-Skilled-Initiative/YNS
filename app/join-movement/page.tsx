@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import MovementHero from "./components/MovementHero";
 import NewsInsightsAndBlog from "../components/NewsInsightsAndBlog";
-import Faq from "../components/Faq/faq";
+import Faq from "../components/faq/faq";
 import Footer from "../components/Footer";
 
 const JoinMovement = () => {
