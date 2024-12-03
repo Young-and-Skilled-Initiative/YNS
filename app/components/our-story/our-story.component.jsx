@@ -54,7 +54,7 @@ const OurStory = () => {
             className="w-full h-full object-cover rounded-lg shadow-lg"
           />
         </div>
-        <div className="space-y-4 h-full overflow-hidden rounded-lg">
+        <div className="space-y-4 h-full overflow-hidden rounded-lg ">
           <Image
             src={Story5}
             alt="Story 5"
@@ -63,7 +63,7 @@ const OurStory = () => {
           <Image
             src={Story6}
             alt="Story 6"
-            className="  object-cover   rounded-lg shadow-md"
+            className=" w-full object-cover   rounded-lg shadow-md"
           />
           
         </div>
