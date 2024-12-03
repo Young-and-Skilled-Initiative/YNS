@@ -70,7 +70,7 @@ export default function Hero() {
                 className="absolute -right-12 -top-12 hidden sm:block animate-spin-slow"
               />
               <Image
-                src="/images/hero.png"
+                src="/icons/hero.svg"
                 width={1220}
                 height={672}
                 alt="homepage image"
