@@ -1,4 +1,5 @@
-import FAQ from "../components/Faq/faq"
+
+import FAQ from "../components/faq/faq"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import CTA from "./components/CTA"
