@@ -1,3 +1,12 @@
+import React from "react";
+import Image from "next/image";
+import Story1 from "@/public/images/story-1.svg"
+import Story2 from "@/public/images/story-2.svg"
+import Story3 from "@/public/images/story-3.svg"
+import Story4 from "@/public/images/story-4.svg"
+import Story5 from "@/public/story5.svg"
+import Story6 from "@/public/story6.svg"
+
 const OurStory = () => {
   return (
     <div className="w-full mt-[75px]">
@@ -18,43 +27,45 @@ const OurStory = () => {
         </p>
       </div>
 
-      <div className="mt-16 grid grid-cols-3 gap-4 items-center">
-        <div className="space-y-4">
-          <img
-            src="/images/story-1.svg"
+      <div className="mt-16 grid grid-cols-3 gap-5 ">
+        <div className="space-y-4 ">
+          {/* Replace <img> with <Image /> component */}
+          <Image
+            src={Story1}
             alt="Story 1"
-            className="w-full h-[354px] object-cover rounded-lg shadow-md"
+            className="w-full object-cover rounded-lg shadow-md"
           />
-          <img
-            src="/images/story-2.svg"
+          <Image
+            src={Story2}
             alt="Story 2"
-            className="w-full h-[354px] object-cover rounded-lg shadow-md"
+            className="w-full object-cover rounded-lg shadow-md"
           />
-          <img
-            src="/images/story-3.svg"
-            alt="Story 2"
-            className="w-full h-[354px] object-cover rounded-lg shadow-md"
+          <Image
+            src={Story3}
+            alt="Story 3"
+            className="w-full object-cover rounded-lg shadow-md"
           />
         </div>
 
-        <div>
-          <img
-            src="/images/story-4.svg"
-            alt="Story 3"
-            className="w-full h-[1106px] object-cover rounded-lg shadow-lg"
+        <div className="h-full">
+          <Image
+            src={Story4}
+            alt="Story 4"
+            className="w-full h-full object-cover rounded-lg shadow-lg"
           />
         </div>
-        <div className="space-y-4">
-          <img
-            src="/images/story-5.svg"
-            alt="Story 4"
-            className="w-full h-[541px] object-cover rounded-lg shadow-md"
-          />
-          <img
-            src="/images/story-6.svg"
+        <div className="space-y-4 h-full overflow-hidden rounded-lg">
+          <Image
+            src={Story5}
             alt="Story 5"
-            className="w-full h-[541px] object-cover rounded-lg shadow-md"
+            className="w-full  object-cover  rounded-lg shadow-md"
           />
+          <Image
+            src={Story6}
+            alt="Story 6"
+            className="  object-cover   rounded-lg shadow-md"
+          />
+          
         </div>
       </div>
     </div>

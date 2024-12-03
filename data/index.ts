@@ -10,8 +10,8 @@ export const teamMembers = [
   {
     id: 2,
     name: "Dave",
-    role: "Design",
-    image: "/meet_our_dream_team_fada.png",
+    role: "Engineering Team Lead",
+    image: "/dumto.jpeg",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/",
   },

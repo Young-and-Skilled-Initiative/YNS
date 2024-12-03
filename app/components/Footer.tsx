@@ -7,51 +7,53 @@ const Footer = () => {
       <div className="lg:px-[45px] px-6 py-12 sm:py-[94px] bg-dark-green w-full rounded-t-3xl sm:rounded-[20px]">
         <div className="flex flex-col gap-[125px] w-full">
           <div className="lg:flex justify-between gap-[6em] w-full h-full items-start ">
-            <img
-              src="images/Logo.svg"
+            <Image
+              src="/images/Logo.svg"
               alt="Logo"
+              width={200}  // Specify appropriate width
+              height={50}  // Specify appropriate height
               className="flex justify-start items-start pb-[30px] lg:p-0"
             />
             {/* <img src="images/logo-sticker.svg" alt="logo sticker" /> */}
 
-            <div className="sm:flex grid grid-cols-2 sm:text-lg sm:gap-0 gap-x-14 gap-y-7 text-base  flex-row w-full justify-between">
-              <div className="flex flex-col gap-[30px]  xl:text-lg lg:text-xl">
+            <div className="sm:flex grid grid-cols-2 sm:text-lg sm:gap-0 gap-x-14 gap-y-7 text-base flex-row w-full justify-between">
+              <div className="flex flex-col gap-[30px] xl:text-lg lg:text-xl">
                 <span className="text-lighter-yellow">Company</span>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <a href="">About us</a>
+                    <Link href="">About us</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Contact</a>
+                    <Link href="">Contact</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Partners</a>
+                    <Link href="">Partners</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Privacy Policy</a>
+                    <Link href="">Privacy Policy</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Cookies Policy</a>
+                    <Link href="">Cookies Policy</Link>  {/* No <a> tag */}
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-[30px]  xl:text-xl">
+              <div className="flex flex-col gap-[30px] xl:text-xl">
                 <span className="text-lighter-yellow">Resources</span>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <a href="">Blog</a>
+                    <Link href="">Blog</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Help Center</a>
+                    <Link href="">Help Center</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Partners</a>
+                    <Link href="">Partners</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Courses</a>
+                    <Link href="">Courses</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Learn </a>
+                    <Link href="">Learn</Link>  {/* No <a> tag */}
                   </li>
                 </ul>
               </div>
@@ -59,13 +61,13 @@ const Footer = () => {
                 <span className="text-lighter-yellow">Legal</span>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <a href="">Privacy Policy</a>
+                    <Link href="">Privacy Policy</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Terms of Use</a>
+                    <Link href="">Terms of Use</Link>  {/* No <a> tag */}
                   </li>
                   <li>
-                    <a href="">Cookie Policy</a>
+                    <Link href="">Cookie Policy</Link>  {/* No <a> tag */}
                   </li>
                 </ul>
               </div>
@@ -78,7 +80,7 @@ const Footer = () => {
                   >
                     <Image
                       src="/x-filled.svg"
-                      alt=""
+                      alt="X logo"
                       width={24}
                       height={24}
                       className=""
@@ -90,7 +92,7 @@ const Footer = () => {
                   >
                     <Image
                       src="/facebook-filled.svg"
-                      alt=""
+                      alt="Facebook logo"
                       width={24}
                       height={24}
                       className=""
@@ -102,7 +104,7 @@ const Footer = () => {
                   >
                     <Image
                       src="/linkedin-filled.svg"
-                      alt=""
+                      alt="LinkedIn logo"
                       width={24}
                       height={24}
                       className=""
@@ -114,7 +116,7 @@ const Footer = () => {
                   >
                     <Image
                       src="/instagram-filled.svg"
-                      alt=""
+                      alt="Instagram logo"
                       width={24}
                       height={24}
                       className=""
@@ -125,7 +127,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col gap-[84px] items-center">
-            <img src="/images/watermark.svg" alt="Watermark" />
+            <Image
+              src="/images/watermark.svg"
+              alt="Watermark"
+              width={200}  // Specify appropriate width
+              height={50}  // Specify appropriate height
+            />
             <p className="text-base sm:text-xl font-normal text-gray-400">
               Copyright © 2024 Young & Skilled Initiative
             </p>

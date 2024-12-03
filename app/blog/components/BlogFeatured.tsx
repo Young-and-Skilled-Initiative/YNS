@@ -1,5 +1,5 @@
 import { blogCards } from "@/data";
-import { IntercomMessenger, Star4 } from "@/public/icons";
+import { IntercomMessenger, Star4 } from "@/public/icons"; // Ensure these are valid imports (SVGs or paths)
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +22,7 @@ const BlogFeatured = () => {
   };
 
   return (
-    <div className="slider-container text-black w-full flex flex-col justify-center px-6  md:px-16 lg:px-24 py-6 pb-16 md:py-8 font-manrope">
+    <div className="slider-container text-black w-full flex flex-col justify-center px-6 md:px-16 lg:px-24 py-6 pb-16 md:py-8 font-manrope">
       <Slider {...settings}>
         {blogCards.map((card, index) => (
           <div key={index} className="md:pb-6 px-2">
@@ -30,9 +30,11 @@ const BlogFeatured = () => {
               <div className="relative md:w-1/2">
                 {/* Generate link using the card's title */}
                 <Link href={`/blog/${generateSlug(card.title)}`}>
-                  <img
+                  <Image
                     src={card.image}
                     alt={card.title}
+                    width={500}  // Add a specific width and height
+                    height={300} // Adjust according to your layout
                     className="w-full h-full object-cover rounded-[1.25rem] cursor-pointer"
                   />
                 </Link>
@@ -43,10 +45,7 @@ const BlogFeatured = () => {
               <div className="relative md:px-4 lg:px-14 py-3 lg:py-5 flex flex-col gap-4 text-left md:w-1/2">
                 <div className="flex gap-5">
                   {card.category.map((cat, idx) => (
-                    <span
-                      key={idx}
-                      className="text-base font-medium text-gray-400"
-                    >
+                    <span key={idx} className="text-base font-medium text-gray-400">
                       {cat}
                     </span>
                   ))}
@@ -58,6 +57,7 @@ const BlogFeatured = () => {
                   <p className="text-[#55534E] font-normal text-base leading-8">
                     {card.description}
                   </p>
+                  {/* Use Image component for IntercomMessenger */}
                   <Image
                     width={20}
                     height={20}
@@ -72,6 +72,7 @@ const BlogFeatured = () => {
                   Read Article <ArrowRight className="text-[#55534E] text-base" />
                 </Link>
 
+                {/* Use Image component for Star4 */}
                 <Image
                   width={20}
                   height={20}

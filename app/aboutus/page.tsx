@@ -6,7 +6,7 @@ import Values from "./components/Values";
 import Interest from "./components/interest";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Faq from "../components/faq/faq"
+import Faq from "../components/Faq/faq"
 import AboutHero from "./components/AboutHero";
 
 const page: React.FC = () => {

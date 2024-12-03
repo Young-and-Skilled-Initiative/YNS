@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { TeamMember } from "@/types";
 import { teamMembers } from "@/data";
+import Image from "next/image"; // Importing the Image component
 
 const TeamMembers: React.FC = () => {
   const [activeMember, setActiveMember] = useState<TeamMember>(teamMembers[0]);
@@ -13,28 +14,29 @@ const TeamMembers: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full gap-8  py-16">
-      {" "}
-      {/* When being added to the main page, the adding px will be removed to use the px from the page itself, but for view and reference purposed i added it*/}
+    <div className="flex flex-col w-full gap-8 py-16">
+      {/* When being added to the main page, the adding px will be removed to use the px from the page itself, but for view and reference purposes i added it*/}
       <h1 className="text-center md:text-left text-3xl md:text-[2.5rem] font-medium font-cocon">
         Meet The <span className="text-dark-orange">Dream</span> Team!
       </h1>
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left side - Active Image */}
-        <div className=" h-full  w-full md:w-[45%]">
-          <img
+        <div className="h-full w-full md:w-[45%]">
+          <Image
             src={activeMember.image}
             alt={activeMember.name}
-            className="h-auto object-cover rounded-[1.25rem] "
+            width={500}  // Set appropriate width for the image
+            height={500} // Set appropriate height for the image
+            className="h-auto object-cover rounded-[1.25rem]"
           />
         </div>
 
         {/* Right side - List of team members */}
-        <div className="flex flex-col gap-y-8 w-full md:w-[55%] lg:pt-0  lg:p-4 ">
+        <div className="flex flex-col gap-y-8 w-full md:w-[55%] lg:pt-0 lg:p-4 ">
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className={`flex justify-between px-4 py-2 md:py-3 xl:py-4 xl:pr-12 items-center w-full  border rounded-lg transition-colors duration-700 ease-linear 
+              className={`flex justify-between px-4 py-2 md:py-3 xl:py-4 xl:pr-12 items-center w-full border rounded-lg transition-colors duration-700 ease-linear 
               ${
                 activeMember.id === member.id
                   ? "border bg-orange-500 text-white"
@@ -43,7 +45,7 @@ const TeamMembers: React.FC = () => {
               onMouseEnter={() => handleHover(member)}
             >
               <div
-                className={`text-[1.75rem] md:text-2xl lg:text-3xl xl:text-[2.5rem] font-medium  font-cocon w-1/3 ${
+                className={`text-[1.75rem] md:text-2xl lg:text-3xl xl:text-[2.5rem] font-medium font-cocon w-1/3 ${
                   activeMember.id === member.id ? "" : "text-dark-green"
                 }`}
               >
@@ -57,7 +59,7 @@ const TeamMembers: React.FC = () => {
                 {member.role}
               </div>
 
-              <div className="flex space-x-1  w-1/3 justify-end">
+              <div className="flex space-x-1 w-1/3 justify-end">
                 <a
                   href={member.instagram}
                   target="_blank"

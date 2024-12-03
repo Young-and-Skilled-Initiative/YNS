@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import HeroPage from "./HeroPage";
 import PageForm from "./PageForm";
-import FAQ from "../components/faq/faq";
+import FAQ from "../components/Faq/faq";
 import Footer from "../components/Footer";
 import ContactAddress from "./ContactAddress";
 

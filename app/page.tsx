@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FAQ from "@/app/components/faq/faq";
+import FAQ from "@/app/components/Faq/faq";
 import Navbar from "./components/Navbar";
 import { Testimonial } from "./components/Testimonial";
 import Footer from "./components/Footer";
@@ -10,7 +10,6 @@ import Hero from "./components/hero/hero";
 import NewsInsightsAndBlog from "./components/NewsInsightsAndBlog";
 import { PersonStandingIcon } from "lucide-react";
 import PersonalizedLearning from "./components/personalizedLerning/personalizedLearning";
-import Network from "./components/Network";
 import OurStory from "./components/our-story/our-story.component";
 
 export default function Home() {

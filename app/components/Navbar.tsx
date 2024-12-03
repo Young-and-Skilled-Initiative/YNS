@@ -13,6 +13,7 @@ const navlinks = [
   { route: "Resources", link: "/resources", id: "resources" },
   { route: "Contact us", link: "/contact-us", id: "contact-us" },
   { route: "Blog", link: "/blog", id: "blog" },
+  { route: "Join Movement", link: "/join-movement", id: "join-movement" },
 ];
 
 const Navbar: React.FC = () => {
@@ -21,7 +22,7 @@ const Navbar: React.FC = () => {
   const underlineRef = useRef(null);
   const [hoverStyle, setHoverStyle] = useState({ width: 0, left: 0 });
 
-  const pathname = usePathname(); // Use usePathname to get current path
+  const pathname = usePathname();
   const activeRoute = navlinks.find((link) => link.link === pathname);
 
   // Handle mouse enter to update the hover style
@@ -64,12 +65,15 @@ const Navbar: React.FC = () => {
     <>
       <div className="w-full bg-white lg:px-[4em] xl:px-[8em] px-4 py-6 flex justify-between gap-6 lg:py-12">
         <Link href="/">
-          <img
+          <Image
             src="/images/logo-main.svg"
             alt="Logo"
+            width={60}
+            height={33}
             className="w-[60px] h-[33px] sm:w-auto sm:h-auto"
           />
         </Link>
+
         {/* Desktop menu */}
         <div
           className="relative hidden md:flex items-center justify-between gap-2 lg:gap-10 text-black"
@@ -108,7 +112,7 @@ const Navbar: React.FC = () => {
             size={"icon"}
             className="rounded-full bg-dark-green ml-[-6px] transform transition-transform duration-500 ease-in-out group-hover:rotate-90"
           >
-            <img src="/arrow.svg" alt="Arrow" className="p-2" />
+            <Image src="/arrow.svg" alt="Arrow" width={24} height={24} className="p-2" />
           </Button>
         </div>
 
@@ -120,7 +124,8 @@ const Navbar: React.FC = () => {
           <motion.img
             src={showMobileMenu ? "/hamburger-close.svg" : "/hamburger.svg"}
             alt="Menu"
-            className="w-8 h-8"
+            width={32}
+            height={32}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -142,9 +147,11 @@ const Navbar: React.FC = () => {
           >
             {/* Logo inside the dropdown */}
             <div className="flex w-full justify-between">
-              <img
+              <Image
                 src="/images/logo.svg"
                 alt="Logo"
+                width={60}
+                height={33}
                 className="w-[60px] h-[33px]"
               />
               {/* Close button inside dropdown */}
@@ -152,7 +159,8 @@ const Navbar: React.FC = () => {
                 <motion.img
                   src="/hamburger-close.svg"
                   alt="Close"
-                  className="w-8 h-8"
+                  width={32}
+                  height={32}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -181,37 +189,38 @@ const Navbar: React.FC = () => {
                 Get Started
               </Button>
               <div className="flex justify-end w-full gap-[75px]">
-                <div className="flex gap-4 items-center ">
-                  <Link href={``}>
+                <div className="flex gap-4 items-center">
+                  <Link href={""}>
                     <Image
-                      src={`x-outlined.svg`}
-                      alt="X-logo"
+                      src="/x-outlined.svg"
+                      alt="X logo"
                       width={20}
                       height={20}
                     />
                   </Link>
-                  <Link href={``}>
+                  <Link href={""}>
                     <Image
-                      src={`Facebook-outlined.svg`}
-                      alt="X-logo"
+                      src="/facebook-outlined.svg"
+                      alt="Facebook logo"
                       width={20}
                       height={20}
                     />
                   </Link>
-                  <Link href={``}>
+                  <Link href={""}>
                     <Image
-                      src={`Linkedin-outlined.svg`}
-                      alt="X-logo"
+                      src="/linkedin-outlined.svg"
+                      alt="LinkedIn logo"
                       width={20}
                       height={20}
                     />
                   </Link>
                 </div>
                 <button className="w-[4x] h-[47px]">
-                  <img
-                    src="Messenger.svg"
-                    alt="intercom messenger"
-                    className=""
+                  <Image
+                    src="/Messenger.svg"
+                    alt="Intercom Messenger"
+                    width={24}
+                    height={24}
                   />
                 </button>
               </div>
