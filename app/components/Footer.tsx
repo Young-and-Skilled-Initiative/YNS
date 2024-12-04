@@ -130,8 +130,8 @@ const Footer = () => {
             <Image
               src="/images/watermark.svg"
               alt="Watermark"
-              width={200}  // Specify appropriate width
-              height={50}  // Specify appropriate height
+              width={1194}  // Specify appropriate width
+              height={173}  // Specify appropriate height
             />
             <p className="text-base sm:text-xl font-normal text-gray-400">
               Copyright © 2024 Young & Skilled Initiative

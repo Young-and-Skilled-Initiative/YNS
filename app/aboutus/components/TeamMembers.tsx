@@ -63,9 +63,9 @@ const TeamMembers: React.FC = () => {
                 <a
                   href={member.instagram}
                   target="_blank"
-                  className={`p-2 md:p-3 xl:p-4 text-xl rounded-[0.625rem] transition-colors duration-700 ease-linear ${
+                  className={`p-2 md:p-3 xl:p-4 text-xl rounded-[0.625rem] transition-colors duration-500 ease-linear ${
                     activeMember.id === member.id
-                      ? "bg-white text-yellow-1 "
+                      ? "bg-dark-green text-yellow "
                       : "bg-dark-green text-white"
                   }`}
                 >
@@ -74,9 +74,9 @@ const TeamMembers: React.FC = () => {
                 <a
                   href={member.linkedin}
                   target="_blank"
-                  className={`p-2 md:p-3 xl:p-4 text-xl rounded-[0.625rem] transition-colors duration-700 ease-linear ${
+                  className={`p-2 md:p-3 xl:p-4 text-xl rounded-[0.625rem] transition-colors duration-500 ease-linear ${
                     activeMember.id === member.id
-                      ? "bg-white text-yellow-1 "
+                      ? "bg-dark-green text-yellow "
                       : "bg-dark-green text-white"
                   }`}
                 >
