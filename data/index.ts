@@ -589,3 +589,21 @@ export const testimonials: TestimonialDetails[] = [
   },
   // Add more testimonials here...
 ];
+
+export const content = [
+  {
+    title: "We are Young &",
+    highlight: "inspired.",
+    highlightColor: "text-light-green",
+  },
+  {
+    title: "We are Young &",
+    highlight: "Loaded.",
+    highlightColor: "text-light-green",
+  },
+  {
+    title: "We are Young &",
+    highlight: "skilled.",
+    highlightColor: "text-dark-green",
+  },
+];
