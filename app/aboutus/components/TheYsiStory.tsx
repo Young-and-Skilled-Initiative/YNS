@@ -16,8 +16,8 @@ const TheYsiStory = () => {
           <div className="absolute z-10">
             <Founders pic={YsiPic1} name={"Fada Usk"} />
           </div>
-          <div className="absolute left-[10px] top-[-8px]">
-            <Founders pic={YsiPic2} name={"Fada Usk"} tilt={"rotate-2"} />
+          <div className="absolute left-[10px] ">
+            <Founders pic={YsiPic1} name={"Fada Usk"}  />
           </div>
           <div>
             <Image
@@ -33,7 +33,7 @@ const TheYsiStory = () => {
           <Image
             src={YsiStar}
             alt="star image"
-            className="absolute right-[-50px] w-16 lg:w-[80px] animate-spin-slow"
+            className="absolute right-[-30px] w-16 lg:w-[80px] animate-spin-slow"
           />
           <h1 className="text-[#EF4C0D] text-[35px] md:text-[50px] font-medium font-[Cocon]">
             The YSI story
