@@ -1,15 +1,15 @@
 export const teamMembers = [
   {
     id: 1,
-    name: "Fada",
+    name: "Sunday",
     role: "Design",
-    image: "/meet_our_dream_team_fada.png",
+    image: "/images/fada.jpeg",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/",
   },
   {
     id: 2,
-    name: "Dave",
+    name: "Dumto",
     role: "Engineering Team Lead",
     image: "/dumto.jpeg",
     instagram: "https://www.instagram.com/",

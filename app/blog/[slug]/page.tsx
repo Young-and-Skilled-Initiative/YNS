@@ -1,3 +1,4 @@
+
 import { FC } from "react";
 import { useRouter } from "next/router"; // Optional for non-Server Component
 import Footer from "@/app/components/Footer";

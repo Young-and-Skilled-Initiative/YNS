@@ -26,7 +26,7 @@ const TeamMembers: React.FC = () => {
             src={activeMember.image}
             alt={activeMember.name}
             width={500}  // Set appropriate width for the image
-            height={500} // Set appropriate height for the image
+            height={400} // Set appropriate height for the image
             className="h-auto object-cover rounded-[1.25rem]"
           />
         </div>
