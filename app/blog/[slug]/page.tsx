@@ -209,7 +209,8 @@ const BlogPost: FC<BlogPostProps> =  async ({ params }) => {
                       alt={more.title}
                       width={0}
                       height={0}
-                      className="w-full"
+                      unoptimized
+                      className="w-full rounded-xl h-[36em]"
                     />
                   )}
                   {more.imageContent.alt && (

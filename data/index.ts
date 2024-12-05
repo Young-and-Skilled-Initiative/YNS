@@ -1,33 +1,33 @@
 export const teamMembers = [
   {
     id: 1,
-    name: "Sunday",
-    role: "Design",
-    image: "/images/fada.jpeg",
+    name: "Marley",
+    role: "Branding Lead",
+    image: "/Brandidentity.jpg",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/",
   },
   {
     id: 2,
     name: "Dumto",
-    role: "Engineering Team Lead",
+    role: "Software Team Lead",
     image: "/dumto.jpeg",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/",
   },
   {
     id: 3,
-    name: "James",
-    role: "Design",
-    image: "/meet_our_dream_team_fada.png",
+    name: "Success",
+    role: "Social Media Lead",
+    image: "/Contentwriter.jpeg",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/",
   },
   {
     id: 4,
-    name: "Amara",
-    role: "Design",
-    image: "/images/amara.png",
+    name: "Priscilla",
+    role: "Event Planning Lead",
+    image: "/Eventplanner.jpg",
     instagram: "https://www.instagram.com/",
     linkedin: "https://www.linkedin.com/",
   },
@@ -79,12 +79,12 @@ export const blogCards: BlogCardData[] = [
   {
     category: ["Education", "Courses"],
     title: "How to Stay Motivated During Online Courses",
-    date: "August 30, 2024",
+    date: "December 5, 2024",
     description:
-      "Financial literacy is a critical life skill that often isn't taught in schools. This blog aims to fill that gap by providing students with the knowledge they need to manage their finances wisely. Learn about budgeting, saving, and investing to build a strong financial foundation for your future.",
+      "Staying motivated in online courses can be tough, but with the right strategies, it’s possible to stay on track. In this post, we share 8 effective tips to help you stay focused, organized, and engaged in your studies. From setting goals to managing distractions, these actionable ideas will keep you motivated and on the path to success in your online learning.",
     image: "/news_and_blog_1.svg",
     author: {
-      name: "Young & Skilled Admin",
+      name: "Success Nwajie",
       image: "/icons/photo-card.svg",
       socials: {
         "twitter(X)": "https://x.com/",
@@ -95,37 +95,37 @@ export const blogCards: BlogCardData[] = [
     },
     moreDescription: [
       {
-        title: "Why Financial Literacy Matters",
+        title: "How to Stay Motivated During Online Courses: 4 Effective Tips That Work",
         content:
-          "Financial literacy empowers students to take control of their finances. It involves understanding basic financial concepts such as saving, investing, credit management, and debt reduction. With this knowledge, students can avoid common financial pitfalls, like accumulating unnecessary debt or overspending, and instead focus on building a solid financial foundation.",
+          "Balancing online courses with other responsibilities like schoolwork, house chores, and personal distractions can be overwhelming. It is easy to get sidetracked by movies, video games, or social media, and staying motivated can feel like an impossible task. If you are struggling to find the energy or focus to stay on track, you are not alone. In this article, we will share practical tips to help you stay motivated during your online courses. From setting achievable goals to celebrating small wins, these simple strategies will keep you focused and energized throughout your learning journey.",
       },
       {
-        title: "Starting Early",
+        title: "1. Start Small",
         content:
-          "The earlier students start learning about money, the better prepared they'll be to handle the financial challenges that come their way. Simple habits like tracking expenses, saving a portion of their income, and understanding the difference between wants and needs can make a significant impact over time.",
+          "If you have ever wondered what causes a lack of motivation in online learning, I will tell you for free—it is because too often, we start with too many expectations. Do not get me wrong; having high expectations is great, but starting something new with an overwhelming workload sends the wrong signals to your brain. This often makes you feel defeated even before you begin. Instead of overburdening yourself, start small. Break your tasks into smaller, manageable bits depending on the timeline given for the course. For example, if a course module is meant to be completed in two weeks, focus on finishing one section a day rather than attempting to finish half the module in one sitting. This approach reduces stress and makes the process of learning online more enjoyable.",
       },
       {
-        title: "Budgeting and Saving",
+        title: "2. Create a Workable Schedule and Stick to it",
         content:
-          "Budgeting is a fundamental skill that helps students manage their money effectively. By creating a budget, they can plan for expenses, save for future goals, and avoid living beyond their means. Additionally, establishing a savings habit early on ensures that students are prepared for unexpected expenses and future financial needs.",
+          "To stay motivated during your online course, you need to create a schedule that works for you—and more importantly, stick to it. Do not try to be overly ambitious with your routine. Your schedule should account for your energy levels, other responsibilities, and your concentration span. For instance, if you are more productive in the morning, schedule your study sessions during that time. Break your learning into manageable time blocks and take regular breaks. The Pomodoro Technique is a great way to structure your study sessions. Study for 25 minutes, then take a 5-minute break. After four cycles, take a longer break of 15 to 20 minutes. Consistency is the key. Once you establish a routine and stick to it, studying becomes a habit rather than a chore.",
       },
       {
-        title: "The Power of Compound Interest",
+        title: "3. Make Your Goals Realistic",
         content:
-          "One of the most valuable lessons in financial literacy is understanding compound interest. By starting to save and invest early, students can take advantage of the power of compounding, where their money grows exponentially over time. This can lead to significant financial gains in the long run.",
+          "One major reason students lose motivation is setting unrealistic goals. Sure, you want to finish the course quickly, but is it realistic given your current schedule and workload? Set clear, achievable goals. For example, instead of saying, “I will finish this 10-hour course in one day,” aim for something more realistic, like, “I will complete two lessons each day.” Write down your goals and place them where you can see them daily. Breaking your bigger goals into smaller milestones will give you a sense of accomplishment and keep you motivated.",
       },
       {
-        title: "Making Informed Financial Decisions",
+        title: "4. Attach a Reward System to Your Milestones",
         content:
-          "Financial literacy also involves making informed decisions about credit and debt. Students should understand how credit works, the importance of maintaining a good credit score, and the long-term impact of taking on debt. By being financially literate, they can avoid high-interest debt and make choices that support their financial well-being.",
+          "Everybody loves free gifts and rewards. You can use this to your advantage. Celebrating small wins can be a huge motivation booster in your online course journey. Whenever you finish a module in your course, you can attach a reward. For instance, after completing a module, treat yourself to something you enjoy—a favorite snack, an episode of your favorite show, or a short walk outside. This gives your brain enough time to rest while getting it excited for the next round of action. These little rewards act as positive reinforcement, keeping you excited and motivated to tackle the next section of your course.",
         imageContent: {
-          image: "/images/finance.png",
+          image: "/onlinecourse.jpg",
 
-          alt: "Image 1: Student making financial plans",
+          alt: "Picture of Someone doing an online course",
         },
 
         moreContent:
-          "Building a strong financial foundation through literacy is one of the most important steps students can take towards a secure future. By learning how to manage money, budget wisely, and make informed financial decisions, they equip themselves with the tools needed to achieve financial success and stability throughout their lives.",
+          "Final Thoughts: Staying motivated during online courses isn’t always easy, but it’s entirely possible with the right approach. Start small, set realistic goals, stick to a schedule, and reward yourself along the way. Also, do not forget to surround yourself with supportive peers, create an inspiring workspace, and minimize all forms of distractions. Every little step you take daily in studying your online course brings you closer to completing it and gaining the skills you desire. The journey may be challenging, but the results will be worth it. So, keep your head up, stay consistent, and finish strong.",
       },
     ],
   },
