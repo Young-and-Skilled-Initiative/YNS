@@ -1,15 +1,15 @@
 "use client";
-import img1 from "@/public/images/about-us-img1.png";
 import { AboutBg } from "@/public/images";
 import img2 from "@/public/images/about-us-img2.png";
-import { ArrowUpRight, MoveUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import badge from "@/public/Logosticker.svg";
+import { stickBadge } from "@/public/icons";
 const AboutUs = () => {
   return (
     <>
-      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-16 sm:gap-24 lg:gap-[142px] px-[1em] xl:px-24 my-14 sm:mb-[134px]">
-        <div className="block sm:hidden text-xs text-ash -mt-24">
+      <div className="w-full flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-20 sm:gap-24 lg:gap-[142px] px-[1em] lg:pl-20 xl:px-28 xl:pl-32 my-14 sm:mb-[134px] h-full">
+        <div className="block sm:hidden text-xs text-ash mt-10">
           <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
             <div className="bg-white w-[120px] text-nowrap h-[32.97px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[32px] ">
               <li className=" font-medium list-disc ">Cyber Security</li>
@@ -36,47 +36,46 @@ const AboutUs = () => {
             </div>
           </ul>
         </div>
-        <div className="w-1/2 relative  ">
-          <Image
-            src={badge}
-            className="lg:w-[90px] lg:h-[90px] w-16 h-16 z-10 absolute object-contain -right-20 sm:-right-20 lg:-right-28 xl:-right-[72px] top-4 sm:top-8 "
-            alt=""
-          />
-          <div className="w-[200px] h-[160px] sm:w-[240px]  sm:h-[180px] lg:w-[301px] lg:h-[314px] rounded-[14.94px] border border-dotted border-ash absolute top-10 sm:top-[75px] left-2 sm:left-20 lg:left-[160px] xl:left-[302px] " />
-          <div className=" md:ml-[4em] xl:ml-[6em] flex w-full">
-            <div className="sm:z-20">
+        <div className="w-full sm:w-1/2 lg:w-full h-full relative -top-10 sm:-top-0 flex">
+          <div className=" sm:z-20 w-full">
               <Image
                 src={AboutBg}
-                className="w- relative right-16 sm:w-[243px] h-[200px] lg:w-[380px] lg:h-[260px] object-contain "
+                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto z-30 right-1 xl:w-auto xl:h-auto object-contain "
                 alt=""
               />
-            </div>
           </div>
 
-          {/* Lady Image (moved up with negative margin) */}
-          <div className="flex  items-end -mt-[1em] sm:-mt-[3em] md:ml-[em]  lg:ml-[8em]  relative ">
-            <div className="flex flex-col z-30  lg:mb-7 ">
+          <Image
+            src={stickBadge}
+            className="lg:w-auto lg:h-auto h-40 w-56 sm:h-52 sm:w-60 z-4 absolute right-14 sm:-right-20 xl:-right-6 top-10 object-contain "
+            alt="Sticker"
+          />
+          <Image
+            src={badge}
+            className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-28 xl:-right-14 object-contain "
+            alt="Sticker"
+          />
+          <div className="absolute -bottom-28 right-14 sm:-right-12 xl:right-1 z-50">
               <Image
                 src={img2}
-                className="w-[280px] sm:w-[223px] sm:h-[200px] lg:w-[343px] h-[180px] lg:h-[228px] md:h-[232px] object-contain -top-20 sm:-top-6 lg:top-0 left-2 sm:left-14 lg:left-4 xl:left-[73px]  relative"
+                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto object-contain"
                 alt=""
               />
             </div>
-          </div>
         </div>
 
-        <div className="sm:w-1/2 w-full">
+        <div className=" sm:w-1/2 lg:w-full">
           <div className="w-[138px] mx-auto  h-[38px] bg-[#FAFAFA] rounded-[30px] flex items-center justify-center">
             <p className="text-base text-center text-ash font-[medium]  sm:text-start">
               About Us
             </p>
           </div>
 
-          <h3 className=" text-[40px]  font-medium leading-[48.64px] font-cocon mt-[30px] mb-[15px] ">
+          <h3 className="text-4xl sm:text-[40px] text-center w-full font-medium sm:leading-[48.64px] font-cocon mt-[30px] mb-[15px] ">
             Life Skills Development
           </h3>
 
-          <p className="text-base font-400 leading-8 text-black/60 font-manrope tracking-wide lg:pr-[2.5em]">
+          <p className="text-base w-full font-400 leading-8 text-black/60 font-manrope tracking-wide lg:pr-[2.5em] xl:p-0">
             Welcome to Young and Skilled Initiative, where we believe that every
             student has the potential to achieve greatness. Our mission is to
             provide high-quality learning experiences that equip young minds
