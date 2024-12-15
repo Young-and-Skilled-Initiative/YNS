@@ -17,6 +17,7 @@ import Group3 from "./Frame 1000001814 (2).svg";
 import Sticker1 from "./Logo stanp sketch.png";
 import Sticker2 from "./Logo stanp sketch (1).png";
 import Sticker3 from "./Logo stanp sketch (2).png";
+import Hero from "./hero.svg";
 export {
   Star4,
   IntercomMessenger,
@@ -33,8 +34,9 @@ export {
   Star3,
   Group1,
   Group2,
-  Group3, 
+  Group3,
   Sticker1,
   Sticker2,
   Sticker3,
+  Hero,
 };

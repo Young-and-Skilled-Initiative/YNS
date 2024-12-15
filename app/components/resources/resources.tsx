@@ -22,7 +22,7 @@ const Resources = () => {
     <div>
       <div className="lg:flex-col cursor-pointer  ">
         <div className="flex flex-col gap-[1em] ">
-          <h1 className="bg-gray-200 text-gray-500 py-[1em] px-[1.5em]  text-center text-[25px] xl:w-[8em] rounded-full mx-auto mb-4">
+          <h1 className="bg-[#FAFAFA] text-[#8E9BAE] py-[1em] px-[1.5em]  text-center text-[16px] xl:w-[8em] font-[500] rounded-full mx-auto mb-4">
             Resources
           </h1>
           <h1 className="font-cocon font-bold xl:text-[40px] text-center xl:w-[25em] mx-auto text-[30px]">

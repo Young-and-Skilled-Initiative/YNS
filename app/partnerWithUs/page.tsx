@@ -1,3 +1,4 @@
+
 import FAQ from "../components/faq/faq"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"

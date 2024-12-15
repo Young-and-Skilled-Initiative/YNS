@@ -54,3 +54,4 @@ const FAQ = ({className}) => {
 };
 
 export default FAQ;
+

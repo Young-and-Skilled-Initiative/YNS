@@ -1,5 +1,6 @@
-"use client";
 
+import { FC } from "react";
+import { useRouter } from "next/router"; // Optional for non-Server Component
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import BlogCardList from "@/components/blog/BlogCardList";
@@ -32,14 +33,14 @@ const getCategoryBgColor = (category: string) => {
   return colors[category] || "bg-gray-200";
 };
 
-// Define the type for params
-interface BlogPostProps {
+// Correcting BlogPostProps with PageProps
+type BlogPostProps = {
   params: {
     slug: string;
   };
-}
+};
 
-const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
+const BlogPost: FC<BlogPostProps> =  async ({ params }) => {
   const { slug } = params;
 
   // Find the blog post by the slug
@@ -73,30 +74,28 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           ))}
         </div>
         <div className="flex justify-between relative gap-4">
-          {" "}
           <h1 className="font-cocon font-medium text-3xl md:text-4xl leading-[45px] lg:text-5xl">
             {blogPost.title}
-          </h1>{" "}
+          </h1>
           <Image
             width={0}
             height={0}
             src={Star4}
             alt="star"
-            className="absolute bottom-0 right-0  w-10 md:w-14 lg:min-w-20  animate-spin-slow"
+            className="absolute bottom-0 right-0 w-10 md:w-14 lg:min-w-20 animate-spin-slow"
           />
         </div>
-           {/* Author and Date */}
+
+        {/* Author and Date */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-y-7 md:items-center">
-          {" "}
           <div className="flex gap-x-5">
-            {" "}
             {blogPost.author?.image && (
               <Image
                 src={blogPost.author.image}
                 alt={blogPost.title}
                 width={0}
                 height={0}
-                className=" w-12 md:w-16 lg:w-20"
+                className="w-12 md:w-16 lg:w-20"
               />
             )}
             <div className="flex flex-col justify-between py-[6px]">
@@ -166,26 +165,31 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
             </div>
           </div>
         </div>
+
+        {/* Main Image and Messenger Icon */}
         <div className="relative">
-          {" "}
           <Image
             src={blogPost.image}
             alt={blogPost.title}
             width={0}
             height={0}
-            className="w-full  object-cover h-auto md:h-[30rem] lg:h-[40rem] rounded-[35px]"
+            className="w-full object-cover h-auto md:h-[30rem] lg:h-[40rem] rounded-[35px]"
           />
           <Image
             width={20}
             height={20}
             src={IntercomMessenger}
             alt="messenger"
-            className="absolute -right-4 top-[48%] w-20 cursor-pointer "
+            className="absolute -right-4 top-[48%] w-20 cursor-pointer"
           />
         </div>
+
+        {/* Blog Post Description */}
         <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
           {blogPost.description}
         </p>
+
+        {/* More Content */}
         <div className="flex flex-col gap-y-12 pb-12">
           {blogPost.moreDescription?.map((more, idx) => (
             <div key={idx} className="flex flex-col gap-y-12">
@@ -200,12 +204,13 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
               {more.imageContent && (
                 <div className="flex flex-col gap-y-4">
                   {more.imageContent.image && (
-                    <img
-                      width={0}
-                      height={0}
+                    <Image
                       src={more.imageContent.image}
                       alt={more.title}
-                      className="w-full"
+                      width={0}
+                      height={0}
+                      unoptimized
+                      className="w-full rounded-xl h-[36em]"
                     />
                   )}
                   {more.imageContent.alt && (
@@ -224,6 +229,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ params }) => {
           ))}
         </div>
 
+        {/* Newsletter and Blog Card List */}
         <BlogNewsletter />
         <p className="font-cocon text-4xl lg:text-5xl font-medium pt-20">
           Stay Updated

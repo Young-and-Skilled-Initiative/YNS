@@ -1,5 +1,6 @@
 "use client";
 import img1 from "@/public/images/about-us-img1.png";
+import { AboutBg } from "@/public/images";
 import img2 from "@/public/images/about-us-img2.png";
 import { ArrowUpRight, MoveUpRight } from "lucide-react";
 import Image from "next/image";
@@ -45,7 +46,7 @@ const AboutUs = () => {
           <div className=" md:ml-[4em] xl:ml-[6em] flex w-full">
             <div className="sm:z-20">
               <Image
-                src={img1}
+                src={AboutBg}
                 className="w- relative right-16 sm:w-[243px] h-[200px] lg:w-[380px] lg:h-[260px] object-contain "
                 alt=""
               />

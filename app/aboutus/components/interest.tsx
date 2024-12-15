@@ -18,7 +18,7 @@ const interest = () => {
                 Offer a wide range of courses:
                 </h1>
                 <p className='text-wrap text-white text-[16px] md:text-[20px] font-manrope font-[400] leading-[32px]'>
-                From tech skills like web development, data analysis, and artificial intelligence to creative arts like graphic design, music production, and writing, we have something for everyone. Whether you're looking to upskill for your current job, start a new career, or simply explore your passions, we have courses to suit your interests and goals.
+                From tech skills like web development, data analysis, and artificial intelligence to creative arts like graphic design, music production, and writing, we have something for everyone. Whether you&apos;re looking to upskill for your current job, start a new career, or simply explore your passions, we have courses to suit your interests and goals.
                 </p>
             </div>
             <div className=' hidden xl:block pr-[1em] '>

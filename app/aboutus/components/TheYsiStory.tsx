@@ -1,12 +1,13 @@
-import Image from "next/image"
-import { StaticImageData } from "next/image"
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 import {
   YsiPic1,
   YsiPic2,
   YsiTapStar,
   YsiStar,
-} from "../../../public/images/ysiStory"
-import React from "react"
+} from "../../../public/images/ysiStory";
+import React from "react";
+import Link from "next/link";
 
 const TheYsiStory = () => {
   return (
@@ -16,15 +17,17 @@ const TheYsiStory = () => {
           <div className="absolute z-10">
             <Founders pic={YsiPic1} name={"Fada Usk"} />
           </div>
-          <div className="absolute left-[10px] top-[-8px]">
-            <Founders pic={YsiPic2} name={"Fada Usk"} tilt={"rotate-2"} />
+          <div className="absolute left-[10px] ">
+            <Founders pic={YsiPic1} name={"Fada Usk"} />
           </div>
           <div>
-            <Image
-              src={YsiTapStar}
-              alt="tap star"
-              className="absolute z-20 left-[-2rem] bottom-[-3rem] lg:left-[-3.5rem] lg:bottom-[-3.5rem] xl:left-[-4rem] xl:bottom-[-4rem] w-28 lg:w-[146px] xl:w-[159.34px] "
-            />
+            <Link href="https://www.instagram.com/fada_usk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <Image
+                src={YsiTapStar}
+                alt="tap star"
+                className="absolute z-20 left-[-2rem] bottom-[-3rem] lg:left-[-3.5rem] lg:bottom-[-3.5rem] xl:left-[-4rem] xl:bottom-[-4rem] w-28 lg:w-[146px] xl:w-[159.34px] "
+              />
+            </Link>
           </div>
         </figure>
       </section>
@@ -33,7 +36,7 @@ const TheYsiStory = () => {
           <Image
             src={YsiStar}
             alt="star image"
-            className="absolute right-[-50px] w-16 lg:w-[80px] animate-spin-slow"
+            className="absolute right-[-30px] w-16 lg:w-[80px] animate-spin-slow"
           />
           <h1 className="text-[#EF4C0D] text-[35px] md:text-[50px] font-medium font-[Cocon]">
             The YSI story
@@ -62,13 +65,13 @@ const TheYsiStory = () => {
         </article>
       </section>
     </section>
-  )
-}
+  );
+};
 
 interface FoundersProps {
-  pic: StaticImageData
-  name: string
-  tilt?: string
+  pic: StaticImageData;
+  name: string;
+  tilt?: string;
 }
 
 const Founders: React.FC<FoundersProps> = ({ pic, name, tilt }) => {
@@ -76,17 +79,17 @@ const Founders: React.FC<FoundersProps> = ({ pic, name, tilt }) => {
     <div className="relative h-[500px] lg:h-[524px] w-[350px] lg:w-[400px]">
       <Image src={pic} alt="Founders Image" />
       <div
-        className={`absolute bottom-16 lg:bottom-6 left-[16px] lg:left-[18px] ${tilt} w-[320px] lg:w-[364px] h-[62px] lg:h-[79px] bg-[#F2A300] flex gap-3 lg:gap-5 rounded-[10px] items-center px-[17px]`}
+        className={`absolute bottom-16 lg:bottom-6 left-[16px] lg:left-[18px] ${tilt} w-[320px] lg:w-[364px] h-[62px] lg:h-[79px] bg-[#F2A300] flex gap-3 lg:gap-5 rounded-[10px] items-center justify-between px-[17px] `}
       >
-        <p className="font-[Cocon] font-medium text-[32px] lg:text-[40px]">
+        <p className="font-[Cocon] font-medium text-[32px] lg:text-[34px]">
           {name}
         </p>
         <p className="w-[124px] lg:w-[144px] text-white text-lg lg:text-xl leading-[21px]">
-          Co-Founder <span className="font-bold"> YS initiative</span>
+          Founder <span className="font-bold"> YS initiative</span>
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TheYsiStory
+export default TheYsiStory;

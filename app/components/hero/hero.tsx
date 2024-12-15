@@ -70,7 +70,7 @@ export default function Hero() {
                 className="absolute -right-12 -top-12 hidden sm:block animate-spin-slow"
               />
               <Image
-                src="/images/hero.png"
+                src="/icons/hero.svg"
                 width={1220}
                 height={672}
                 alt="homepage image"
@@ -87,7 +87,7 @@ export default function Hero() {
                 variant="light"
                 className="absolute right-6 xl:right-10 py-[2em] !w-[150px] lg:!w-[150px] bottom-8"
               >
-                <Link href="/" className="flex items-center">
+                <Link href="/aboutus" className="flex items-center">
                   <div className=" flex gap-2 justify-center items-center">
                     <Image
                       src="/images/play.svg"
