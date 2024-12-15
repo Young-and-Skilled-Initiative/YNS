@@ -14,9 +14,9 @@ const ContactUs = () => {
                 <HeroPage className="relative" />
                 <PageForm className="relative md:-mt-20 m-0" /> {/* Adjust margin-top to overlap the HeroPage */}
             </div>
-            <ContactAddress/>
+            <ContactAddress />
             <FAQ className={'md:px-32 px-8'} />
-            <Footer/>
+            <Footer />
         </div>
     );
 };
