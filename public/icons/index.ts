@@ -18,6 +18,7 @@ import Sticker1 from "./Logo stanp sketch.png";
 import Sticker2 from "./Logo stanp sketch (1).png";
 import Sticker3 from "./Logo stanp sketch (2).png";
 import Hero from "./hero.svg";
+import StickBadge from "./Rectangle 19275.svg";
 export {
   Star4,
   IntercomMessenger,
@@ -39,4 +40,5 @@ export {
   Sticker2,
   Sticker3,
   Hero,
+  StickBadge,
 };
