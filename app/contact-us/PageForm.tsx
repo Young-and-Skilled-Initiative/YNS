@@ -1,9 +1,9 @@
 const PageForm = ({ className }: { className: string }) => {
     return (
-        <div className={`max-w-[70%] h-[85vh] flex flex-col mx-auto px-8 py-16 bg-white rounded-xl ${className} shadow-2xl`}>
+        <div className={`md:max-w-[70%] w-full md:h-[85vh] h-full flex flex-col mx-auto px-8 py-16 bg-white rounded-xl ${className} shadow-2xl`}>
             <div className="mb-4 flex flex-col">
                 {/* Full Name and Email Row */}
-                <div className="flex flex-row mb-4 gap-8">
+                <div className="flex md:flex-row flex-col mb-4 gap-8">
                     <div className="w-full pr-2">
                         <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">
                             Full Name <span className="text-red-500">*</span>
@@ -34,7 +34,7 @@ const PageForm = ({ className }: { className: string }) => {
                 </div>
 
                 {/* Company and Subject Row */}
-                <div className="flex flex-row mb-4 gap-8">
+                <div className="flex md:flex-row flex-col mb-4 gap-8">
                     <div className="w-full pr-2">
                         <label htmlFor="company" className="block text-gray-700 text-sm font-bold mb-2">
                             Company
