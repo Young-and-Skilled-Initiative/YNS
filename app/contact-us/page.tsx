@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import HeroPage from "./HeroPage";
 import PageForm from "./PageForm";
-import FAQ from "../components/faq/faq";
+// import FAQ from "../components/faq/faq";
 import Footer from "../components/Footer";
 import ContactAddress from "./ContactAddress";
 
@@ -14,9 +14,9 @@ const ContactUs = () => {
                 <HeroPage className="relative" />
                 <PageForm className="relative md:-mt-20 m-0" /> {/* Adjust margin-top to overlap the HeroPage */}
             </div>
-            <ContactAddress />
-            <FAQ className={'md:px-32 px-8'} />
-            <Footer />
+            <ContactAddress/>
+            {/* <FAQ className={'md:px-32 px-8'} /> */}
+            <Footer/>
         </div>
     );
 };
