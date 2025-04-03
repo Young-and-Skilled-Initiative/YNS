@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { TeamMember } from "@/types";
 import { teamMembers } from "@/data";
-import Image from "next/image"; // Importing the Image component
+import Image from "next/image"; 
 
 const TeamMembers: React.FC = () => {
   const [activeMember, setActiveMember] = useState<TeamMember>(teamMembers[0]);
@@ -14,7 +14,7 @@ const TeamMembers: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full gap-8 py-16">
+    <div className="flex flex-col w-full gap-8 lg:py-16 pt-[5em] lg:pt-[10em] container mx-auto ">
       {/* When being added to the main page, the adding px will be removed to use the px from the page itself, but for view and reference purposes i added it*/}
       <h1 className="text-center md:text-left text-3xl md:text-[2.5rem] font-medium font-cocon">
         Meet The <span className="text-dark-orange">Dream</span> Team!
@@ -25,8 +25,8 @@ const TeamMembers: React.FC = () => {
           <Image
             src={activeMember.image}
             alt={activeMember.name}
-            width={500}  // Set appropriate width for the image
-            height={400} // Set appropriate height for the image
+            width={500} 
+            height={400} 
             className="h-auto object-cover rounded-[1.25rem]"
           />
         </div>
@@ -52,7 +52,7 @@ const TeamMembers: React.FC = () => {
                 {member.name}
               </div>
               <div
-                className={`text-xl md:text-[1.25rem] lg:text-2xl xl:text-3xl w-1/3 flex justify-center  ${
+                className={`text-left text-xl md:text-[1.25rem] lg:text-2xl xl:text-3xl w-1/3 flex justify-center md:justify-start  ${
                   activeMember.id === member.id ? "" : "text-dark-green"
                 }`}
               >
