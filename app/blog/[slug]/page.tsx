@@ -35,13 +35,14 @@ const getCategoryBgColor = (category: string) => {
 
 // Correcting BlogPostProps with PageProps
 type BlogPostProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>
 };
 
-const BlogPost: FC<BlogPostProps> =  async ({ params }) => {
-  const { slug } = params;
+
+export default async function BlogPost({ params }: BlogPostProps) {
+  const { slug } = await params
 
   // Find the blog post by the slug
   const blogPost = blogCards.find((card) => generateSlug(card.title) === slug);
@@ -241,4 +242,3 @@ const BlogPost: FC<BlogPostProps> =  async ({ params }) => {
   );
 };
 
-export default BlogPost;
