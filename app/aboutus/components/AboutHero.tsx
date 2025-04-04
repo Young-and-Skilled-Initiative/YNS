@@ -1,6 +1,6 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+'use client'
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence, Variant } from "framer-motion";
 import Image from "next/image";
 import {
   Star1,
@@ -12,162 +12,323 @@ import {
   Sticker1,
   Sticker2,
   Sticker3,
-} from "@/public/icons"; // Assuming your SVGs are in the public/icons directory
+} from "@/public/icons";
 import { content } from "@/data";
 
-const textVariants = {
-  enter: { opacity: 0 },
-  center: { opacity: 1 },
-  exit: { opacity: 0 },
+const POSITIONS = ["left", "center", "right"] as const;
+type Position = (typeof POSITIONS)[number];
+
+const getResponsiveXTranslation = (position: 'left' | 'center' | 'right', screenWidth: number) => {
+  if (screenWidth < 640) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-110%" : 
+           "110%";
+  } 
+  if (screenWidth < 768) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-100%" : 
+           "100%";
+  }
+  if (screenWidth < 1024) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-100%" : 
+           "100%";
+  }
+  if (screenWidth < 1280) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-100%" : 
+           "100%";
+  }
+  if (screenWidth < 3000) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-110%" : 
+           "110%";
+  }
+
+  return position === 'center' ? "0%" : 
+         position === 'left' ? "-100%" : 
+         "100%";
 };
 
 const AboutHero = () => {
-  const [index, setIndex] = useState(0);
+  const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
+  const [isMobile, setIsMobile] = useState(false);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const width = window.innerWidth;
+      setScreenWidth(width);
+      setIsMobile(width < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % content.length);
-    }, 5000);
+      if (isMobile) {
+        paginate(1);
+      } else {
+        handleNext();
+      }
+    }, 3000);  // Reduced time for smoother feel
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile, page]);
 
-  const rotateContent = (i: number) => content[(index + i) % content.length];
+  const handleNext = () => {
+    setPositionIndexes((prev) => prev.map((x) => (x + 2) % 3));
+  };
+
+  const handleBack = () => {
+    setPositionIndexes((prev) => prev.map((x) => (x + 1) % 3));
+  };
+
+  const paginate = (newDirection: number) => {
+    if (isMobile) {
+      setPage(([prevPage, prevDirection]) => {
+        const nextPage = prevPage + newDirection;
+        return [nextPage, newDirection];
+      });
+    } else {
+      newDirection > 0 ? handleNext() : handleBack();
+    }
+  };
+
+  const getPosition = (index: number): Position => {
+    return POSITIONS[positionIndexes[index]];
+  };
+
+  // Enhanced mobile variants with better transitions and positioning
+  const mobileVariants = {
+    initial: (direction: number) => ({
+      x: direction > 0 ? "100%" : "-100%",
+      opacity: 0,
+    }),
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 25 },
+        opacity: { duration: 0.2 }
+      }
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? "100%" : "-100%",
+      opacity: 0,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 25 },
+        opacity: { duration: 0.2 }
+      }
+    })
+  };
+
+  const cards = [
+    {
+      bg: "bg-orange-500",
+      title: content[0].title,
+      highlight: content[0].highlight,
+      group: Group1,
+      sticker: Sticker1,
+      star: Star1,
+      highlightColor: "text-light-green"
+    },
+    {
+      bg: "bg-green-900",
+      title: content[1].title,
+      highlight: content[1].highlight,
+      group: Group2,
+      sticker: Sticker2,
+      star: Star2,
+      highlightColor: "text-light-green"
+    },
+    {
+      bg: "bg-green-300",
+      title: content[2].title,
+      highlight: content[2].highlight,
+      group: Group3,
+      sticker: Sticker3,
+      star: Star3,
+      highlightColor: "text-dark-green"
+    }
+  ];
+
+  const wrap = (index: number, length: number) => {
+    return ((index % length) + length) % length;
+  };
+
+  // This ensures the card always exists for any page number
+  const getCardContent = (pageIndex: number) => {
+    return cards[wrap(pageIndex, cards.length)];
+  };
+
+  const cardVariants = {
+    center: { 
+      x: getResponsiveXTranslation('center', screenWidth),
+      scale: 1.05,
+      zIndex: 5,
+      transition: { 
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        mass: 0.8,
+        duration: 0.8
+      }
+    },
+    left: { 
+      x: getResponsiveXTranslation('left', screenWidth),
+      scale: 0.95,
+      zIndex: 3,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        mass: 0.8,
+        duration: 0.8
+      }
+    },
+    right: { 
+      x: getResponsiveXTranslation('right', screenWidth),
+      scale: 0.95,
+      zIndex: 3,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        mass: 0.8,
+        duration: 0.8
+      }
+    }
+  };
 
   return (
-    <div className="font-cocon div flex flex-col gap-10 sm:gap-16 pt-10 lg:pt-0 xl:px-9 lg:pb-16">
+    <div className="font-cocon flex flex-col gap-10 sm:gap-16 pt-10 lg:pt-0 xl:px-9 lg:pb-16">
       <h1 className="text-center text-7xl">
         Who are{" "}
         <span className="bg-clip-text text-transparent bg-eight-color-block">
           We?
         </span>
       </h1>
-      <section className="flex flex-col sm:flex-row flex-wrap sm:flex-nowrap sm:grd grid-cols-2 justify-center gap-2 space-y-2 relative items-center lg:-space-x-2 sm:p-4 px-5 py-6">
-        {/* First Card */}
-        <div className="relative bg-orange-500 lg:w-[380px] h-[260px] sm:w-[320px]  w-full lg:h-[410px] rounded-xl text-white p-4 lg:p-7 flex flex-col gap-14 items-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={rotateContent(0).title + rotateContent(0).highlight}
-              variants={textVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="flex flex-col items-center"
-            >
-              <h1 className="text-3xl lg:text-[3.25rem] font-medium  lg:leading-[64px]">
-                {rotateContent(0).title}{" "}
-                <span className="text-light-green">
-                  {rotateContent(0).highlight}
-                </span>
-              </h1>
-            </motion.div>
-          </AnimatePresence>
-          <div className="absolute bottom-2 sm:bottom-8 px-3 lg:px-7 flex w-full justify-between">
-            <Image
-              src={Group1}
-              alt="Group1"
-              className="xl:w-auto lg:w-[140px] sm:w-24"
-            />
-            <Image
-              src={Sticker1}
-              alt="Sticker1"
-              className="xl:w-[105px] lg:w-[100px] sm:w-20"
-            />
-          </div>
-          <Image
-            alt="Star1"
-            src={Star1}
-            className="absolute right-1 lg:right-9 top-12 lg:top-2 animate-spin-slow"
-          />
-        </div>
 
-        {/* Middle Card */}
-        <div className="relative bg-green-900 lg:w-[420px] h-[260px] sm:h-[320px] sm:w-[360px] lg:h-[440px] xl:w-[480px] xl:h-[500px] w-full z-10 scale-105 rounded-xl text-white p-4 lg:p-7 flex flex-col gap-10 items-">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={rotateContent(1).title + rotateContent(1).highlight}
-              variants={textVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="flex flex-col items-start"
-            >
-              <h1 className="text-3xl lg:text-[3.5rem] max-w-[280px] lg:font-medium lg:leading-[64px]">
-                {rotateContent(1).title}{" "}
-                <span className="text-light-green">
-                  {rotateContent(1).highlight}
-                </span>
-              </h1>
-            </motion.div>
-          </AnimatePresence>
-          <div className="absolute bottom-2 sm:bottom-10 pr-10 lg:pr-14 flex w-full  justify-between">
-            <Image
-              src={Group2}
-              alt="Group2"
-              className="xl:w-56 lg:w-[160px] sm:w-24 w-[180px]"
-            />
-            <Image
-              src={Sticker2}
-              alt="Sticker2"
-              className="xl:w-[120px] lg:w-[90px] sm:w-20 w-28"
-            />
-          </div>
-          <Image
-            alt="Star2"
-            src={Star2}
-            className="absolute right-6 top-12 sm:top-16 lg:top-[160px] animate-spin-slow"
-          />
-        </div>
+      <div className="relative h-[450px] sm:h-[600px] w-full max-w-[1400px] mx-auto overflow-hidden mb-[6em] lg:mb-0">
+        <div className="relative w-full h-full flex justify-center items-center">
+          <AnimatePresence 
+            initial={false} 
+            custom={direction}
+            mode="popLayout"
+          >
+            {isMobile ? (
+              <motion.div
+                key={page}
+                custom={direction}
+                variants={mobileVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = Math.abs(offset.x) * velocity.x;
+                  if (swipe < -10000) {
+                    paginate(1);
+                  } else if (swipe > 10000) {
+                    paginate(-1);
+                  }
+                }}
+                className="absolute inset-0 flex justify-center items-center px-4 "
+              >
+                <div 
+                  className={`${cards[wrap(page, 3)].bg} rounded-2xl text-white p-4 lg:p-7
+                    w-full max-w-[380px] h-[450px] flex flex-col items-center justify-center relative `}
+                >
+                  <div className="flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <h1 className="text-4xl sm:text-3xl lg:text-[3.25rem] font-medium leading-[44px] lg:leading-[64px] text-center max-w-[280px]">
+                      {cards[wrap(page, 3)].title}{" "}
+                      <span className={cards[wrap(page, 3)].highlightColor}>
+                        {cards[wrap(page, 3)].highlight}
+                      </span>
+                    </h1>
+                  </div>
 
-        {/* Third Card */}
-        <div className="relative bg-green-300 lg:w-[380px] h-[260px] sm:w-[320px] w-full lg:h-[410px] rounded-xl text-white p-4 lg:p-7 flex flex-col gap-14 items-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={rotateContent(2).title + rotateContent(2).highlight}
-              variants={textVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="flex flex-col items-center"
-            >
-              <h1 className="text-3xl lg:text-[3.25rem] font-medium  lg:leading-[64px]">
-                {rotateContent(2).title}{" "}
-                <span className="text-dark-green">
-                  {rotateContent(2).highlight}
-                </span>
-              </h1>
-            </motion.div>
+                  <div className="absolute bottom-2 sm:bottom-8 px-3 lg:px-7 flex w-full justify-between">
+                    <Image
+                      src={cards[wrap(page, 3)].group}
+                      alt={`Group${wrap(page, 3) + 1}`}
+                      className="xl:w-auto lg:w-[140px] sm:w-24 w-[180px]"
+                    />
+                    <Image
+                      src={cards[wrap(page, 3)].sticker}
+                      alt={`Sticker${wrap(page, 3) + 1}`}
+                      className="xl:w-[105px] lg:w-[100px] sm:w-20 w-28"
+                    />
+                  </div>
+                  <Image
+                    alt={`Star${wrap(page, 3) + 1}`}
+                    src={cards[wrap(page, 3)].star}
+                    className="absolute right-1 lg:right-9 top-12 sm:top-16 lg:top-[160px] animate-spin-slow"
+                  />
+                </div>
+              </motion.div>
+            ) : (
+              // Desktop view with responsive card variants
+              cards.map((card, index) => {
+                const currentPosition = getPosition(index);
+                return (
+                  <motion.div
+                    key={index}
+                    className={`absolute ${card.bg} rounded-xl text-white p-4 lg:p-7
+                      ${currentPosition === "center"
+                        ? 'lg:w-[420px] h-[260px] sm:h-[320px] sm:w-[360px] lg:h-[440px] xl:w-[480px] xl:h-[500px]' 
+                        : 'lg:w-[380px] h-[260px] sm:w-[320px] lg:h-[410px]'}
+                      flex flex-col gap-14 items-center`}
+                    variants={cardVariants}
+                    animate={currentPosition}
+                    style={{ transformOrigin: "center" }}
+                  >
+                    <div className="flex flex-col items-center">
+                      <h1 className={`text-3xl lg:text-[3.25rem] font-medium lg:leading-[64px] 
+                        ${currentPosition === "center" ? 'max-w-[280px]' : ''}`}>
+                        {card.title}{" "}
+                        <span className={card.highlightColor}>
+                          {card.highlight}
+                        </span>
+                      </h1>
+                    </div>
+
+                    <div className="absolute bottom-2 sm:bottom-8 px-3 lg:px-7 flex w-full justify-between">
+                      <Image
+                        src={card.group}
+                        alt={`Group${index + 1}`}
+                        className={`xl:w-auto lg:w-[140px] sm:w-24 
+                          ${currentPosition === "center" ? 'w-[180px]' : ''}`}
+                      />
+                      <Image
+                        src={card.sticker}
+                        alt={`Sticker${index + 1}`}
+                        className={`xl:w-[105px] lg:w-[100px] sm:w-20 
+                          ${currentPosition === "center" ? 'w-28' : ''}`}
+                      />
+                    </div>
+                    <Image
+                      alt={`Star${index + 1}`}
+                      src={card.star}
+                      className={`absolute right-1 lg:right-9 top-12 
+                        ${currentPosition === "center" 
+                          ? 'sm:top-16 lg:top-[160px]' 
+                          : 'lg:top-2'} 
+                        animate-spin-slow`}
+                    />
+                  </motion.div>
+                );
+              })
+            )}
           </AnimatePresence>
-          <div className="absolute bottom-2 sm:bottom-8 px-3 lg:px-7 flex w-full justify-between ">
-            <Image
-              src={Group3}
-              alt="Group3"
-              className="xl:w-auto lg:w-[140px] sm:w-28"
-            />
-            <Image
-              src={Sticker3}
-              alt="Sticker3"
-              className="xl:w-[100px] lg:w-[100px] sm:w-20"
-            />
-          </div>
-          <Image
-            alt="Star3"
-            src={Star3}
-            className="absolute right-1 lg:right-9 top-10 lg:top-2 animate-spin-slow"
-          />
         </div>
-      </section>
+      </div>
     </div>
   );
 };

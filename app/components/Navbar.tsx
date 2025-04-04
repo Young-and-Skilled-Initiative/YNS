@@ -64,9 +64,11 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="w-full bg-white lg:px-[3em] xl:px-[8em] px-4 py-6 flex justify-between gap-6 lg:py-12">
+      <div className="w-full bg-white lg:px-[3em] xl:px-[8em] px-10 py-6 flex justify-between gap-6 lg:py-12">
         <Link href="/">
           <Image
+            width={80}
+            height={80}
             src={LogoMain}
             alt="Logo"
           />

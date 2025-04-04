@@ -8,19 +8,18 @@ import { faq_list } from "./faq-list";
 
 // Define the type for the props, making `className` optional
 interface FAQProps {
-  className?: string;  // className is optional
+  className?: string; // className is optional
 }
 
 const FAQ: React.FC<FAQProps> = ({ className }) => {
   return (
-    <div className={`w-full mt-[135px] mb-[40px] ${className}`}>
+    <div className={`w-full mt-[135px] mb-[40px] container mx-auto  ${className}`}>
       <div className="w-full flex flex-col lg:flex-row items-start justify-between lg:gap-[100px]">
         <div className="w-full lg:w-[50%]">
           <h2 className="text-[30px] lg:text-[50px] font-bold font-cocon leading-[50px]">
-            Frequently Asked <span className="text-[#00000099]"></span>
-            Questions
+            Frequently Asked <span className="text-[#00000099]">Questions</span>
           </h2>
-          <p className="mt-[16px] w-[65%] leading-[32px] font-manrope text-[16px] font-normal text-[#00000099]">
+          <p className="mt-[16px] w-full md:w-[65%] leading-[32px] font-manrope text-[16px] font-normal text-[#00000099]">
             Find quick answers to common queries in our FAQs section, designed
             to address your most pressing questions and provide you with the
             information you need.
