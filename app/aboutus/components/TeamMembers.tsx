@@ -36,7 +36,7 @@ const TeamMembers: React.FC = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className={`flex justify-between px-4 py-2 md:py-3 xl:py-4 xl:pr-12 items-center w-full border rounded-lg transition-colors duration-700 ease-linear 
+              className={`flex justify-between px-4 py-2 md:py-3 xl:py-4 gap-5 xl:pr-12 items-center w-full border rounded-lg transition-colors duration-700 ease-linear 
               ${
                 activeMember.id === member.id
                   ? "border bg-[#F2A300] text-white"
@@ -45,14 +45,14 @@ const TeamMembers: React.FC = () => {
               onMouseEnter={() => handleHover(member)}
             >
               <div
-                className={`text-[1.75rem] md:text-2xl lg:text-3xl xl:text-[2.5rem] font-medium font-cocon w-1/3 ${
+                className={`text-[1.5rem] md:text-2xl lg:text-3xl xl:text-[2.5rem] font-medium font-cocon w-1/3 ${
                   activeMember.id === member.id ? "" : "text-dark-green"
                 }`}
               >
                 {member.name}
               </div>
               <div
-                className={`text-left text-xl md:text-[1.25rem] lg:text-2xl xl:text-3xl w-1/3 flex justify-center md:justify-start  ${
+                className={`text-left text-md md:text-[1.25rem] lg:text-2xl xl:text-3xl w-1/3 flex justify-center md:justify-start  ${
                   activeMember.id === member.id ? "" : "text-dark-green"
                 }`}
               >
