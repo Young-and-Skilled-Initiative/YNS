@@ -9,7 +9,13 @@ import Story5 from "@/public/story5.svg";
 import Story6 from "@/public/story6.svg";
 import { X } from "lucide-react";
 
-const ImageModal = ({ image, alt, onClose }) => {
+interface ImageModalProps {
+  image: string;
+  alt: string;
+  onClose: () => void;
+}
+
+const ImageModal = ({ image, alt, onClose }: ImageModalProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 md:hidden">
       <div className="relative w-full max-w-lg">
@@ -33,16 +39,16 @@ const ImageModal = ({ image, alt, onClose }) => {
 };
 
 const OurStory = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
-  const handleImageClick = (image, alt) => {
+  const handleImageClick = (image: string, alt: string) => {
     if (window.innerWidth < 768) {  // Only open modal on mobile
       setSelectedImage({ src: image, alt });
     }
   };
 
   return (
-    <div className="w-full mt-[75px]">
+    <div className="w-full mt-[75px] max-w-[1500px] mx-auto">
       <div className="">
         <div className="w-full flex items-start justify-start lg:items-center lg:justify-center">
           <div className="inline-block text-center px-6 py-2 bg-[#FAFAFA] rounded-full w-[129px]">

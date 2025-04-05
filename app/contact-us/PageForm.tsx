@@ -4,7 +4,7 @@ const PageForm = ({ className }: { className: string }) => {
             <div className="mb-4 flex flex-col">
                 {/* Full Name and Email Row */}
                 <div className="flex md:flex-row flex-col mb-4 gap-8">
-                    <div className="w-full pr-2">
+                    <div className="w-full ">
                         <label htmlFor="fullName" className="block text-gray-700 text-sm font-bold mb-2">
                             Full Name <span className="text-red-500">*</span>
                         </label>
@@ -18,7 +18,7 @@ const PageForm = ({ className }: { className: string }) => {
                         />
                     </div>
 
-                    <div className="w-full pl-2">
+                    <div className="w-full ">
                         <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
                             Your Email <span className="text-red-500">*</span>
                         </label>
@@ -35,7 +35,7 @@ const PageForm = ({ className }: { className: string }) => {
 
                 {/* Company and Subject Row */}
                 <div className="flex md:flex-row flex-col mb-4 gap-8">
-                    <div className="w-full pr-2">
+                    <div className="w-full ">
                         <label htmlFor="company" className="block text-gray-700 text-sm font-bold mb-2">
                             Company
                         </label>
@@ -49,7 +49,7 @@ const PageForm = ({ className }: { className: string }) => {
                         />
                     </div>
 
-                    <div className="w-full pl-2">
+                    <div className="w-full ">
                         <label htmlFor="subject" className="block text-gray-700 text-sm font-bold mb-2">
                             Subject <span className="text-red-500">*</span>
                         </label>
@@ -65,7 +65,7 @@ const PageForm = ({ className }: { className: string }) => {
                 </div>
 
                 {/* Message Field */}
-                <div className="w-full px-2">
+                <div className="w-full ">
                     <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
                         Message <span className="text-red-500">*</span>
                     </label>

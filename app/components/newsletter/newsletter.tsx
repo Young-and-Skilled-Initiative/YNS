@@ -6,7 +6,7 @@ import "./newsletter.css";
 
 const Newsletter = () => {
   return (
-    <div className="newsletter flex flex-col lg:h-full h-[749px] rounded-3xl lg:p-[5em] pt-[3em] p-[2em] pb-[1em] md:p-[3em] justify-between ">
+    <div className="newsletter flex flex-col lg:h-full h-[749px] rounded-3xl lg:p-[5em] pt-[3em] p-[2em] pb-[1em] md:p-[3em] justify-between container">
       <div className=" flex flex-col  items-center lg:items-start lg:gap-[2em] gap-[1em] ">
         <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">
           Join the Movement Now

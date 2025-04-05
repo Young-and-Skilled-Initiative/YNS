@@ -8,11 +8,9 @@ import Newsletter from "./components/newsletter/newsletter";
 import AboutUs from "./components/about/about-us.component";
 import Hero from "./components/hero/hero";
 import NewsInsightsAndBlog from "./components/NewsInsightsAndBlog";
-import { PersonStandingIcon } from "lucide-react";
 import PersonalizedLearning from "./components/personalizedLerning/personalizedLearning";
 import OurStory from "./components/our-story/our-story.component";
 import FAQ from "./components/faq/faq";
-
 
 export default function Home() {
   return (
@@ -32,8 +30,9 @@ export default function Home() {
         <NewsInsightsAndBlog />
         <FAQ className={undefined} />
       </main>
-      {/* <Network /> */}
-      <Footer />
+      <div className="px-5 md:px-9 lg:px-[2.5rem]">
+        <Footer />
+      </div>
     </>
   );
 }
