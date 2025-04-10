@@ -232,7 +232,7 @@ const Resources = () => {
       <div className="lg:flex-col">
         <Header />
 
-        <div className=" lg:pt-16 xl:flex-col gap-16 mt-8 px-12 hidden xl:block">
+        <div className=" lg:pt-16 xl:flex-col gap-16 mt-8  hidden xl:block">
           <div className="flex-col flex xl:flex-row lg:justify-center gap-16">
             {bentoImages.slice(0, 2).map((image) => (
               <BentoCard

@@ -5,11 +5,12 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import badge from "@/public/Logosticker.svg";
 import Link from "next/link";
+import Section from "@/components/layout/Section";
 
 const AboutUs = () => {
   return (
     <>
-      <div className="w-full container max-w-[1480px] mx-auto flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-20 sm:gap-24 lg:gap-[142px] px-[1em] lg:pl-20 xl:px-28 xl:pl-32 my-14 sm:mb-[134px] h-full">
+      <Section id="about-us" className=" flex sm:flex-row flex-col-reverse sm:items-start sm:text-start text-center justify-center items-center relative gap-20 sm:gap-24 lg:gap-[142px] h-full">
         <div className="block sm:hidden text-xs text-ash mt-10">
           <ul className="w-full mt-[15px] flex items-center justify-start gap-[10px] ">
             <div className="bg-white w-[120px] text-nowrap h-[32.97px] rounded-[44.98px] flex items-center justify-center border border-ash py-[15.5px] px-[32px] ">
@@ -88,7 +89,7 @@ const AboutUs = () => {
           </p>
 
           <div className="w-full mt-[15px] flex items-center justify-center sm:justify-start ">
-            <Link href='/aboutus'>
+            <Link href="/aboutus">
               <button className="bg-[#114F3C] sm:h-[62.97px] rounded-[44.98px] flex items-center justify-center text-sm sm:text-[17.19px] text-white py-[18.49px] px-8 sm:px-[40px] ">
                 Explore More About Us
               </button>
@@ -127,7 +128,7 @@ const AboutUs = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </Section>
     </>
   );
 };

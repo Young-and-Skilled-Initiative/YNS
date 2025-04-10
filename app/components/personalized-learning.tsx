@@ -9,7 +9,7 @@ import Section from "@/components/layout/Section";
 const PersonalizedLearning = () => {
   return (
     <Section id="personalized-learning" wrapperClassName="bg-black ">
-      <div className="flex flex-col lg:flex-row justify-between 2xl:justify-center lg:px-[5em] items-center w-full lg:p-10 px-[2em]">
+      <div className="flex flex-col lg:flex-row justify-between 2xl:justify-center  items-center w-full lg:p-10 px-[2em]">
         {/* First Text Section */}
         <div className=" lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em] hidden lg:block ">
           <h1 className="font-[500] lg:text-[40px] text-[30px]">
@@ -44,7 +44,7 @@ const PersonalizedLearning = () => {
       <div className="flex  items-left lg:hidden  w-10 lg:w-full">
         <Image src={Star} alt="" className="animate-spin-slow " />
       </div>
-      <div className="flex lg:px-[5em]">
+      <div className="flex ">
         <div className="mx-auto relative">
           <div className="absolute -left-[5em]">
             <Image

@@ -7,13 +7,17 @@ import Mobiletxt from "@/public/mobiletxt.svg";
 import { Play } from "lucide-react"; // Importing Play from lucide-react
 import { Group } from "@/public";
 import { Hero_Mobile } from "@/public/icons";
+import Section from "@/components/layout/Section";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-between gap-5 w-full relative px-5 sm:px-[4em] pt-[1em] items-center sm:mt-6 sm:mb-[6em] ">
+    <Section
+      id="hero"
+      className="flex flex-col justify-between gap-5 w-full relative  items-center "
+    >
       {/* text section  */}
       <div className="flex flex-col gap-16 w-full">
-        <div className="flex flex-col justify-between w-full relative xl:px-[4em] pt-[1em] items-center sm:mt-6">
+        <div className="flex flex-col justify-between w-full relative  items-center sm:mt-6">
           {/* text section */}
           <div className=" flex flex-col gap-16 w-full">
             <div className="flex flex-col justify-center sm:gap-3 lg:gap-6 xl:gap-8 z-[20] w-full sm:max-w-screen-md absolute sm:-top-7">
@@ -121,6 +125,6 @@ export default function Hero() {
           Join the Program
         </Button>
       </div>
-    </div>
+    </Section>
   );
 }
