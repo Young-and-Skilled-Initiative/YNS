@@ -39,13 +39,11 @@ const PersonalizedLearning = () => {
             experience.
           </p>
         </div>
-      
       </div>
       <div className="flex  items-left lg:hidden mb-7 ml-[2em] w-10 lg:w-full">
-          <Image src={Star} alt="" className="animate-spin-slow "/>
-    
-        </div>
-      <div className="flex lg:pl-[5em]  ">
+        <Image src={Star} alt="" className="animate-spin-slow " />
+      </div>
+      <div className="flex lg:px-[5em]">
         <div className="mx-auto relative">
           <div className="absolute -left-[5em]">
             <Image
@@ -64,8 +62,6 @@ const PersonalizedLearning = () => {
             <Image src={Logo} alt="" className=" hidden lg:block " />
           </div>
         </div>
-
-        <div></div>
       </div>
     </div>
   );
