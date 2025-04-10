@@ -1,40 +1,42 @@
 "use client";
-
+import Section from "@/components/layout/Section";
 import React from "react";
 
 const Newsletter = () => {
   return (
-    <div
-      style={{ backgroundImage: 'url("/newsletterbg.")' }}
-      className="flex flex-col p-4 py-16 lg:p-16 rounded-3xl  justify-between bg-cover bg-no-repeat bg-top w-full h-full"
-    >
-      <div className=" flex flex-col  items-center lg:items-start lg:gap-[2em] gap-[1em] ">
-        <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">
-          Join the Movement Now
-        </h1>
-        <p className="font-[400] text-xl text-white lg:max-w-xl text-wrap text-center lg:text-left">
-          Are you ready to take the next step in your learning journey? Sign up
-          now and start exploring a world of opportunities with Young and
-          Skilled Initiative. Your future begins here!
-        </p>
+    <Section>
+      <div
+        style={{ backgroundImage: 'url("/newsletterbg.png")' }}
+        className="flex flex-col p-4 py-16 lg:p-16 rounded-3xl  justify-between bg-cover bg-no-repeat bg-top w-full h-full"
+      >
+        <div className=" flex flex-col  items-center lg:items-start lg:gap-[2em] gap-[1em] ">
+          <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">
+            Join the Movement Now
+          </h1>
+          <p className="font-[400] text-xl text-white lg:max-w-xl text-wrap text-center lg:text-left">
+            Are you ready to take the next step in your learning journey? Sign
+            up now and start exploring a world of opportunities with Young and
+            Skilled Initiative. Your future begins here!
+          </p>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-[2em] items-center lg:items-start mt-[2em]">
+          <input
+            type="text"
+            className="bg-white p-[1em] pl-10 rounded-full  lg:w-[30em] w-full"
+            placeholder="Enter your Email"
+          />
+          <button
+            type="submit"
+            className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] "
+          >
+            Join Waitlist
+          </button>
+          <button className="bg-white bg-opacity-20 p-[1.5em] xl:px-[2.5em] rounded-full text-white text-[16px] w-full lg:w-[15em]">
+            Browse Courses
+          </button>
+        </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-[2em] items-center lg:items-start mt-[2em]">
-        <input
-          type="text"
-          className="bg-white p-[1em] pl-10 rounded-full  lg:w-[30em] w-full"
-          placeholder="Enter your Email"
-        />
-        <button
-          type="submit"
-          className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] "
-        >
-          Join Waitlist
-        </button>
-        <button className="bg-white bg-opacity-20 p-[1.5em] xl:px-[2.5em] rounded-full text-white text-[16px] w-full lg:w-[15em]">
-          Browse Courses
-        </button>
-      </div>
-    </div>
+    </Section>
   );
 };
 

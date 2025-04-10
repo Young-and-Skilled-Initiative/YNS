@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Story1 from "@/public/images/story-1.svg";
 import Story2 from "@/public/images/story-2.svg";
 import Story3 from "@/public/images/story-3.svg";
@@ -8,8 +8,16 @@ import Story4 from "@/public/images/story-4.svg";
 import Story5 from "@/public/story5.svg";
 import Story6 from "@/public/story6.svg";
 import { X } from "lucide-react";
+import Section from "@/components/layout/Section";
 
-const ImageModal = ({ image, alt, onClose }) => {
+// Define props for ImageModal
+interface ImageModalProps {
+  image: StaticImageData;
+  alt: string;
+  onClose: () => void;
+}
+
+const ImageModal: React.FC<ImageModalProps> = ({ image, alt, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 md:hidden">
       <div className="relative w-full max-w-lg">
@@ -32,18 +40,23 @@ const ImageModal = ({ image, alt, onClose }) => {
   );
 };
 
-const OurStory = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+interface SelectedImage {
+  src: StaticImageData;
+  alt: string;
+}
 
-  const handleImageClick = (image, alt) => {
-    if (window.innerWidth < 768) {  // Only open modal on mobile
+const OurStory: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<SelectedImage | null>(null);
+
+  const handleImageClick = (image: StaticImageData, alt: string) => {
+    if (window.innerWidth < 768) {
       setSelectedImage({ src: image, alt });
     }
   };
 
   return (
-    <div className="w-full mt-[75px]">
-      <div className="">
+    <Section id="our-story" className="w-full">
+      <div>
         <div className="w-full flex items-start justify-start lg:items-center lg:justify-center">
           <div className="inline-block text-center px-6 py-2 bg-[#FAFAFA] rounded-full w-[129px]">
             <h3 className="text-[#8E9BAE] font-medium font-manrope text-[16px]">
@@ -61,6 +74,7 @@ const OurStory = () => {
           changemakers of tomorrow.
         </p>
       </div>
+
       <div className="mt-16 lg:grid lg:grid-cols-3 gap-5">
         <div className="lg:space-y-4 flex gap-1 items-center justify-between lg:block">
           <Image
@@ -82,6 +96,7 @@ const OurStory = () => {
             className="w-[33%] h-[120px] md:h-[200px] lg:h-auto lg:w-full object-cover rounded-lg shadow-lg cursor-pointer md:cursor-default"
           />
         </div>
+
         <div className="h-full mt-[12px] lg:mt-0 hidden md:block">
           <Image
             src={Story4}
@@ -89,6 +104,7 @@ const OurStory = () => {
             className="w-full h-[149px] md:h-[200px] lg:h-full object-cover lg:rounded-lg shadow-lg"
           />
         </div>
+
         <div className="mt-[12px] lg:mt-0 lg:space-y-4 flex gap-1 items-center justify-between lg:block rounded-lg overflow-hidden">
           <Image
             src={Story5}
@@ -112,7 +128,7 @@ const OurStory = () => {
           onClose={() => setSelectedImage(null)}
         />
       )}
-    </div>
+    </Section>
   );
 };
 

@@ -15,6 +15,7 @@ import Bento1mob from "@/public/Bento1mob.svg";
 import Bento2mob from "@/public/Bento2mob.svg";
 import Bento3mob from "@/public/Bento3mob.svg";
 import Bento4mob from "@/public/Bento4mob.svg";
+import Section from "@/components/layout/Section";
 
 type BentoImage = {
   id: number;
@@ -25,10 +26,34 @@ type BentoImage = {
 };
 
 const bentoImages: BentoImage[] = [
-  { id: 1, original: Bento1, variant: Variant1, mobile: Bento1mob, alt: "Bento 1" },
-  { id: 2, original: Bento2, variant: Variant2, mobile: Bento2mob, alt: "Bento 2" },
-  { id: 3, original: Bento3, variant: Variant3, mobile: Bento3mob, alt: "Bento 3" },
-  { id: 4, original: Bento4, variant: Variant4, mobile: Bento4mob, alt: "Bento 4" },
+  {
+    id: 1,
+    original: Bento1,
+    variant: Variant1,
+    mobile: Bento1mob,
+    alt: "Bento 1",
+  },
+  {
+    id: 2,
+    original: Bento2,
+    variant: Variant2,
+    mobile: Bento2mob,
+    alt: "Bento 2",
+  },
+  {
+    id: 3,
+    original: Bento3,
+    variant: Variant3,
+    mobile: Bento3mob,
+    alt: "Bento 3",
+  },
+  {
+    id: 4,
+    original: Bento4,
+    variant: Variant4,
+    mobile: Bento4mob,
+    alt: "Bento 4",
+  },
 ];
 
 const mobileVariants = {
@@ -54,33 +79,35 @@ const mobileVariants = {
   }),
 };
 
-const BentoCard = memo(({ 
-  image, 
-  isHovered, 
-  onHover, 
-  onLeave 
-}: { 
-  image: BentoImage; 
-  isHovered: boolean; 
-  onHover: () => void; 
-  onLeave: () => void;
-}) => (
-  <div
-    onMouseEnter={onHover}
-    onMouseLeave={onLeave}
-    className="transition-all duration-700 ease-in-out transform hover:scale-105"
-  >
-    <Image
-      src={isHovered ? image.variant : image.original}
-      alt={image.alt}
-      className={`w-full h-auto transition-opacity duration-700 ${
-        isHovered ? "opacity-100" : "opacity-90"
-      }`}
-    />
-  </div>
-));
+const BentoCard = memo(
+  ({
+    image,
+    isHovered,
+    onHover,
+    onLeave,
+  }: {
+    image: BentoImage;
+    isHovered: boolean;
+    onHover: () => void;
+    onLeave: () => void;
+  }) => (
+    <div
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
+      className="transition-all duration-700 ease-in-out transform hover:scale-105"
+    >
+      <Image
+        src={isHovered ? image.variant : image.original}
+        alt={image.alt}
+        className={`w-full h-auto transition-opacity duration-700 ${
+          isHovered ? "opacity-100" : "opacity-90"
+        }`}
+      />
+    </div>
+  )
+);
 
-BentoCard.displayName = 'BentoCard';
+BentoCard.displayName = "BentoCard";
 
 const Header = memo(() => (
   <div className="flex flex-col gap-4">
@@ -92,13 +119,13 @@ const Header = memo(() => (
     </h2>
     <p className="font-manrope text-gray-500 text-base md:text-xl text-center xl:w-[60em] mx-auto">
       Our learning programs are designed to nurture creativity, critical
-      thinking, and collaboration, helping students to become the
-      changemakers of tomorrow
+      thinking, and collaboration, helping students to become the changemakers
+      of tomorrow
     </p>
   </div>
 ));
 
-Header.displayName = 'Header';
+Header.displayName = "Header";
 
 const MobileGallery = memo(() => {
   const [[page, direction], setPage] = useState([0, 0]);
@@ -108,7 +135,7 @@ const MobileGallery = memo(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1280);
     };
-    
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -116,18 +143,18 @@ const MobileGallery = memo(() => {
 
   useEffect(() => {
     if (!isMobile) return;
-    
+
     const interval = setInterval(() => {
       paginate(1);
     }, 3000);
-    
+
     return () => clearInterval(interval);
   }, [isMobile, page]);
 
   const paginate = (newDirection: number) => {
     setPage(([prevPage, prevDirection]) => [
       (prevPage + newDirection + bentoImages.length) % bentoImages.length,
-      newDirection
+      newDirection,
     ]);
   };
 
@@ -161,7 +188,7 @@ const MobileGallery = memo(() => {
             }}
             className="absolute inset-0 flex justify-center items-center px-4"
           >
-            <Image 
+            <Image
               src={bentoImages[wrap(page, bentoImages.length)].mobile}
               alt={bentoImages[wrap(page, bentoImages.length)].alt}
               className="w-full rounded-xl shadow-md"
@@ -182,11 +209,11 @@ const MobileGallery = memo(() => {
             }}
             animate={{
               width: index === page ? 48 : 32,
-              backgroundColor: index === page ? '#15803d' : '#d1d5db'
+              backgroundColor: index === page ? "#15803d" : "#d1d5db",
             }}
             transition={{
               duration: 0.3,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           />
         ))}
@@ -195,17 +222,17 @@ const MobileGallery = memo(() => {
   );
 });
 
-MobileGallery.displayName = 'MobileGallery';
+MobileGallery.displayName = "MobileGallery";
 
 const Resources = () => {
   const [hoveredImage, setHoveredImage] = useState<number | null>(null);
 
   return (
-    <div>
+    <Section id="resources">
       <div className="lg:flex-col">
         <Header />
-        
-        <div className="lg:px-8 lg:py-16 xl:flex-col gap-16 mt-8 px-12 hidden xl:block">
+
+        <div className=" lg:pt-16 xl:flex-col gap-16 mt-8 px-12 hidden xl:block">
           <div className="flex-col flex xl:flex-row lg:justify-center gap-16">
             {bentoImages.slice(0, 2).map((image) => (
               <BentoCard
@@ -231,7 +258,7 @@ const Resources = () => {
         </div>
       </div>
       <MobileGallery />
-    </div>
+    </Section>
   );
 };
 
