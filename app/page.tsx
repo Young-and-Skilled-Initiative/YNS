@@ -1,17 +1,17 @@
 import Image from "next/image";
 
-import Navbar from "./components/Navbar";
-import { Testimonial } from "./components/Testimonial";
-import Footer from "./components/Footer";
-import Resources from "./components/resources/resources";
-import Newsletter from "./components/newsletter/newsletter";
-import AboutUs from "./components/about/about-us.component";
-import Hero from "./components/hero/hero";
-import NewsInsightsAndBlog from "./components/NewsInsightsAndBlog";
-import { PersonStandingIcon } from "lucide-react";
-import PersonalizedLearning from "./components/personalizedLerning/personalizedLearning";
-import OurStory from "./components/our-story/our-story.component";
-import FAQ from "./components/faq/faq";
+import Navbar from "../components/Navbar";
+
+import Footer from "../components/Footer";
+import Resources from "./components/resources";
+import Newsletter from "./components/newsletter";
+import AboutUs from "./components/about-us";
+import Hero from "./components/hero";
+import NewsInsightsAndBlog from "./components/news-insights-and-blog";
+import PersonalizedLearning from "./components/personalized-learning";
+import OurStory from "./components/our-story";
+import FAQ from "./components/faq";
+import { Testimonial } from "./components/testimonial";
 
 
 export default function Home() {
@@ -25,7 +25,6 @@ export default function Home() {
 
       <main className="flex min-h-screen flex-col items-center justify-between px-6 md:px-16 lg:px-24 py-6 md:py-8">
         <Resources />
-
         <OurStory />
         <Testimonial />
         <Newsletter />

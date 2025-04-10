@@ -1,8 +1,8 @@
 
 import { FC } from "react";
 import { useRouter } from "next/router"; // Optional for non-Server Component
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import BlogCardList from "@/components/blog/BlogCardList";
 import { blogCards } from "@/data"; // Ensure this contains all the blog card data
 import Image from "next/image";

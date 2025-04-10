@@ -4,7 +4,6 @@ import img2 from "@/public/images/about-us-img2.png";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import badge from "@/public/Logosticker.svg";
-import { stickBadge } from "@/public/icons";
 import Link from "next/link";
 
 const AboutUs = () => {

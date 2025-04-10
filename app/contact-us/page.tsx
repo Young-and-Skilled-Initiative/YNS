@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import HeroPage from "./HeroPage";
 import PageForm from "./PageForm";
 // import FAQ from "../components/faq/faq";
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer";
 import ContactAddress from "./ContactAddress";
 
 const ContactUs = () => {

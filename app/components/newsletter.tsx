@@ -2,16 +2,17 @@
 
 import React from "react";
 
-import "./newsletter.css";
-
 const Newsletter = () => {
   return (
-    <div className="newsletter flex flex-col lg:h-full h-[749px] rounded-3xl lg:p-[5em] pt-[3em] p-[2em] pb-[1em] md:p-[3em] justify-between ">
+    <div
+      style={{ backgroundImage: 'url("/newsletterbg.")' }}
+      className="flex flex-col p-4 py-16 lg:p-16 rounded-3xl  justify-between bg-cover bg-no-repeat bg-top w-full h-full"
+    >
       <div className=" flex flex-col  items-center lg:items-start lg:gap-[2em] gap-[1em] ">
         <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">
           Join the Movement Now
         </h1>
-        <p className="font-[400] text-[20px] text-white lg:w-[570px] text-wrap text-center lg:text-left">
+        <p className="font-[400] text-xl text-white lg:max-w-xl text-wrap text-center lg:text-left">
           Are you ready to take the next step in your learning journey? Sign up
           now and start exploring a world of opportunities with Young and
           Skilled Initiative. Your future begins here!

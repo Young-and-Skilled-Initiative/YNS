@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import MovementHero from "./components/MovementHero";
-import NewsInsightsAndBlog from "../components/NewsInsightsAndBlog";
-import Faq from "../components/faq/faq";
-import Footer from "../components/Footer";
+import NewsInsightsAndBlog from "../components/news-insights-and-blog";
+import Faq from "../components/faq";
+import Footer from "../../components/Footer";
 
 const JoinMovement = () => {
   return (

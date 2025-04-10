@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Manrope } from "next/font/google";
 import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
