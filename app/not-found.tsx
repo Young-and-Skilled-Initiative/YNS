@@ -13,7 +13,6 @@ const manrope = Manrope({
 export default function NotFound() {
   return (
     <div>
-      <Navbar />
       <div className="w-full flex items-center justify-center p-4">
         <div className="max-w-6xl w-full grid md:grid-cols-2 overflow-hidden rounded-xl shadow-2xl min-h-[500px]">
           {/* Left visual section */}
@@ -82,7 +81,6 @@ export default function NotFound() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
