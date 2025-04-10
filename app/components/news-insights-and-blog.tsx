@@ -1,9 +1,10 @@
 import BlogCardList from "@/components/blog/BlogCardList";
+import Section from "@/components/layout/Section";
 import React from "react";
 
 const NewsInsightsAndBlog = () => {
   return (
-    <div className="flex flex-col gap-12 py-12">
+    <Section className="flex flex-col gap-12 py-12">
       <div className="flex flex-col gap-7">
         <p className="font-medium text-base leading-4 text-center bg-[#FAFAFA] text-[#8E9BAE] rounded-[30px] py-2 px-6 w-fit">
           Blog
@@ -19,7 +20,7 @@ const NewsInsightsAndBlog = () => {
         </div>
       </div>
       <BlogCardList limit={3}/>
-    </div>
+    </Section>
   );
 };
 

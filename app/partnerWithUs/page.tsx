@@ -1,6 +1,4 @@
 import FAQ from "../components/faq";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 import CTA from "./components/CTA";
 import Hero from "./components/Hero";
 import OurPartners from "./components/OurPartners";
