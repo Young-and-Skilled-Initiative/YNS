@@ -10,7 +10,6 @@ import BlogFeatured from "./components/BlogFeatured";
 const page = () => {
   return (
     <div>
-      <Navbar />
       <BlogHero />
       <BlogFeatured />
       <div className="px-6 pt-12  md:px-16 lg:px-24">
@@ -21,7 +20,6 @@ const page = () => {
         {/*temporal till the paddings are fixed by creator of Newsletter */}
         <Newsletter />
       </div>
-      <Footer />
     </div>
   );
 };

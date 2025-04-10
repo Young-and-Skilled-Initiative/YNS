@@ -6,24 +6,20 @@ import Values from "./components/Values";
 import Interest from "./components/interest";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Faq from "../components/faq"
+import Faq from "../components/faq";
 import AboutHero from "./components/AboutHero";
 
 const page: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <AboutHero/>
+      <AboutHero />
       <TheYsiStory />
       <Values />
       <Interest />
       <div className="px-5 md:px-9 lg:px-[2.5rem]">
         <WhoIsIntrested />
-
         <TeamMembers />
-        <Faq/>
-
-        <Footer />
+        <Faq />
       </div>
     </>
   );
