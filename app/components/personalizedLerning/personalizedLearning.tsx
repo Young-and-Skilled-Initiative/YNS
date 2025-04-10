@@ -40,7 +40,7 @@ const PersonalizedLearning = () => {
           </p>
         </div>
       </div>
-      <div className="flex  items-left lg:hidden mb-7 ml-[2em] w-10 lg:w-full">
+      <div className="flex  items-left lg:hidden  w-10 lg:w-full">
         <Image src={Star} alt="" className="animate-spin-slow " />
       </div>
       <div className="flex lg:px-[5em]">

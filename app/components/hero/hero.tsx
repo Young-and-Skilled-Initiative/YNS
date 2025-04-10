@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="flex flex-col gap-16 w-full">
         <div className="flex flex-col justify-between w-full relative xl:px-[4em] pt-[1em] items-center sm:mt-6">
           {/* text section */}
-          <div className=" flex flex-col gap-16">
+          <div className=" flex flex-col gap-16 w-full">
             <div className="flex flex-col justify-center sm:gap-3 lg:gap-6 xl:gap-8 z-[20] w-full sm:max-w-screen-md absolute sm:-top-7">
               <h1
                 className="relative w-fit sm:tracking-tight sm:text-balance  sm:mt-3 
@@ -71,7 +71,7 @@ export default function Hero() {
               />
               <Image
                 src="/icons/hero.svg"
-                width={1220}
+                width={2000}
                 height={672}
                 alt="homepage image"
               />
