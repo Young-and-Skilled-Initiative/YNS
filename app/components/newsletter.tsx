@@ -25,15 +25,18 @@ const Newsletter = () => {
             className="bg-white p-[1em] pl-10 rounded-full  lg:w-[30em] w-full"
             placeholder="Enter your Email"
           />
-          <button
-            type="submit"
-            className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] "
-          >
-            Join Waitlist
-          </button>
-          <button className="bg-white bg-opacity-20 p-[1.5em] xl:px-[2.5em] rounded-full text-white text-[16px] w-full lg:w-[15em]">
-            Browse Courses
-          </button>
+          <div className="flex flex-col md:flex-row gap-[2em] items-center lg:items-start w-full">
+            {" "}
+            <button
+              type="submit"
+              className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] "
+            >
+              Join Waitlist
+            </button>
+            <button className="bg-white bg-opacity-20 p-[1.5em] xl:px-[2.5em] rounded-full text-white text-[16px] w-full lg:w-[15em]">
+              Browse Courses
+            </button>
+          </div>
         </div>
       </div>
     </Section>
