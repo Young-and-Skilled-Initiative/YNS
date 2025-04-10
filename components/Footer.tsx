@@ -58,7 +58,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="sm:p-[3em] text-white">
+    <div className="md:p-10 xl:p-14 text-white">
       <div className="lg:px-[45px] px-6 py-12 sm:py-[94px] bg-dark-green w-full rounded-t-3xl sm:rounded-[20px]">
         <div className="flex flex-col gap-[125px] w-full">
           <div className="lg:flex justify-between gap-[6em] w-full h-full items-start ">

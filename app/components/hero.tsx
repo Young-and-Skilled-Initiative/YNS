@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Mobilehero from "@/public/hero.svg";
-import Mobilegrp from "@/public/mobilegrp.svg";
-import Mobiletxt from "@/public/mobiletxt.svg";
-import { Play } from "lucide-react"; // Importing Play from lucide-react
 import { Group } from "@/public";
 import { Hero_Mobile } from "@/public/icons";
 import Section from "@/components/layout/Section";
@@ -20,12 +16,12 @@ export default function Hero() {
         <div className="flex flex-col justify-between w-full relative  items-center sm:mt-6">
           {/* text section */}
           <div className=" flex flex-col gap-16 w-full">
-            <div className="flex flex-col justify-center sm:gap-3 lg:gap-6 xl:gap-8 z-[20] w-full sm:max-w-screen-md absolute sm:-top-7">
+            <div className="flex flex-col justify-center sm:gap-3 lg:gap-6 xl:gap-8 z-20 w-full sm:max-w-screen-md absolute sm:-top-7">
               <h1
                 className="relative w-fit sm:tracking-tight sm:text-balance  sm:mt-3 
-              lg:-mt-3 xl:-mt-5 font-cocon font-medium sm:!leading-[48px] text-[30px] 
+              lg:-mt-3 xl:-mt-5 font-cocon font-medium sm:!leading-[48px] text-3xl 
               leading-8 lg:!leading-[64px] xl:!leading-[84px] text-black sm:text-4xl 
-              xl:text-[74.65px] lg:text-[58px] max-w-[200px] sm:max-w-[440px] lg:max-w-[800px]"
+              xl:text-[74.65px] lg:text-[58px] max-w-52 sm:max-w-md lg:max-w-[800px]"
               >
                 <span className="bg-six-color-gradient text-transparent bg-clip-text">
                   Empowering
@@ -36,7 +32,7 @@ export default function Hero() {
                     src={Group}
                     alt=""
                     width={140}
-                    className="xl:w-[180px] sm:w-[140px] lg:h-14 w-14 h-5 "
+                    className="xl:w-44 sm:w-36 lg:h-14 w-14 h-5 "
                   />
                 </span>{" "}
                 to Excel in the <br className="hidden md:block" /> Dynamic{" "}
@@ -44,7 +40,7 @@ export default function Hero() {
               </h1>
               <p
                 className="font-normal leading-5 h-full text-xs sm:text-lg sm:leading-7 font-helvetica text-primary 
-              max-w-[130px] sm:max-w-[240px] lg:max-w-[400px] xl:max-w-[550px]"
+              max-w-32 sm:max-w-60 lg:max-w-96 xl:max-w-xl"
               >
                 Unlock your potential with learning programs designed for the
                 leaders of <br className="block sm:hidden" /> tomorrow.
@@ -52,13 +48,13 @@ export default function Hero() {
               <div className=" hidden lg:flex flex-row gap-3.5">
                 <Button
                   variant="primary"
-                  className="hover:opacity-50 lg:!w-[120px] xl:!w-[188px] hover:text-slate-200 text-base font-manrope"
+                  className="hover:opacity-50 lg:!w-28 xl:!w-48 hover:text-slate-200 text-base font-manrope"
                 >
                   Get started
                 </Button>
                 <Button
                   variant="light"
-                  className="hover:opacity-70 lg:!w-[180px] xl:!w-[188px] hover:bg-slate-600 text-dark-green bg-gray-100 font-manrope text-lg hover:text-white transition ease-linear duration-100"
+                  className="hover:opacity-70 lg:!w-44 xl:!w-48 hover:bg-slate-600 text-dark-green bg-gray-100 font-manrope text-lg hover:text-white transition ease-linear duration-100"
                 >
                   Join the Program
                 </Button>
@@ -89,14 +85,14 @@ export default function Hero() {
               <Button
                 asChild
                 variant="light"
-                className="absolute right-6 xl:right-10 py-[2em] !w-[150px] lg:!w-[150px] bottom-8"
+                className="absolute right-6 xl:right-10 py-8 !w-36 lg:!w-36 bottom-8"
               >
                 <Link href="/aboutus" className="flex items-center">
                   <div className=" flex gap-2 justify-center items-center">
                     <Image
                       src="/images/play.svg"
                       alt=""
-                      className="w-[34px]"
+                      className="w-8"
                       width={60}
                       height={60}
                     />
