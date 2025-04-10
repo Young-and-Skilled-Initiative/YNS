@@ -4,10 +4,11 @@ import Star from "@/public/cstar.svg";
 import Star2 from "@/public/stargreen.svg";
 import Man from "@/public/man.gif";
 import Logo from "@/public/orangelogo.svg";
+import Section from "@/components/layout/Section";
 
 const PersonalizedLearning = () => {
   return (
-    <div className="bg-black mb-[] lg:mb-[9em] px-[2em] ">
+    <Section id="personalized-learning" wrapperClassName="bg-black ">
       <div className="flex flex-col lg:flex-row justify-between 2xl:justify-center lg:px-[5em] items-center w-full lg:p-10 px-[2em]">
         {/* First Text Section */}
         <div className=" lg:flex-col font-cocon text-white lg:w-[30%] mb-3 mt-[1em] hidden lg:block ">
@@ -63,7 +64,7 @@ const PersonalizedLearning = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

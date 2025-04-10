@@ -8,7 +8,7 @@ import Newsletter from "./components/newsletter";
 import AboutUs from "./components/about-us";
 import Hero from "./components/hero";
 import NewsInsightsAndBlog from "./components/news-insights-and-blog";
-import PersonalizedLearning from "./components/personalizedLearning";
+import PersonalizedLearning from "./components/personalized-learning";
 import OurStory from "./components/our-story";
 import FAQ from "./components/faq";
 import { Testimonial } from "./components/testimonial";
