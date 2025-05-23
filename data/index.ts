@@ -143,7 +143,7 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
       instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       linkedin: "https://www.linkedin.com/",
     },

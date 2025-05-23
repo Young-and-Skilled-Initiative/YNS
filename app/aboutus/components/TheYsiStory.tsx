@@ -14,7 +14,7 @@ const TheYsiStory = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="bg-[#1A1A1A] pt-[4.8rem] pb-[5.5rem] px-[4rem] lg:px-[9rem] flex lg:gap-[3rem] xl:gap-[4.656rem] flex-wrap lg:flex-nowrap items-center justify-center">
+    <section className="bg-[#1A1A1A] pt-[4.8rem] pb-[5.5rem] px-[2rem] lg:px-[9rem] flex lg:gap-[3rem] xl:gap-[4.656rem] flex-wrap lg:flex-nowrap items-center justify-center">
       <section className="">
         <figure className="relative h-[452px] lg:h-[520px] w-[360px] lg:w-[410px]">
           <div className="absolute left-[10px]">
