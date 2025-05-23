@@ -7,7 +7,7 @@ const Footer = () => {
   // Company links
   const companyLinks = [
     { name: "About us", href: "/about-us" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact-us" },
     { name: "Partners", href: "/partners" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Cookies Policy", href: "/cookies-policy" },
@@ -17,7 +17,7 @@ const Footer = () => {
   const resourcesLinks = [
     { name: "Blog", href: "/blog" },
     { name: "Help Center", href: "/help-center" },
-    { name: "Partners", href: "/partners" },
+    // { name: "Partners", href: "/partners" },
     { name: "Courses", href: "/courses" },
     { name: "Learn", href: "/learn" },
   ];
@@ -31,29 +31,29 @@ const Footer = () => {
 
   // Social media links with brand colors
   const socialLinks = [
-    {
-      name: "X",
-      href: "https://twitter.com/youngskilled",
-      icon: "/x-filled.svg",
-      hoverColor: "hover:bg-black", // X/Twitter dark color
-    },
+    // {
+    //   name: "X",
+    //   href: "https://twitter.com/youngskilled",
+    //   icon: "/x-filled.svg",
+    //   hoverColor: "hover:bg-black", // X/Twitter dark color
+    // },
     {
       name: "Facebook",
-      href: "https://facebook.com/youngskilled",
+      href: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
       icon: "/facebook-filled.svg",
-      hoverColor: "hover:bg-blue-600", // Facebook blue
+      hoverColor: "hover:bg-blue-600",
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/company/youngskilled",
+      href: "https://www.linkedin.com/company/young-and-skilled-initiative/",
       icon: "/linkedin-filled.svg",
-      hoverColor: "hover:bg-blue-700", // LinkedIn blue
+      hoverColor: "hover:bg-blue-700", 
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/youngskilled",
+      href: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       icon: "/instagram-filled.svg",
-      hoverColor: "hover:bg-pink-600", // Instagram pink/purple
+      hoverColor: "hover:bg-pink-600", 
     },
   ];
 

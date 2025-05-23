@@ -15,9 +15,9 @@ export const MovementHero = () => {
           />{" "}
           Join 600+ others
         </span>
-        <h1 className="text-5xl sm:text-6xl lg:text-8xl text-center font-medium font-lato sm:font-cocon">
+        <h1 className="text-5xl sm:text-6xl lg:text-8xl text-center font-medium font-cocon">
           Join The Young and Skilled{" "}
-          <span className="sm:bg-movement-gradient text-black sm:text-transparent bg-clip-text">
+          <span className="bg-movement-gradient text-black text-transparent bg-clip-text">
             Movement
           </span>
         </h1>
@@ -35,9 +35,9 @@ export const MovementHero = () => {
         />
         <button
           type="submit"
-          className="bg-black py-[1em] px-[2.5em] text-white text-manrope text-sm sm:text-lg font-bold rounded-full hover:bg-black/80 duration-300"
+          className="bg-black py-[1em] px-[2.5em] text-white text-manrope text-sm sm:text-lg font-semibold rounded-full hover:bg-black/80 duration-300"
         >
-          Join Waitlist
+          Join Movement
         </button>
       </form>
     </div>

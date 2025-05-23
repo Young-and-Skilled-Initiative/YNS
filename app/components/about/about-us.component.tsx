@@ -51,11 +51,11 @@ const AboutUs = () => {
 
             <Image
               src={badge}
-              className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-32 xl:-right-14 object-contain "
+              className="lg:w-auto lg:h-auto w-16 h-16 z-10 absolute right-14 sm:-right-14 lg:-right-32 xl:-right-14 object-contain "
               alt="Sticker"
             />
           </div>
-          <div className="absolute -bottom-28 right-14 sm:-right-12 xl:right-1 z-50">
+          <div className="absolute -bottom-28 right-14 sm:-right-12 xl:right-1 z-20">
             <Image
               src={img2}
               className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:hauto object-contain"

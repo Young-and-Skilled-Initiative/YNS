@@ -4,10 +4,10 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <Section>
+    <Section id="newsletter">
       <div
         style={{ backgroundImage: 'url("/newsletterbg.png")' }}
-        className="flex flex-col p-4 py-16 lg:p-16 rounded-3xl  justify-between bg-cover bg-no-repeat bg-top w-full h-full"
+        className=" Newsletter flex flex-col p-4 py-16 lg:p-16 rounded-3xl  justify-between bg-cover bg-no-repeat bg-top w-full h-full"
       >
         <div className=" flex flex-col  items-center lg:items-start lg:gap-[2em] gap-[1em] ">
           <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">

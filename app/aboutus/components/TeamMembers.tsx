@@ -15,7 +15,7 @@ const TeamMembers: React.FC = () => {
   };
 
   return (
-    <Section>
+    <Section id="team">
       <div className="flex flex-col w-full gap-8 lg:py-16 pt-[5em] lg:pt-[10em] container mx-auto ">
         {/* When being added to the main page, the adding px will be removed to use the px from the page itself, but for view and reference purposes i added it*/}
         <h1 className="text-center md:text-left text-3xl md:text-[2.5rem] font-medium font-cocon">

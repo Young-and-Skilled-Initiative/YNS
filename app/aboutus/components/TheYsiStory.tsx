@@ -37,14 +37,14 @@ const TheYsiStory = () => {
           <Image
             src={YsiStar}
             alt="star image"
-            className="absolute right-[-30px] w-16 lg:w-[80px] animate-spin-slow"
+            className="absolute right-0 w-16 lg:w-[80px] animate-spin-slow"
           />
           <h1 className="text-[#EF4C0D] text-[35px] md:text-[50px] font-medium font-[Cocon]">
             The YSI story
           </h1>
           <div className="text-[#F6DEAE] pt-[27px]">
-            <p className="font-bold text-xl leading-8 text-center lg:text-left">
-              The Spark That Ignited Young and Skilled:
+            <p className="font-bold text-xl leading-8 text-center lg:text-left italic">
+              The Spark That Ignited YOUNG AND SKILLED ADVANCEMENT INITIATIVE:
             </p>
             <div className="relative mt-[1em] text-[#d0c3a8]">
               <p className={`leading-8 font-medium text-justify ${!isExpanded ? 'line-clamp-4 md:line-clamp-none' : ''}`}>

@@ -24,7 +24,21 @@ const Navbar: React.FC = () => {
   const [hoverStyle, setHoverStyle] = useState({ width: 0, left: 0 });
 
   const pathname = usePathname();
-  const activeRoute = navlinks.find((link) => link.link === pathname);
+
+  // Function to check if a route is active
+  const isRouteActive = (linkPath: string) => {
+    if (linkPath === "/") {
+      return pathname === "/";
+    }
+    // For blog routes, check if pathname starts with /blog
+    if (linkPath === "/blog") {
+      return pathname.startsWith("/blog");
+    }
+    return pathname === linkPath;
+  };
+
+  // Find the active route using the new logic
+  const activeRoute = navlinks.find((link) => isRouteActive(link.link));
 
   // Handle mouse enter to update the hover style
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -64,14 +78,9 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="w-full bg-white lg:px-[3em] xl:px-[8em] px-10 py-6 flex justify-between gap-6 lg:py-12">
+      <div className="w-full bg-white lg:px-[3em] xl:px-[8em] px-10 py-6 flex justify-between gap-6 lg:py-8 sticky top-0 z-40 ">
         <Link href="/">
-          <Image
-            width={80}
-            height={80}
-            src={LogoMain}
-            alt="Logo"
-          />
+          <Image width={80} height={80} src={LogoMain} alt="Logo" />
         </Link>
 
         {/* Desktop menu */}
@@ -91,7 +100,7 @@ const Navbar: React.FC = () => {
               href={item.link}
               id={item.id} // Add id to each link for active link tracking
               className={`relative group text-sm lg:text-base font-semibold transition-all p-[6px] text-nowrap duration-200 ${
-                pathname === item.link ? "text-black" : "text-ash"
+                isRouteActive(item.link) ? "text-black" : "text-ash"
               } hover:text-black`}
               onMouseEnter={handleMouseEnter}
             >
@@ -102,17 +111,26 @@ const Navbar: React.FC = () => {
 
         {/* Action buttons */}
         <div className="hidden md:flex items-center group">
-          <Button
-            size={"lg"}
-            className="rounded-3xl bg-dark-green transform transition-all duration-300 ease-in-out group-hover:scale-120 group-hover:text-base hover:bg-dark-green"
-          >
-            Get Started
-          </Button>
+          <Link href={"/join-movement"}>
+            <Button
+              size={"lg"}
+              className="rounded-3xl bg-dark-green transform transition-all duration-300 ease-in-out group-hover:scale-120 group-hover:text-base hover:bg-dark-green"
+            >
+              Get Started
+            </Button>
+          </Link>
+
           <Button
             size={"icon"}
             className="rounded-full hidden lg:inline-flex bg-dark-green ml-[-6px] transform transition-transform duration-500 ease-in-out group-hover:rotate-90"
           >
-            <Image src="/arrow.svg" alt="Arrow" width={24} height={24} className="p-2" />
+            <Image
+              src="/arrow.svg"
+              alt="Arrow"
+              width={24}
+              height={24}
+              className="p-2"
+            />
           </Button>
         </div>
 
@@ -175,19 +193,22 @@ const Navbar: React.FC = () => {
                   key={item.id}
                   href={item.link}
                   className={`text-lg font-semibold ${
-                    pathname === item.link ? "text-[#98BC6D]" : "text-white"
+                    isRouteActive(item.link) ? "text-[#98BC6D]" : "text-white"
                   } hover:text-gray-400`}
                   onClick={closeMobileMenu}
                 >
                   {item.route}
                 </Link>
               ))}
-              <Button
-                size={"lg"}
-                className="rounded-[50px] border-2 border-white !py-2.5 !text-base bg-dark-green w-full"
-              >
-                Get Started
-              </Button>
+              <Link href={"/join-movement"} className="w-full">
+                <Button
+                  size={"lg"}
+                  className="rounded-[50px] border-2 border-white !py-2.5 !text-base bg-dark-green w-full"
+                >
+                  Get Started
+                </Button>
+              </Link>
+
               <div className="flex justify-end w-full gap-[75px]">
                 <div className="flex gap-4 items-center">
                   <Link href={""}>

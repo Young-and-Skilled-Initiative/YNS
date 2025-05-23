@@ -59,8 +59,16 @@ export default async function BlogPost({ params }: BlogPostProps) {
     <div>
       <Navbar />
       <div className="px-6 pt-8 pb-20 md:px-16 lg:px-24 flex flex-col gap-9">
-        {/* Categories */}
-        <div className="flex gap-5">
+        {/* Categories with Back Button */}
+        <div className="flex gap-5 flex-wrap">
+          {/* Back to Blog Posts Button */}
+          <Link href="/blog">
+            <button className="text-xs font-medium text-white px-7 py-3 rounded-[31px] bg-[#EF4C0D] hover:bg-[#d63f0a] transition-colors duration-200">
+              ← Back to Blog Posts
+            </button>
+          </Link>
+          
+          {/* Category Tags */}
           {blogPost.category.map((cat, idx) => (
             <span
               key={idx}
@@ -72,6 +80,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
             </span>
           ))}
         </div>
+        
         <div className="flex justify-between relative gap-4">
           <h1 className="font-cocon font-medium text-3xl md:text-4xl leading-[45px] lg:text-5xl">
             {blogPost.title}
@@ -114,7 +123,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
               Socials
             </p>
             <div className="flex gap-2.5">
-              {blogPost.author?.socials["twitter(X)"] && (
+              {/* {blogPost.author?.socials["twitter(X)"] && (
                 <Link
                   href={blogPost.author.socials["twitter(X)"]}
                   target="_blank"
@@ -127,7 +136,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
                     className="w-10 md:w-12"
                   />
                 </Link>
-              )}
+              )} */}
               {blogPost.author?.socials.facebook && (
                 <Link href={blogPost.author.socials.facebook} target="_blank">
                   <Image

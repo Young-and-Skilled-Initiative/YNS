@@ -89,9 +89,9 @@ export const blogCards: BlogCardData[] = [
       image: "/icons/photo-card.svg",
       socials: {
         "twitter(X)": "https://x.com/",
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
-        linkedin: "https://www.linkedin.com/",
+        facebook: "https://www.facebook.com/share/18sSLjyqYV/",
+        instagram: "https://www.instagram.com/intentional_mimi?igsh=b3V3NzNuZHRjd2Zk",
+        linkedin: "https://www.linkedin.com/in/success-nwajie-seocontentwriter?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     },
     moreDescription: [
@@ -210,9 +210,9 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/company/young-and-skilled-initiative/",
     },
   },
   moreDescription: [
@@ -268,7 +268,7 @@ export const blogCards: BlogCardData[] = [
  {
   category: ["Company", "Courses"],
   title: "Preparing for College: A Comprehensive Guide",
-  date: "August 23, 2024",
+  date: "October 23, 2024",
   description:
     "Getting ready for college can be overwhelming, but with the right preparation, you can transition smoothly and confidently. From choosing the right courses and organizing your documents to learning essential life skills like budgeting and time management, this comprehensive guide provides everything you need to set yourself up for success before stepping on campus.",
   image: "/news_and_blog_4.svg",
@@ -277,9 +277,9 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/company/young-and-skilled-initiative/",
     },
   },
   moreDescription: [
@@ -344,9 +344,9 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/company/young-and-skilled-initiative/",
     },
   },
   moreDescription: [
@@ -406,9 +406,9 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/company/young-and-skilled-initiative/",
     },
   },
   moreDescription: [
@@ -468,9 +468,9 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/company/young-and-skilled-initiative/",
     },
   },
   moreDescription: [
@@ -511,7 +511,7 @@ export const blogCards: BlogCardData[] = [
 {
   category: ["Company", "Courses"],
   title: "Top Skills Employers Look for in 2025",
-  date: "June 10, 2025",
+  date: "February 10, 2025",
   description:
     "Today’s employers are prioritizing adaptability, creativity, and technical fluency over traditional qualifications. Discover the top skills companies are actively seeking in 2025 and how you can align your personal development with market demands.",
   image: "/news_and_blog_8.svg",
@@ -520,8 +520,8 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
+       facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       linkedin: "https://www.linkedin.com/",
     },
   },
@@ -572,9 +572,9 @@ export const blogCards: BlogCardData[] = [
     image: "/icons/photo-card.svg",
     socials: {
       "twitter(X)": "https://x.com/",
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
+      facebook: "https://www.facebook.com/profile.php?id=61563309331437&mibextid=LQQJ4d&mibextid=LQQJ4d",
+      instagram: "https://www.instagram.com/ysinitiative?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      linkedin: "https://www.linkedin.com/company/young-and-skilled-initiative/",
     },
   },
   moreDescription: [

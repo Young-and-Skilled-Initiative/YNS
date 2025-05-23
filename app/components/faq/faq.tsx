@@ -15,7 +15,7 @@ interface FAQProps {
 const FAQ: React.FC<FAQProps> = ({ className }) => {
   return (
     <Section>
-          <div className={`w-full mt-[135px] mb-[40px] container mx-auto  ${className}`}>
+          <div className={`w-full  mb-[40px] container mx-auto  ${className}`}>
       <div className="w-full flex flex-col lg:flex-row items-start justify-between lg:gap-[100px]">
         <div className="w-full lg:w-[50%]">
           <h2 className="text-[30px] lg:text-[50px] font-bold font-cocon leading-[50px]">
