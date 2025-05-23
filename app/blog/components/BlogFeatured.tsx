@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
+import Section from "@/components/layout/Section";
 
 // Slugify utility function
 const generateSlug = (title: string) => {

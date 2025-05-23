@@ -2,10 +2,12 @@ import { Sketch_Annotation, Smile, Star4 } from "@/public/icons";
 import { Star } from "@/public/images";
 import Image from "next/image";
 import React from "react";
+import Section from "@/components/layout/Section";
 
 const BlogNewsletter = () => {
   return (
-    <div className="bg-dark-green overflow-hidden relative flex flex-col gap-y-7 items-center text-center px-6 py-24 md:py-20 text-white rounded-[20px]">
+    <Section>
+          <div className="bg-dark-green overflow-hidden relative flex flex-col gap-y-7 items-center text-center px-6 py-24 md:py-20 text-white rounded-[20px]">
       <h1 className="font-cocon text-[2.5rem] lg:text-5xl font-medium z-[1000]">
         Want to enjoy more news like this?
       </h1>
@@ -66,6 +68,7 @@ const BlogNewsletter = () => {
         />
       </div>
     </div>
+    </Section>
   );
 };
 

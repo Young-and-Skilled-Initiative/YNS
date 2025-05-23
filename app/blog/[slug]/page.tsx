@@ -1,4 +1,3 @@
-
 import { FC } from "react";
 import { useRouter } from "next/router"; // Optional for non-Server Component
 import Footer from "@/app/components/Footer";
@@ -10,12 +9,12 @@ import BlogNewsletter from "./component/BlogNewsletter";
 import {
   Facebook_green,
   Instagram_green,
-  IntercomMessenger,
   Linkedin_green,
   Star4,
   Twitter_green,
 } from "@/public/icons";
 import Link from "next/link";
+import Section from "@/components/layout/Section";
 
 // Slugify utility function
 const generateSlug = (title: string) =>
@@ -37,12 +36,11 @@ const getCategoryBgColor = (category: string) => {
 type BlogPostProps = {
   params: Promise<{
     slug: string;
-  }>
+  }>;
 };
 
-
 export default async function BlogPost({ params }: BlogPostProps) {
-  const { slug } = await params
+  const { slug } = await params;
 
   // Find the blog post by the slug
   const blogPost = blogCards.find((card) => generateSlug(card.title) === slug);
@@ -176,59 +174,56 @@ export default async function BlogPost({ params }: BlogPostProps) {
             height={0}
             className="w-full object-cover h-auto md:h-[30rem] lg:h-[40rem] rounded-[35px]"
           />
-          <Image
-            width={20}
-            height={20}
-            src={IntercomMessenger}
-            alt="messenger"
-            className="absolute -right-4 top-[48%] w-20 cursor-pointer"
-          />
         </div>
 
         {/* Blog Post Description */}
-        <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
-          {blogPost.description}
-        </p>
+              <Section>
+                        <div>
+          <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
+            {blogPost.description}
+          </p>
 
-        {/* More Content */}
-        <div className="flex flex-col gap-y-12 pb-12">
-          {blogPost.moreDescription?.map((more, idx) => (
-            <div key={idx} className="flex flex-col gap-y-12">
-              <div className="flex flex-col gap-y-5">
-                <p className="font-bold text-xl md:text-2xl lg:text-3xl">
-                  {more.title}
-                </p>
-                <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
-                  {more.content}
-                </p>
-              </div>
-              {more.imageContent && (
-                <div className="flex flex-col gap-y-4">
-                  {more.imageContent.image && (
-                    <Image
-                      src={more.imageContent.image}
-                      alt={more.title}
-                      width={0}
-                      height={0}
-                      unoptimized
-                      className="w-full rounded-xl h-[36em]"
-                    />
-                  )}
-                  {more.imageContent.alt && (
-                    <p className="w-full text-center font-manrope text-base leading-8 font-normal text-[#808080]">
-                      {more.imageContent.alt}
-                    </p>
-                  )}
+          {/* More Content */}
+          <div className="flex flex-col gap-y-12 pb-12">
+            {blogPost.moreDescription?.map((more, idx) => (
+              <div key={idx} className="flex flex-col gap-y-12">
+                <div className="flex flex-col gap-y-5">
+                  <p className="font-bold text-xl md:text-2xl lg:text-3xl mt-[1em]">
+                    {more.title}
+                  </p>
+                  <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
+                    {more.content}
+                  </p>
                 </div>
-              )}
-              {more.moreContent && (
-                <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
-                  {more.moreContent}
-                </p>
-              )}
-            </div>
-          ))}
+                {more.imageContent && (
+                  <div className="flex flex-col gap-y-4">
+                    {more.imageContent.image && (
+                      <Image
+                        src={more.imageContent.image}
+                        alt={more.title}
+                        width={0}
+                        height={0}
+                        unoptimized
+                        className="w-auto rounded-xl lg:h-[40em]"
+                      />
+                    )}
+                    {more.imageContent.alt && (
+                      <p className="w-full text-center font-manrope text-base leading-8 font-normal text-[#808080]">
+                        {more.imageContent.alt}
+                      </p>
+                    )}
+                  </div>
+                )}
+                {more.moreContent && (
+                  <p className="font-manrope text-base leading-8 font-normal text-[#808080]">
+                    {more.moreContent}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
+              </Section>
 
         {/* Newsletter and Blog Card List */}
         <BlogNewsletter />
@@ -240,5 +235,4 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <Footer />
     </div>
   );
-};
-
+}

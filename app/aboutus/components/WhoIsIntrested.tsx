@@ -4,6 +4,7 @@ import inStar1 from "@/public/images/inStar1.svg";
 import inStar2 from "@/public/images/inStar2.svg";
 import inStar3 from "@/public/images/inStar3.svg";
 import InterestCard from "./interestcard";
+import Section from "@/components/layout/Section";
 
 const WhoIsInterested = () => {
   const interestData = [
@@ -28,7 +29,8 @@ const WhoIsInterested = () => {
   ];
 
   return (
-    <div className="w-full h-full bg-white container max-w-[1500px] mx-auto px-[1em] lg:px-0 ">
+<Section>
+      <div className="w-full h-full bg-white container max-w-[1500px] mx-auto px-[0.5em] lg:px-0 ">
       <div className="pt-10 flex flex-col gap-8">
         <div className="w-full md:max-w-[803px] flex flex-col gap-5">
           <h1 className="font-cocon text-[30px] md:text-[40px]">
@@ -52,6 +54,7 @@ const WhoIsInterested = () => {
         </div>
       </div>
     </div>
+</Section>
   );
 };
 

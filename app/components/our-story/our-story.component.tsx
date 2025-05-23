@@ -8,6 +8,7 @@ import Story4 from "@/public/images/story-4.svg";
 import Story5 from "@/public/story5.svg";
 import Story6 from "@/public/story6.svg";
 import { X } from "lucide-react";
+import Section from "@/components/layout/Section";
 
 interface ImageModalProps {
   image: string;
@@ -48,7 +49,8 @@ const OurStory = () => {
   };
 
   return (
-    <div className="w-full mt-[75px] max-w-[1500px] mx-auto">
+    <Section>
+          <div className="w-full mt-[75px]  mx-auto">
       <div className="">
         <div className="w-full flex items-start justify-start lg:items-center lg:justify-center">
           <div className="inline-block text-center px-6 py-2 bg-[#FAFAFA] rounded-full w-[129px]">
@@ -119,6 +121,7 @@ const OurStory = () => {
         />
       )}
     </div>
+    </Section>
   );
 };
 
