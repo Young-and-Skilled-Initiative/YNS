@@ -66,7 +66,7 @@ const AboutUs = () => {
 
         <div className=" sm:w-1/2 lg:w-full">
           <div className="w-[138px] mx-auto  h-[38px] bg-[#FAFAFA] rounded-[30px] flex items-center justify-center">
-            <p className="text-base text-center text-ash font-[medium]  sm:text-start">
+            <p className="text-base text-center text-ash  sm:text-start font-manrope">
               About Us
             </p>
           </div>
