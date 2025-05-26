@@ -1,67 +1,127 @@
-// components/geometric-loader.tsx
 "use client"
 
-export default function GeometricLoader() {
+import { useState, useEffect, useRef } from "react"
+
+interface CustomLoaderProps {
+  onComplete?: () => void;
+}
+
+export default function CustomLoader({ onComplete }: CustomLoaderProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [showLoader, setShowLoader] = useState(false)
+  const [debugInfo, setDebugInfo] = useState("Initializing...")
+
+  useEffect(() => {
+    console.log('🚀 Loader started at:', new Date().toLocaleTimeString())
+    
+    // Phase 1: Type "WELCOME TO"
+    setTimeout(() => {
+      setDebugInfo("Typing 'WELCOME TO'...")
+      typeText('welcome-text', 'WELCOME TO', 100, () => {
+        console.log('✅ Welcome complete at:', new Date().toLocaleTimeString())
+        
+        // Phase 2: Type main text after welcome is done
+        setTimeout(() => {
+          setDebugInfo("Typing main text...")
+          typeText('main-text-line1', 'YOUNG AND SKILLED', 80, () => {
+            console.log('✅ First line complete at:', new Date().toLocaleTimeString())
+            
+            // Type second line immediately after first line
+            typeText('main-text-line2', 'ADVANCEMENT INITIATIVE', 80, () => {
+              console.log('✅ Main text complete at:', new Date().toLocaleTimeString())
+              
+              // Phase 3: Show loader after main text is done
+              setTimeout(() => {
+                setDebugInfo("Showing loader animation...")
+                setShowLoader(true) 
+                
+                // Complete after 3 seconds + 2 second delay
+                setTimeout(() => {
+                  setDebugInfo("Animation complete!")
+                  onComplete?.()
+                }, 5000) // Changed from 3000 to 5000 (3s animation + 2s delay)
+              }, 500)
+            })
+          })
+        }, 500)
+      })
+    }, 500)
+
+  }, [onComplete])
+
+  const typeText = (elementId: string, text: string, speed: number, callback: () => void) => {
+    const element = document.getElementById(elementId)
+    if (!element) return
+
+    let index = 0
+    element.innerHTML = ''
+    
+    const typeInterval = setInterval(() => {
+      if (index < text.length) {
+        element.innerHTML += text[index]
+        index++
+      } else {
+        clearInterval(typeInterval)
+        setTimeout(callback, 200)
+      }
+    }, speed)
+  }
+
   return (
-    <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
-      <div className="text-center space-y-8">
-        {/* Animated Geometric Shapes */}
-        <div className="relative w-32 h-32 mx-auto">
-          {/* Rotating squares */}
-          <div className="absolute inset-0 border-4 border-light-green rounded-lg animate-spin"></div>
-          <div
-            className="absolute inset-4 border-4 border-yellow rounded-lg animate-spin"
-            style={{ animationDirection: "reverse", animationDuration: "1.5s" }}
-          ></div>
-          <div
-            className="absolute inset-8 border-4 border-dark-orange rounded-lg animate-spin"
-            style={{ animationDuration: "2s" }}
-          ></div>
-          <div className="absolute inset-12 w-8 h-8 bg-dark-green rounded-full"></div>
+    <div ref={containerRef} className="fixed inset-0 bg-white flex flex-col items-center justify-center z-50">
+
+      {/* Typewriter Text */}
+      <div className="text-center space-y-4 mb-16 min-h-[250px] flex flex-col justify-center">
+        {/* Welcome To */}
+        <div className="relative">
+          <h2 
+            id="welcome-text"
+            className="text-2xl md:text-2xl  text-gray-600 font-manrope mb-4 "
+          />
         </div>
 
-        {/* Organization Name with Staggered Animation */}
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold text-dark-green font-manrope">
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0s" }}>Y</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.1s" }}>o</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.2s" }}>u</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.3s" }}>n</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.4s" }}>g</span>
-            <span className="inline-block animate-bounce mx-2" style={{ animationDelay: "0.5s" }}>&</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.6s" }}>S</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.7s" }}>k</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.8s" }}>i</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "0.9s" }}>l</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "1s" }}>l</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "1.1s" }}>e</span>
-            <span className="inline-block animate-bounce" style={{ animationDelay: "1.2s" }}>d</span>
-          </h1>
-          <h2
-            className="text-xl font-semibold text-ash font-manrope opacity-0"
-            style={{
-              animation: "fadeIn 0.5s ease-in-out 1.5s forwards",
-            }}
-          >
-            Advancement Initiative
-          </h2>
+        {/* Main Text */}
+        <div className="relative">
+          {/* Young and Skilled - Keep original gradient styling */}
+          <h1 
+            id="main-text-line1"
+            className="bg-six-color-gradient text-transparent bg-clip-text text-6xl font-cocon leading-tight tracking-tight min-h-[4rem]"
+          />
+          
+          {/* Advancement Initiative - Different styling */}
+          <h1 
+            id="main-text-line2"
+            className="text-slate-800 text-5xl font-light italic leading-tight tracking-wider min-h-[4rem] drop-shadow-lg"
+          />
         </div>
-
-        {/* Loading Text */}
-        <p className="text-ash font-manrope text-sm animate-pulse">Loading your experience...</p>
       </div>
 
-      {/* Custom CSS for fade-in animation */}
+      {/* Loader Animation */}
+      <div className="flex justify-center items-center">
+        <div className="block justify-center items-center rotate-[5deg]">
+          <div className="flex justify-center items-center">
+            <div className="w-12 h-12 m-0.5 bg-gray-400 bg-opacity-25 rounded-md opacity-0 animate-[blinking_0.8s_ease-in-out_infinite] [animation-delay:0.2s]"></div>
+            <div className="w-12 h-12 m-0.5 bg-gray-400 bg-opacity-25 rounded-md opacity-0 animate-[blinking_0.8s_ease-in-out_infinite] [animation-delay:0.4s]"></div>
+          </div>
+          <div className="flex justify-center items-center">
+            <div className="w-12 h-12 m-0.5 bg-gray-400 bg-opacity-25 rounded-md opacity-0 animate-[blinking_0.8s_ease-in-out_infinite] [animation-delay:0.6s]"></div>
+            <div className="w-12 h-12 m-0.5 bg-gray-400 bg-opacity-25 rounded-md opacity-0 animate-[blinking_0.8s_ease-in-out_infinite] [animation-delay:0.8s]"></div>
+          </div>
+        </div>
+      </div>
+
+      <p className="text-gray-600 font-nunito text-xl mt-8 animate-pulse">Preparing your journey...</p>
+
+      {/* Conditional Loader */}
+
+
       <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        @keyframes blinking {
+          0% { opacity: 0.25; background-color: rgba(152, 188, 109, 0.4); }
+          25% { opacity: 0.5; background-color: #98BC6D; }
+          50% { opacity: 0.75; background-color: #F2A300; }
+          75% { opacity: 0.9; background-color: #EF4C0D; }
+          100% { opacity: 1; background-color: #114F3C; }
         }
       `}</style>
     </div>

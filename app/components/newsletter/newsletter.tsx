@@ -1,15 +1,72 @@
 "use client";
 import Section from "@/components/layout/Section";
-import React from "react";
+import React, { useState } from "react";
+import toast from 'react-hot-toast';
 
 const Newsletter = () => {
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.email) {
+      toast.error('Please fill in all fields');
+      return;
+    }
+    
+    setIsLoading(true);
+    
+    try {
+      const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/newsletter/subscribe`;
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      
+      // Success toast with custom styling
+      toast.success('🎉 Successfully joined the waitlist! Welcome aboard!', {
+        duration: 4000,
+        style: {
+          background: '#10B981',
+          color: 'white',
+          fontWeight: '500',
+        },
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "" });
+      
+    } catch (error) {
+      // Error toast
+      toast.error('😞 Something went wrong. Please try again later.', {
+        duration: 4000,
+      });
+    }
+    
+    setIsLoading(false);
+  };
+
   return (
     <Section id="newsletter">
       <div
         style={{ backgroundImage: 'url("/newsletterbg.png")' }}
-        className=" Newsletter flex flex-col p-4 py-16 lg:p-16 rounded-3xl  justify-between bg-cover bg-no-repeat bg-top w-full h-full"
+        className="Newsletter flex flex-col p-4 py-16 lg:p-16 rounded-3xl justify-between bg-cover bg-no-repeat bg-top w-full h-full"
       >
-        <div className=" flex flex-col  items-center lg:items-start lg:gap-[2em] gap-[1em] ">
+        <div className="flex flex-col items-center lg:items-start lg:gap-[2em] gap-[1em]">
           <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">
             Join the Movement Now
           </h1>
@@ -19,25 +76,38 @@ const Newsletter = () => {
             Skilled Initiative. Your future begins here!
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row gap-[2em] items-center lg:items-start mt-[2em]">
+
+        <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-[2em] items-center lg:items-start mt-[2em]">
           <input
             type="text"
-            className="bg-white p-[1em] pl-10 rounded-full  lg:w-[30em] w-full"
-            placeholder="Enter your Email"
+            value={formData.name}
+            onChange={(e) => setFormData({...formData, name: e.target.value})}
+            className="bg-white p-[1em] pl-10 rounded-full lg:w-[30em] w-full"
+            placeholder="Enter your Name"
+            disabled={isLoading}
+            required
           />
+          
+          <input
+            type="email"
+            value={formData.email}
+            onChange={(e) => setFormData({...formData, email: e.target.value})}
+            className="bg-white p-[1em] pl-10 rounded-full lg:w-[30em] w-full"
+            placeholder="Enter your Email"
+            disabled={isLoading}
+            required
+          />
+          
           <div className="flex flex-col md:flex-row gap-[2em] items-center lg:items-start w-full">
-            {" "}
             <button
               type="submit"
-              className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] "
+              disabled={isLoading}
+              className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] disabled:opacity-50"
             >
-              Join Waitlist
-            </button>
-            <button className="bg-white bg-opacity-20 p-[1.5em] xl:px-[2.5em] rounded-full text-white text-[16px] w-full lg:w-[15em]">
-              Browse Courses
+              {isLoading ? 'Joining...' : 'Join Waitlist'}
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </Section>
   );

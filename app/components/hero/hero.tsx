@@ -5,7 +5,11 @@ import Link from "next/link";
 import { Group } from "@/public";
 import { Hero_Mobile } from "@/public/icons";
 
+
+
 export default function Hero() {
+
+  
   return (
     <div className="flex flex-col justify-between gap-5 w-full relative px-5 sm:px-[4em] pt-[1em] items-center sm:mt-6 sm:mb-[6em] ">
       {/* text section  */}
