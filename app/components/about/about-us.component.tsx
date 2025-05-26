@@ -38,10 +38,10 @@ const AboutUs = () => {
           </ul>
         </div>
         <div className="w-full sm:w-1/2 lg:w-full h-full relative  -top-10 sm:-top-0 flex">
-          <div className=" sm:z-20 w-full">
+          <div className="  w-full">
             <Image
               src={AboutBg}
-              className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto left-4 md:left-9 lg:left-0 relative z-30 right-1 xl:w-auto xl:h-auto object-contain "
+              className="h-40 w-52 sm:h-52 sm:w-60  left-4 md:left-9 lg:left-0 relative z-0 right-1 xl:w-auto xl:h-auto object-contain "
               alt=""
             />
           </div>
@@ -55,10 +55,10 @@ const AboutUs = () => {
               alt="Sticker"
             />
           </div>
-          <div className="absolute -bottom-28 right-14 sm:-right-12 xl:right-1 z-20">
+          <div className="absolute -bottom-28 lg:-bottom-[10em] right-14 sm:-right-12 lg:-right-[3em] z-0 ">
             <Image
               src={img2}
-              className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:hauto object-contain"
+              className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto object-contain"
               alt=""
             />
           </div>

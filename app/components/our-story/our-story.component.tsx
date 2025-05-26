@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Story1 from "@/public/images/story-1.svg";
 import Story2 from "@/public/images/story-2.svg";
@@ -17,7 +17,76 @@ interface ImageModalProps {
 }
 
 const ImageModal = ({ image, alt, onClose }: ImageModalProps) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Handle outside click for mobile
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    // Add both mouse and touch event listeners for better mobile support
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isMobile, onClose]);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [onClose]);
+
+  // Prevent body scroll when modal is open (mobile only)
+  useEffect(() => {
+    if (isMobile) {
+      document.body.style.overflow = 'hidden';
+      // Prevent touch scrolling on iOS
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.position = 'unset';
+      document.body.style.width = 'unset';
+    };
+  }, [isMobile]);
+
   const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    // For mobile, close on backdrop touch
     if (e.target === e.currentTarget) {
       onClose();
     }
@@ -27,11 +96,17 @@ const ImageModal = ({ image, alt, onClose }: ImageModalProps) => {
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 md:hidden"
       onClick={handleBackdropClick}
+      onTouchStart={handleTouchStart}
     >
-      <div className="relative w-full max-w-lg">
+      <div 
+        ref={modalRef}
+        className="relative w-full max-w-lg"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on image
+        onTouchStart={(e) => e.stopPropagation()} // Prevent closing when touching image
+      >
         <button 
           onClick={onClose}
-          className="absolute right-2 top-2 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+          className="absolute right-2 top-2 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors active:scale-95"
         >
           <X className="w-6 h-6 text-gray-800" />
         </button>
@@ -42,6 +117,11 @@ const ImageModal = ({ image, alt, onClose }: ImageModalProps) => {
             className="object-contain w-full h-full rounded-lg"
             style={{ maxHeight: "80vh" }}
           />
+        </div>
+        
+        {/* Mobile hint */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full text-sm">
+          Tap outside to close
         </div>
       </div>
     </div>
@@ -61,16 +141,28 @@ const StoryImage = ({ src, alt, className, onClick }: StoryImageProps) => {
       src={src}
       alt={alt}
       onClick={onClick}
-      className={`${className} ${onClick ? 'cursor-pointer md:cursor-default' : ''}`}
+      className={`${className} ${onClick ? 'cursor-pointer md:cursor-default transition-transform duration-200 active:scale-95' : ''}`}
     />
   );
 };
 
 const OurStory = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const handleImageClick = (image: string, alt: string) => {
-    if (window.innerWidth < 768) {
+    if (isMobile) {
       setSelectedImage({ src: image, alt });
     }
   };

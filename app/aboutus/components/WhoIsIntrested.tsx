@@ -116,40 +116,46 @@ const WhoIsInterested = () => {
 
           {/* Mobile Carousel - Only shows on mobile */}
           <div className="md:hidden">
-            <div className="relative min-h-[300px] w-full">
-              <AnimatePresence initial={false} custom={direction} mode="popLayout">
-                <motion.div
-                  key={page}
-                  custom={direction}
-                  variants={mobileVariants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={1}
-                  onDragEnd={(e, { offset, velocity }) => {
-                    const swipe = Math.abs(offset.x) * velocity.x;
-                    if (swipe < -10000) {
-                      paginate(1);
-                    } else if (swipe > 10000) {
-                      paginate(-1);
-                    }
-                  }}
-                  className="absolute inset-0 w-full flex justify-center"
-                >
-                  <InterestCard
-                    title={interestData[wrap(page, interestData.length)].title}
-                    description={interestData[wrap(page, interestData.length)].description}
-                    imageUrl={interestData[wrap(page, interestData.length)].imageUrl}
-                    bgColor={interestData[wrap(page, interestData.length)].bgColor}
-                  />
-                </motion.div>
-              </AnimatePresence>
+            {/* Carousel Container with proper spacing */}
+            <div className="relative w-full mb-8">
+              {/* Increased height and made it flexible */}
+              <div className="relative min-h-[400px] h-auto w-full overflow-hidden">
+                <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                  <motion.div
+                    key={page}
+                    custom={direction}
+                    variants={mobileVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    onDragEnd={(e, { offset, velocity }) => {
+                      const swipe = Math.abs(offset.x) * velocity.x;
+                      if (swipe < -10000) {
+                        paginate(1);
+                      } else if (swipe > 10000) {
+                        paginate(-1);
+                      }
+                    }}
+                    className="absolute inset-0 w-full flex justify-center items-start pt-4"
+                  >
+                    <div className="w-full max-w-sm px-4">
+                      <InterestCard
+                        title={interestData[wrap(page, interestData.length)].title}
+                        description={interestData[wrap(page, interestData.length)].description}
+                        imageUrl={interestData[wrap(page, interestData.length)].imageUrl}
+                        bgColor={interestData[wrap(page, interestData.length)].bgColor}
+                      />
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
 
-            {/* Indicator Tabs */}
-            <div className="flex gap-2 justify-center mt-6">
+            {/* Indicator Tabs - Now properly spaced below the carousel */}
+            <div className="flex gap-2 justify-center">
               {interestData.map((_, index) => (
                 <motion.div
                   key={index}
