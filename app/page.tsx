@@ -12,7 +12,6 @@ import PersonalizedLearning from "./components/personalizedLerning/personalizedL
 import OurStory from "./components/our-story/our-story.component";
 import FAQ from "./components/faq/faq";
 
-
 export default function Home() {
   return (
     <>

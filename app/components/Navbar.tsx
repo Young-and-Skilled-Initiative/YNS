@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { LogoMain } from "@/public/images";
-import { useNavigationLoader } from "@/app/hooks/useNavigation";
 
 const navlinks = [
   { route: "Home", link: "/", id: "home" },
@@ -27,15 +26,6 @@ const Navbar: React.FC = () => {
   const [hoverStyle, setHoverStyle] = useState({ width: 0, left: 0 });
 
   const pathname = usePathname();
-  const { startLoading } = useNavigationLoader();
-
-  // Handle navigation with loading
-  const handleNavigation = (targetPath: string) => {
-    // Only start loading if navigating to a different route
-    if (pathname !== targetPath) {
-      startLoading();
-    }
-  };
 
   // Check if device is mobile
   useEffect(() => {
@@ -153,7 +143,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="w-full bg-white lg:px-[3em] xl:px-[8em] px-10 py-6 flex justify-between gap-6 lg:py-8 sticky top-0 z-40 ">
-        <Link href="/" onClick={() => handleNavigation("/")}>
+        <Link href="/">
           <Image width={80} height={80} src={LogoMain} alt="Logo" />
         </Link>
 
@@ -177,7 +167,6 @@ const Navbar: React.FC = () => {
                 isRouteActive(item.link) ? "text-black" : "text-ash"
               } hover:text-black`}
               onMouseEnter={handleMouseEnter}
-              onClick={() => handleNavigation(item.link)}
             >
               {item.route}
             </Link>
@@ -186,7 +175,7 @@ const Navbar: React.FC = () => {
 
         {/* Action buttons */}
         <div className="hidden md:flex items-center group">
-          <Link href={"/join-movement"} onClick={() => handleNavigation("/join-movement")}>
+          <Link href={"/join-movement"}>
             <Button
               size={"lg"}
               className="rounded-3xl bg-dark-green transform transition-all duration-300 ease-in-out group-hover:scale-120 group-hover:text-base hover:bg-dark-green"
@@ -285,25 +274,16 @@ const Navbar: React.FC = () => {
                     className={`text-lg font-semibold ${
                       isRouteActive(item.link) ? "text-[#98BC6D]" : "text-white"
                     } hover:text-gray-400`}
-                    onClick={() => {
-                      handleNavigation(item.link);
-                      closeMobileMenu();
-                    }}
+                    onClick={closeMobileMenu}
                   >
                     {item.route}
                   </Link>
                 ))}
-                <Link 
-                  href={"/join-movement"} 
-                  className="w-full"
-                  onClick={() => {
-                    handleNavigation("/join-movement");
-                    closeMobileMenu();
-                  }}
-                >
+                <Link href={"/join-movement"} className="w-full">
                   <Button
                     size={"lg"}
                     className="rounded-[50px] border-2 border-white !py-2.5 !text-base bg-dark-green w-full"
+                    onClick={closeMobileMenu}
                   >
                     Get Started
                   </Button>
