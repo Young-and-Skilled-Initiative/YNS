@@ -14,12 +14,11 @@ const Newsletter = () => {
       toast.error('Please fill in all fields');
       return;
     }
-    
+
     setIsLoading(true);
-    
+
     try {
       const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/newsletter/subscribe`;
-      
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
@@ -31,32 +30,52 @@ const Newsletter = () => {
         }),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
+      // Always parse the response data first
       const result = await response.json();
       
-      // Success toast with custom styling
-      toast.success('🎉 Successfully joined the waitlist! Welcome aboard!', {
-        duration: 4000,
-        style: {
-          background: '#10B981',
-          color: 'white',
-          fontWeight: '500',
-        },
-      });
-      
-      // Reset form
-      setFormData({ name: "", email: "" });
-      
+      if (response.ok) {
+        // Success toast with custom styling
+        toast.success('🎉 Successfully joined the Newsletter! Welcome aboard!', {
+          duration: 4000,
+          style: {
+            background: '#10B981',
+            color: 'white',
+            fontWeight: '500',
+          },
+        });
+        // Reset form
+        setFormData({ name: "", email: "" });
+      } else {
+        // Check if email is already subscribed
+        const errorMessage = result.error || result.message || '';
+        const isAlreadySubscribed = response.status === 409 || 
+                                   errorMessage.toLowerCase().includes('already subscribed') ||
+                                   errorMessage.toLowerCase().includes('already exists');
+
+        if (isAlreadySubscribed) {
+          toast.error('📧 This email is already subscribed to our newsletter!', {
+            duration: 4000,
+            style: {
+              background: '#F59E0B',
+              color: 'white',
+              fontWeight: '500',
+            },
+          });
+        } else {
+          // General error toast
+          toast.error('😞 Something went wrong. Please try again later.', {
+            duration: 4000,
+          });
+        }
+      }
     } catch (error) {
+      console.error('Newsletter subscription error:', error);
       // Error toast
       toast.error('😞 Something went wrong. Please try again later.', {
         duration: 4000,
       });
     }
-    
+
     setIsLoading(false);
   };
 
@@ -68,7 +87,7 @@ const Newsletter = () => {
       >
         <div className="flex flex-col items-center lg:items-start lg:gap-[2em] gap-[1em]">
           <h1 className="font-cocon text-white text-[40px] lg:text-[50px] text-center lg:text-left">
-            Join the Movement Now
+            Join our Newsletter now
           </h1>
           <p className="font-[400] text-xl text-white lg:max-w-xl text-wrap text-center lg:text-left">
             Are you ready to take the next step in your learning journey? Sign
@@ -76,7 +95,6 @@ const Newsletter = () => {
             Skilled Initiative. Your future begins here!
           </p>
         </div>
-
         <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-[2em] items-center lg:items-start mt-[2em]">
           <input
             type="text"
@@ -87,7 +105,6 @@ const Newsletter = () => {
             disabled={isLoading}
             required
           />
-          
           <input
             type="email"
             value={formData.email}
@@ -97,14 +114,13 @@ const Newsletter = () => {
             disabled={isLoading}
             required
           />
-          
           <div className="flex flex-col md:flex-row gap-[2em] items-center lg:items-start w-full">
             <button
               type="submit"
               disabled={isLoading}
               className="bg-black py-[1em] px-[1.5em] text-white text-manrope text-[20px] rounded-full w-full lg:w-[15em] disabled:opacity-50"
             >
-              {isLoading ? 'Joining...' : 'Join Waitlist'}
+              {isLoading ? 'Joining...' : 'Join Newsletter'}
             </button>
           </div>
         </form>
