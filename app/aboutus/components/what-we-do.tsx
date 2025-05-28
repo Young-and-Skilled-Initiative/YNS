@@ -2,11 +2,13 @@ import React from 'react'
 import Arrow from "../../../public/abtarrow.svg"
 import Image from "next/image"
 import Circle from "../../../public/circles.svg"
+import Section from "@/components/layout/Section";
 
 const interest = () => {
   return (
     <div className='  flex justify-center py-[2em] md:py-[4em]  bg-[#F6DEAE] px-[2em] lg:px-[5em] '>
-        <div className='  items-center flex flex-col lg:flex-row gap-[3em] container  mx-auto   '>
+        <Section>
+                    <div className='  items-center flex flex-col lg:flex-row gap-[3em] container  mx-auto   '>
         <div className=' bg-[#114F3C] h-full flex flex-col font-cocon text-white  md:p-[4em] p-[2em] gap-[1em] justify-between items-center   xl:w-[24em] rounded-3xl  w-full'>
             <h1 className='text-[30px] xl:text-[40px] px-3'>what we do?</h1>
             <Image src={Arrow} alt="" />
@@ -29,6 +31,7 @@ const interest = () => {
         </div>
 
         </div>
+        </Section>
        
       
     </div>

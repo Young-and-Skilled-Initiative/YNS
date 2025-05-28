@@ -14,7 +14,7 @@ const TheYsiStory = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="bg-[#1A1A1A] pt-[4.8rem] pb-[5.5rem] px-[4rem] lg:px-[9rem] flex lg:gap-[3rem] xl:gap-[4.656rem] flex-wrap lg:flex-nowrap items-center justify-center">
+    <section className="bg-[#1A1A1A] pt-[4.8rem] pb-[5.5rem] px-[2rem] lg:px-[9rem] flex lg:gap-[3rem] xl:gap-[4.656rem] flex-wrap lg:flex-nowrap items-center justify-center">
       <section className="">
         <figure className="relative h-[452px] lg:h-[520px] w-[360px] lg:w-[410px]">
           <div className="absolute left-[10px]">
@@ -37,14 +37,14 @@ const TheYsiStory = () => {
           <Image
             src={YsiStar}
             alt="star image"
-            className="absolute right-[-30px] w-16 lg:w-[80px] animate-spin-slow"
+            className="absolute right-0 w-16 lg:w-[80px] animate-spin-slow"
           />
           <h1 className="text-[#EF4C0D] text-[35px] md:text-[50px] font-medium font-[Cocon]">
             The YSI story
           </h1>
           <div className="text-[#F6DEAE] pt-[27px]">
-            <p className="font-bold text-xl leading-8 text-center lg:text-left">
-              The Spark That Ignited Young and Skilled:
+            <p className="font-bold text-xl leading-8 text-center lg:text-left italic">
+              The Spark That Ignited YOUNG AND SKILLED ADVANCEMENT INITIATIVE:
             </p>
             <div className="relative mt-[1em] text-[#d0c3a8]">
               <p className={`leading-8 font-medium text-justify ${!isExpanded ? 'line-clamp-4 md:line-clamp-none' : ''}`}>

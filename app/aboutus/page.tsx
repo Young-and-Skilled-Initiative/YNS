@@ -3,7 +3,7 @@ import TeamMembers from "./components/TeamMembers";
 import WhoIsIntrested from "./components/WhoIsIntrested";
 import TheYsiStory from "./components/TheYsiStory";
 import Values from "./components/Values";
-import Interest from "./components/interest";
+import Interest from "./components/what-we-do";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Faq from "../components/faq/faq"

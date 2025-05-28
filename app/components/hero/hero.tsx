@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Mobilehero from "@/public/hero.svg";
-import Mobilegrp from "@/public/mobilegrp.svg";
-import Mobiletxt from "@/public/mobiletxt.svg";
-import { Play } from "lucide-react"; // Importing Play from lucide-react
+
 import { Group } from "@/public";
 import { Hero_Mobile } from "@/public/icons";
 
+
+
 export default function Hero() {
+
+  
   return (
     <div className="flex flex-col justify-between gap-5 w-full relative px-5 sm:px-[4em] pt-[1em] items-center sm:mt-6 sm:mb-[6em] ">
       {/* text section  */}
@@ -45,19 +46,23 @@ export default function Hero() {
                 Unlock your potential with learning programs designed for the
                 leaders of <br className="block sm:hidden" /> tomorrow.
               </p>
-              <div className=" hidden lg:flex flex-row gap-3.5">
-                <Button
-                  variant="primary"
-                  className="hover:opacity-50 lg:!w-[120px] xl:!w-[188px] hover:text-slate-200 text-base font-manrope"
-                >
-                  Get started
-                </Button>
-                <Button
-                  variant="light"
-                  className="hover:opacity-70 lg:!w-[180px] xl:!w-[188px] hover:bg-slate-600 text-dark-green bg-gray-100 font-manrope text-lg hover:text-white transition ease-linear duration-100"
-                >
-                  Join the Program
-                </Button>
+              <div className=" hidden lg:flex flex-row gap-3.5 ">
+                <Link href="#newsletter">
+                  <Button
+                    variant="primary"
+                    className="hover:bg-green-700 lg:!w-[120px] xl:!w-[188px] hover:text-slate-200 text-base font-manrope"
+                  >
+                    Get started
+                  </Button>
+                </Link>
+                <Link href={"/join-movement"}>
+                  <Button
+                    variant="light"
+                    className="hover:bg-green-700 lg:!w-[180px] xl:!w-[188px] text-dark-green bg-gray-100 font-manrope text-lg hover:text-white transition ease-linear duration-100"
+                  >
+                    Join the Program
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -87,7 +92,7 @@ export default function Hero() {
                 variant="light"
                 className="absolute right-6 xl:right-10 py-[2em] !w-[150px] lg:!w-[150px] bottom-8"
               >
-                <Link href="/aboutus" className="flex items-center">
+                <Link href="/aboutus#team" className="flex items-center">
                   <div className=" flex gap-2 justify-center items-center">
                     <Image
                       src="/images/play.svg"
@@ -107,19 +112,24 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex sm:flex-row flex-col gap-4 lg:hidden w-full">
-        <Button
-          variant="primary"
-          className="hover:opacity-50 !w-full hover:text-slate-200 text-base font-manrope"
-        >
-          Get started
-        </Button>
-        <Button
-          variant="light"
-          className="hover:opacity-70 !w-full hover:bg-slate-600 text-dark-green bg-gray-100 font-manrope text-lg hover:text-white transition ease-linear duration-100"
-        >
-          Join the Program
-        </Button>
+      <div className="flex sm:flex-row flex-col gap-4 lg:hidden w-full px-[1.74em]">
+        <Link href="#newsletter">
+          <Button
+            variant="primary"
+            className=" w-full hover:bg-green-700 hover:text-slate-200 text-base font-manrope"
+          >
+            Get started
+          </Button>
+        </Link>
+
+        <Link href={"/join-movement"}>
+          <Button
+            variant="light"
+            className=" !w-full shadow-sm hover:bg-green-700 text-dark-green bg-gray-100 font-manrope text-lg hover:text-white transition ease-linear duration-100"
+          >
+            Join the Program
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
+import Section from "@/components/layout/Section";
 
 // Slugify utility function
 const generateSlug = (title: string) => {
@@ -58,13 +59,13 @@ const BlogFeatured = () => {
                     {card.description}
                   </p>
                   {/* Use Image component for IntercomMessenger */}
-                  <Image
+                  {/* <Image
                     width={20}
                     height={20}
                     src={IntercomMessenger}
                     alt="messenger"
                     className="absolute w-20 cursor-pointer -top-14 -right-0 md:-right-5 lg:-right-14"
-                  />
+                  /> */}
                 </div>
                 <p className="text-gray-400 text-base">{card.date}</p>
 

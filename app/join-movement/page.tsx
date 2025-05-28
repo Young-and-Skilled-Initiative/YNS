@@ -10,7 +10,7 @@ const JoinMovement = () => {
   return (
     <div className="w-full">
       <Navbar />
-      <div className="flex flex-col justify-center items-center gap-20 sm:gap-[100px] sm:px-[6.25em] px-5">
+      <div className="flex flex-col justify-center items-center  sm:px-[6.25em] px-5">
         <MovementHero />
         <NewsInsightsAndBlog />
         <Faq />
